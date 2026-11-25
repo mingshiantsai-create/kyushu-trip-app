@@ -1,0 +1,320 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>KYUSHU 2027 · 九州親子自駕</title><meta name="theme-color" content="#f6f3ec"><script src="assets/lucide.min.js"></script></head><body><div id="kyushu12">
+<style>
+/* ===== KYUSHU 2027 · V13 visual system ===== */
+:root{color-scheme:light}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#f6f3ec;color:#1e2638;-webkit-font-smoothing:antialiased}
+#kyushu12{
+  --bg:#f6f3ec;--surface:#fff;--surface-2:#efebe2;--ink:#1e2638;--ink-2:#465063;--quiet:#7a8091;
+  --line:#e6e0d4;--line-2:#d9d2c3;--indigo:#24365c;--indigo-2:#31497a;--indigo-soft:#e9edf5;
+  --shu:#c0442c;--shu-soft:#fbece7;--moss:#56704f;--moss-soft:#eef2ea;
+  --serif:"Noto Serif TC","Noto Serif CJK TC","Songti TC","Hiragino Mincho ProN","Source Han Serif TC",serif;
+  --sans:system-ui,-apple-system,"PingFang TC","Noto Sans TC","Noto Sans CJK TC","Microsoft JhengHei",sans-serif;
+  --r-lg:22px;--r-md:16px;--r-sm:12px;
+  --shadow:0 1px 2px rgba(30,38,56,.04),0 6px 22px rgba(30,38,56,.06);
+  --shadow-lg:0 2px 6px rgba(30,38,56,.06),0 18px 44px rgba(30,38,56,.12);
+  --pad:20px;--nav-h:68px;
+  position:relative;box-sizing:border-box;max-width:1200px;margin:0 auto;min-height:100vh;
+  font:15px/1.65 var(--sans);color:var(--ink);background:var(--bg);
+  padding-bottom:calc(var(--nav-h) + 16px + env(safe-area-inset-bottom));
+}
+#kyushu12 *{box-sizing:border-box}
+#kyushu12 [hidden]{display:none!important}
+#kyushu12 button,#kyushu12 a,#kyushu12 input,#kyushu12 select{font:inherit;color:inherit}
+#kyushu12 a{text-decoration:none;cursor:pointer}
+#kyushu12 p{margin:0}
+#kyushu12 h2,#kyushu12 h3{margin:0;color:var(--ink)}
+#kyushu12 h2{font:600 26px/1.3 var(--serif);letter-spacing:.02em}
+#kyushu12 h3{font-size:17px;font-weight:650;line-height:1.4;letter-spacing:.01em}
+#kyushu12 .muted{color:var(--quiet);font-size:13px;line-height:1.7}
+#kyushu12 .eyebrow{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--shu)}
+#kyushu12 .flex{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#kyushu12 .between{justify-content:space-between}
+
+/* --- buttons --- */
+#kyushu12 button{cursor:pointer;background:var(--surface);border:1px solid var(--line-2);border-radius:999px;padding:9px 15px;font-size:13px;font-weight:550;line-height:1.3;
+  transition:background .18s,border-color .18s,color .18s,box-shadow .18s,transform .12s;-webkit-tap-highlight-color:transparent}
+#kyushu12 button:hover{border-color:var(--indigo);color:var(--indigo)}
+#kyushu12 button:active,#kyushu12 a.primary:active{transform:scale(.97)}
+#kyushu12 button:focus-visible,#kyushu12 a:focus-visible,#kyushu12 select:focus-visible,#kyushu12 input:focus-visible,#kyushu12 summary:focus-visible{outline:2px solid var(--shu);outline-offset:2px}
+#kyushu12 .primary{background:var(--indigo);border-color:var(--indigo);color:#fff}
+#kyushu12 button.primary:hover,#kyushu12 a.primary:hover{background:var(--indigo-2);border-color:var(--indigo-2);color:#fff;box-shadow:0 6px 18px rgba(36,54,92,.25)}
+#kyushu12 a.primary{display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:999px;padding:12px 20px;font-size:14px;font-weight:600;border:1px solid var(--indigo);transition:background .18s,box-shadow .18s,transform .12s}
+
+/* --- header --- */
+#kyushu12 .brand{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:14px var(--pad);background:rgba(246,243,236,.86);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid rgba(217,210,195,.6)}
+#kyushu12 .brand>div:first-child{display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:center}
+#kyushu12 .brand>div:first-child:before{content:'';grid-row:span 2;width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 50% 50%,var(--shu) 0 34%,transparent 35%),var(--surface);box-shadow:inset 0 0 0 1.5px var(--shu)}
+#kyushu12 .wordmark{font:600 17px/1.15 var(--serif);letter-spacing:.08em;white-space:nowrap}
+#kyushu12 .brand .eyebrow{font-size:9.5px;color:var(--quiet);letter-spacing:.22em;margin-top:2px}
+#kyushu12 .version{font-size:10px;line-height:1.6;letter-spacing:.04em;white-space:nowrap;color:var(--quiet);text-align:right;font-variant-numeric:tabular-nums}
+
+/* --- main --- */
+#kyushu12 main{padding:24px var(--pad) 32px;animation:k13in .3s ease}
+#kyushu12 main>.eyebrow:first-child{margin-bottom:6px}
+#kyushu12 main>h2:first-of-type{font-size:30px;line-height:1.25;margin-bottom:6px}
+@keyframes k13in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* --- date strip --- */
+#kyushu12 .dates{position:relative;display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;margin:20px calc(-1 * var(--pad)) 22px;padding:4px var(--pad) 8px;scrollbar-width:none}
+#kyushu12 .dates::-webkit-scrollbar{display:none}
+#kyushu12 .dates button{flex:0 0 auto;scroll-snap-align:center;min-width:62px;border-radius:var(--r-sm);padding:9px 8px 8px;font-size:16px;font-weight:650;font-variant-numeric:tabular-nums;background:var(--surface);border-color:var(--line);text-align:center}
+#kyushu12 .dates span{display:block;font-size:10px;font-weight:500;letter-spacing:.06em;color:var(--quiet);margin-top:1px}
+#kyushu12 .dates .active{background:var(--indigo);border-color:var(--indigo);color:#fff;box-shadow:0 6px 16px rgba(36,54,92,.25)}
+#kyushu12 .dates .active span{color:#c9d3e6}
+
+/* --- day header --- */
+#kyushu12 .dayhead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin:0 0 22px;padding:22px;border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow);position:relative;overflow:hidden}
+#kyushu12 .dayhead .eyebrow{font-size:10.5px}
+#kyushu12 .dayhead h2{font-size:24px;margin-top:6px}
+#kyushu12 .dayhead .muted{margin-top:6px}
+#kyushu12 .daynumber{font:600 64px/.8 var(--serif);color:transparent;-webkit-text-stroke:1.2px var(--line-2);flex-shrink:0;letter-spacing:-.02em}
+#kyushu12 .dayhead.scenic{min-height:210px;color:#fff;background:linear-gradient(180deg,rgba(16,22,36,.05) 20%,rgba(16,22,36,.78)),url('assets/dazaifu-tenmangu.jpg') center 30%/cover}
+#kyushu12 .dayhead.scenic h2{color:#fff}
+#kyushu12 .dayhead.scenic .eyebrow{color:#ffd9cf}
+#kyushu12 .dayhead.scenic .muted{color:rgba(255,255,255,.88)}
+#kyushu12 .dayhead.scenic .daynumber{-webkit-text-stroke-color:rgba(255,255,255,.55)}
+
+/* --- itinerary layout --- */
+#kyushu12 .workspace{display:flex;flex-direction:column;gap:22px}
+#kyushu12 .sidebar{display:flex;flex-direction:column;gap:14px}
+#kyushu12 .mapmodule{background:var(--surface);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow)}
+#kyushu12 .mapheading{padding:14px 18px 12px}
+#kyushu12 .mapheading h3{font-size:15px}
+#kyushu12 .mapheading p{font-size:11.5px;color:var(--quiet);margin-top:2px}
+#kyushu12 iframe{display:block;width:100%;height:240px;border:0;background:linear-gradient(135deg,#e9ece4,#dfe5ea)}
+#kyushu12 .mapcaption{padding:10px 18px 12px;font-size:11.5px;color:var(--quiet);line-height:1.6}
+#kyushu12 .navbox{background:var(--surface);border-radius:var(--r-lg);padding:18px;box-shadow:var(--shadow)}
+#kyushu12 .navbox>.flex{gap:12px}
+#kyushu12 .navbox h3{font-size:15px}
+#kyushu12 .mode{display:flex;gap:2px;padding:3px;background:var(--surface-2);border-radius:999px}
+#kyushu12 .mode button{border:0;background:transparent;padding:6px 12px;font-size:12px;color:var(--ink-2)}
+#kyushu12 .mode button:hover{color:var(--indigo)}
+#kyushu12 .mode .active{background:var(--surface);color:var(--indigo);box-shadow:0 1px 4px rgba(30,38,56,.14)}
+#kyushu12 .next{display:grid;gap:12px;margin-top:14px}
+#kyushu12 select{display:block;width:100%;appearance:none;-webkit-appearance:none;padding:12px 40px 12px 14px;border:1px solid var(--line-2);border-radius:var(--r-sm);font-size:14px;font-weight:550;
+  background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%23465063' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 14px center/14px no-repeat}
+#kyushu12 .next .muted{font-size:12px;margin-top:8px}
+#kyushu12 .next a.primary{width:100%}
+#kyushu12 .navfoot{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:11.5px;color:var(--quiet);line-height:1.8}
+
+/* --- timeline --- */
+#kyushu12 .timeline{min-width:0;position:relative}
+#kyushu12 .period{display:flex;align-items:center;gap:10px;margin:6px 0 12px;font-size:12px;font-weight:650;letter-spacing:.12em;color:var(--ink-2)}
+#kyushu12 .period:before{content:'';width:8px;height:8px;border-radius:50%;background:var(--shu)}
+#kyushu12 .period:after{content:'';flex:1;height:1px;background:var(--line)}
+#kyushu12 .stop{position:relative;margin:0 0 14px 22px;background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:visible;animation:k13in .3s ease both}
+#kyushu12 .stop:before{content:'';position:absolute;left:-22px;top:24px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:2px solid var(--indigo);z-index:1}
+#kyushu12 .stop:after{content:'';position:absolute;left:-17.5px;top:38px;bottom:-30px;width:1px;background:var(--line-2)}
+#kyushu12 .stop:last-child:after{display:none}
+#kyushu12 .photocard{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;border-radius:var(--r-lg) var(--r-lg) 0 0;background:var(--surface-2)}
+#kyushu12 .stopbody{padding:16px 18px 16px}
+#kyushu12 .stopbody>.flex{align-items:flex-start;flex-wrap:nowrap;gap:12px}
+#kyushu12 .stopbody>.flex>div{min-width:0}
+#kyushu12 .stop small{display:block;font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--shu)}
+#kyushu12 .stop h3{font-size:18px;margin-top:3px}
+#kyushu12 .stopbody>.flex>button{flex-shrink:0;padding:7px 12px;font-size:12px;background:var(--indigo-soft);border-color:transparent;color:var(--indigo)}
+#kyushu12 .stopbody>.flex>button:hover{background:var(--indigo);color:#fff}
+#kyushu12 .guide{font-size:13.5px;color:var(--ink-2);line-height:1.75;margin-top:10px}
+#kyushu12 .guide:empty{display:none}
+#kyushu12 .stopbody>.muted{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:12.5px}
+#kyushu12 .supply{margin-top:8px;padding:8px 12px;border-radius:10px;background:var(--moss-soft);color:var(--moss);font-size:12.5px;line-height:1.6}
+#kyushu12 details{margin-top:10px;font-size:13px}
+#kyushu12 summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;color:var(--ink-2);font-weight:550;padding:4px 0}
+#kyushu12 summary::-webkit-details-marker{display:none}
+#kyushu12 summary:before{content:'';width:6px;height:6px;border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:rotate(-45deg);transition:transform .2s;margin-right:2px}
+#kyushu12 details[open] summary:before{transform:rotate(45deg)}
+#kyushu12 summary:hover{color:var(--indigo)}
+#kyushu12 .detail{margin-top:8px;padding:12px 14px;background:var(--bg);border-radius:var(--r-sm);color:var(--ink-2);line-height:1.7}
+#kyushu12 .detail .muted{margin-top:6px;font-size:12px}
+#kyushu12 .detail a{display:inline-block;margin-top:6px;color:var(--indigo);font-weight:600}
+#kyushu12 .detail a:hover{text-decoration:underline}
+#kyushu12 .mapjump{margin-top:12px;padding:0;border:0;background:none;border-radius:0;font-size:12.5px;color:var(--indigo);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(36,54,92,.3)}
+#kyushu12 .mapjump:hover{color:var(--shu);text-decoration-color:currentColor}
+#kyushu12 .reststop{background:transparent;box-shadow:none;border:1.5px dashed var(--line-2)}
+#kyushu12 .reststop:before{border-color:var(--moss);background:var(--moss-soft)}
+#kyushu12 .reststop .stopbody{padding:13px 16px}
+#kyushu12 .reststop small{color:var(--moss)}
+#kyushu12 .reststop h3{font-size:15.5px}
+#kyushu12 .reststop .stopbody>.flex>button{background:var(--surface)}
+#kyushu12 .timeline>.muted{padding:28px 20px;text-align:center;background:var(--surface);border-radius:var(--r-lg);border:1.5px dashed var(--line-2)}
+
+/* --- home --- */
+#kyushu12 .home{display:grid;gap:18px}
+#kyushu12 .homeintro h2{font-size:34px;line-height:1.2;margin:6px 0 8px}
+#kyushu12 .cover{position:relative;height:340px;border-radius:26px;overflow:hidden;background:var(--indigo);box-shadow:var(--shadow-lg)}
+#kyushu12 .cover img{width:100%;height:100%;object-fit:cover;object-position:30% 40%;display:block;transform:scale(1.02)}
+#kyushu12 .cover:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,20,34,0) 30%,rgba(14,20,34,.82) 100%)}
+#kyushu12 .covertext{position:absolute;left:22px;right:22px;bottom:22px;z-index:1;color:#fff}
+#kyushu12 .covertext .eyebrow{color:#ffd9cf}
+#kyushu12 .covertext h2{color:#fff;font-size:28px;margin:6px 0 12px}
+#kyushu12 .routechips{display:flex;flex-wrap:wrap;gap:6px}
+#kyushu12 .routechips span{padding:4px 10px;border-radius:999px;font-size:12px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+#kyushu12 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+#kyushu12 .facts>div{background:var(--surface);border-radius:var(--r-md);padding:14px 12px;box-shadow:var(--shadow);min-width:0}
+#kyushu12 .facts small{display:block;font-size:11px;color:var(--quiet);letter-spacing:.08em}
+#kyushu12 .facts b{display:block;font:600 22px/1.3 var(--serif);color:var(--indigo);margin:2px 0}
+#kyushu12 .facts span{display:block;font-size:12px;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#kyushu12 .continue{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px;border-radius:var(--r-lg);background:var(--indigo);color:#fff;box-shadow:var(--shadow-lg);flex-wrap:wrap}
+#kyushu12 .continue .eyebrow{color:#ffcfc3}
+#kyushu12 .continue h3{color:#fff;font-size:19px;margin-top:4px}
+#kyushu12 .continue .muted{color:#c9d3e6;margin-top:2px}
+#kyushu12 .continue button.primary{background:#fff;color:var(--indigo);border-color:#fff;padding:11px 18px;font-size:14px}
+#kyushu12 .continue button.primary:hover{background:var(--shu-soft);border-color:var(--shu-soft);color:var(--shu);box-shadow:none}
+#kyushu12 .sectionhead{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-top:8px}
+#kyushu12 .sectionhead h3{font:600 20px/1.3 var(--serif)}
+#kyushu12 .daygrid{display:grid;gap:8px}
+#kyushu12 .dayitem{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:12px;width:100%;text-align:left;padding:12px 16px 12px 12px;border-radius:var(--r-md);background:var(--surface);border:1px solid transparent;box-shadow:var(--shadow)}
+#kyushu12 .dayitem:hover{border-color:var(--indigo);color:inherit}
+#kyushu12 .dnum{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:var(--surface-2);font:600 17px/1 var(--serif);color:var(--ink-2)}
+#kyushu12 .dtext{min-width:0}
+#kyushu12 .dtext small{display:block;font-size:11px;color:var(--quiet);letter-spacing:.05em;font-weight:500}
+#kyushu12 .dtext b{display:block;font-size:15px;font-weight:650;color:var(--ink)}
+#kyushu12 .darrow{color:var(--quiet);font-size:16px;transition:transform .18s}
+#kyushu12 .dayitem:hover .darrow{transform:translateX(3px);color:var(--indigo)}
+#kyushu12 .dayitem.current{border-color:var(--indigo)}
+#kyushu12 .dayitem.current .dnum{background:var(--indigo);color:#fff}
+#kyushu12 .photocredit{font-size:11px;color:var(--quiet)}
+#kyushu12 .photocredit a{text-decoration:underline;text-underline-offset:2px}
+
+/* --- map page --- */
+#kyushu12 .maplayout{display:flex;flex-direction:column;gap:18px}
+#kyushu12 .maplarge iframe{height:340px}
+#kyushu12 .maplayout>section:last-child{background:var(--surface);border-radius:var(--r-lg);padding:18px;box-shadow:var(--shadow)}
+#kyushu12 .maplist{display:grid;gap:6px;margin:14px 0 16px}
+#kyushu12 .maplist a{display:grid;grid-template-columns:30px 1fr;column-gap:12px;align-items:center;padding:10px 12px;border-radius:var(--r-sm);font-size:14px;font-weight:600;border:1px solid transparent;transition:background .18s,border-color .18s}
+#kyushu12 .maplist a:hover{background:var(--bg)}
+#kyushu12 .maplist a .muted{grid-column:2;font-size:12px;font-weight:400;line-height:1.5}
+#kyushu12 .marker{grid-row:span 2;width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--surface-2);color:var(--ink-2);font-size:12px;font-weight:700}
+#kyushu12 .maplist a.selected{background:var(--indigo-soft);border-color:rgba(36,54,92,.18)}
+#kyushu12 .maplist a.selected .marker{background:var(--shu);color:#fff}
+#kyushu12 .maplayout a.primary{width:100%}
+
+/* --- wallet --- */
+#kyushu12 .total{margin:18px 0 4px;padding:22px 22px 18px;border-radius:var(--r-lg);background:var(--indigo);color:#fff;font:600 40px/1.1 var(--serif);font-variant-numeric:tabular-nums;box-shadow:var(--shadow-lg)}
+#kyushu12 .total+.muted{margin:0 0 14px 4px}
+#kyushu12 .ledger{background:var(--surface);border-radius:var(--r-md);padding:16px 18px;margin:0 0 10px;box-shadow:var(--shadow)}
+#kyushu12 .ledger.flex{flex-wrap:nowrap}
+#kyushu12 .ledger.flex>div:first-child{font-weight:600;min-width:0}
+#kyushu12 .ledger.flex>div:first-child p{font:600 18px/1.4 var(--serif);color:var(--indigo);margin-top:2px}
+#kyushu12 .ledger .flex button{padding:6px 12px;font-size:12px}
+#kyushu12 .ledger .flex button[data-delete]:hover{border-color:var(--shu);color:var(--shu);background:var(--shu-soft)}
+#kyushu12 .ledger h3{margin-top:2px}
+#kyushu12 .ledger>.muted:first-child{display:inline-block;padding:2px 10px;border-radius:999px;background:var(--shu-soft);color:var(--shu);font-weight:650;font-size:12px}
+#kyushu12 .addrow{position:fixed;right:max(20px,calc(50vw - 600px + 24px));bottom:calc(var(--nav-h) + 28px + env(safe-area-inset-bottom));z-index:15;margin:0}
+#kyushu12 .add{width:56px;height:56px;padding:0;border-radius:50%;font-size:26px;line-height:1;box-shadow:0 10px 26px rgba(36,54,92,.35)}
+
+/* --- bottom nav --- */
+#kyushu12 footer{position:fixed;left:50%;transform:translateX(-50%);bottom:0;z-index:30;width:100%;max-width:1200px;display:flex;justify-content:space-around;gap:4px;
+  padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.9);backdrop-filter:saturate(1.6) blur(18px);-webkit-backdrop-filter:saturate(1.6) blur(18px);border-top:1px solid var(--line)}
+#kyushu12 footer button{flex:1;max-width:96px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 4px;border:0;border-radius:14px;background:transparent;font-size:11px;font-weight:600;color:var(--quiet)}
+#kyushu12 footer button svg{width:21px;height:21px;stroke-width:1.8}
+#kyushu12 footer button:hover{color:var(--indigo);background:transparent}
+#kyushu12 footer .active{color:var(--indigo);background:var(--indigo-soft)}
+#kyushu12 footer .active svg{stroke-width:2.2}
+
+/* --- notice / toast / modal --- */
+#kyushu12 .notice{margin:0 var(--pad) 8px;padding:14px 16px;border-radius:var(--r-md);background:var(--surface-2);font-size:11.5px;line-height:1.8;color:var(--quiet)}
+#kyushu12 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--nav-h) + 20px + env(safe-area-inset-bottom));z-index:40;padding:11px 18px;border-radius:999px;background:var(--ink);color:#fff;font-size:13.5px;font-weight:550;box-shadow:var(--shadow-lg);animation:k13in .25s ease}
+#kyushu12 .overlay{position:fixed;inset:0;z-index:50;display:flex;align-items:flex-end;justify-content:center;padding:0;background:rgba(14,20,34,.45);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+#kyushu12 .modal{width:100%;max-width:440px;background:var(--surface);padding:22px 22px calc(22px + env(safe-area-inset-bottom));border-radius:24px 24px 0 0;box-shadow:var(--shadow-lg);animation:k13sheet .28s cubic-bezier(.2,.8,.2,1)}
+@keyframes k13sheet{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+#kyushu12 .modal>.flex{flex-wrap:nowrap}
+#kyushu12 .modal h3{font:600 20px/1.3 var(--serif)}
+#kyushu12 .modal [data-close]{width:36px;height:36px;padding:0;font-size:20px;line-height:1;border-color:transparent;background:var(--surface-2)}
+#kyushu12 label{display:block;margin:16px 0 0;font-size:13px;font-weight:600;color:var(--ink-2)}
+#kyushu12 input{display:block;width:100%;margin-top:6px;padding:12px 14px;border:1px solid var(--line-2);border-radius:var(--r-sm);background:var(--bg);font-size:16px;font-weight:500;transition:border-color .18s,box-shadow .18s}
+#kyushu12 input:focus{outline:none;border-color:var(--indigo);box-shadow:0 0 0 3px rgba(36,54,92,.14);background:var(--surface)}
+#kyushu12 .modal button[type=submit]{width:100%;margin-top:20px;padding:13px;font-size:15px}
+
+/* --- tablet / desktop --- */
+@media(min-width:720px){
+  #kyushu12{--pad:36px}
+  #kyushu12 .wordmark{font-size:20px;letter-spacing:.14em}
+  #kyushu12 .version{font-size:11px;letter-spacing:.08em}
+  #kyushu12 main{padding-top:34px}
+  #kyushu12 main>h2:first-of-type{font-size:36px}
+  #kyushu12 .dates{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));overflow:visible;margin:24px 0 26px;padding:0}
+  #kyushu12 .dates button{min-width:0}
+  #kyushu12 .dates button:hover{transform:translateY(-2px)}
+  #kyushu12 .dayhead{padding:28px 30px}
+  #kyushu12 .dayhead h2{font-size:30px}
+  #kyushu12 .daynumber{font-size:96px}
+  #kyushu12 .dayhead.scenic{min-height:260px}
+  #kyushu12 .homeintro h2{font-size:46px}
+  #kyushu12 .cover{height:440px}
+  #kyushu12 .covertext{left:36px;bottom:34px;right:36px}
+  #kyushu12 .covertext h2{font-size:38px}
+  #kyushu12 .facts{gap:14px}
+  #kyushu12 .facts>div{padding:18px 20px}
+  #kyushu12 .facts b{font-size:28px}
+  #kyushu12 .continue{padding:24px 28px}
+  #kyushu12 .daygrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  #kyushu12 .overlay{align-items:center;padding:20px}
+  #kyushu12 .modal{border-radius:24px;padding:26px}
+  #kyushu12 .notice{margin:0 var(--pad) 12px}
+  #kyushu12 footer{bottom:16px;width:auto;max-width:none;border:1px solid var(--line);border-radius:999px;padding:6px;gap:2px;box-shadow:var(--shadow-lg)}
+  #kyushu12 footer button{flex:0 0 auto;max-width:none;flex-direction:row;gap:7px;padding:10px 18px;border-radius:999px;font-size:13px}
+  #kyushu12 footer button svg{width:18px;height:18px}
+  #kyushu12 .toast{bottom:96px}
+  #kyushu12 .addrow{bottom:100px}
+}
+@media(min-width:960px){
+  #kyushu12{--pad:48px}
+  #kyushu12 .workspace{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-items:start}
+  #kyushu12 .timeline{grid-column:1;grid-row:1}
+  #kyushu12 .sidebar{grid-column:2;grid-row:1;position:sticky;top:84px}
+  #kyushu12 .stop{margin-left:26px}
+  #kyushu12 .stop:before{left:-26px}
+  #kyushu12 .stop:after{left:-21.5px}
+  #kyushu12 .photocard{aspect-ratio:auto;height:260px}
+  #kyushu12 .stopbody{padding:20px 24px}
+  #kyushu12 .stop h3{font-size:20px}
+  #kyushu12 .reststop .stopbody{padding:14px 20px}
+  #kyushu12 .home{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px;row-gap:22px}
+  #kyushu12 .home>.homeintro{align-self:end}
+  #kyushu12 .home>.cover,#kyushu12 .home>.sectionhead,#kyushu12 .home>.daygrid,#kyushu12 .home>.photocredit{grid-column:1/-1}
+  #kyushu12 .home>.homeintro{grid-column:1;grid-row:1}
+  #kyushu12 .home>.facts{grid-column:2;grid-row:1;align-self:end}
+  #kyushu12 .home>.cover{grid-row:2}
+  #kyushu12 .home>.continue{grid-column:1/-1}
+  #kyushu12 .maplayout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:start}
+  #kyushu12 .maplarge iframe{height:520px}
+  #kyushu12 main>.ledger,#kyushu12 main>.total,#kyushu12 main>.total+.muted{max-width:760px}
+}
+@media(max-width:380px){
+  #kyushu12{--pad:16px}
+  #kyushu12 .version{display:none}
+  #kyushu12 .facts span{white-space:normal}
+}
+@media(prefers-reduced-motion:reduce){#kyushu12 *{animation:none!important;transition:none!important}}
+
+</style>
+<header class="brand"><div><div class="wordmark">KYUSHU 2027</div><div class="eyebrow">FAMILY ROAD TRIP</div></div><div class="version">2027.01.16 — 01.24<br>9 DAYS · FAMILY ROAD TRIP</div></header>
+<main id="k12-content"></main><div id="k12-toast" class="toast" role="status" aria-live="polite" hidden></div><footer id="k12-nav"></footer><div class="notice">V12 互動原型 · Day 2 為完整範本，其餘日期為草稿。Google 地圖顯示所選站點，尚未接入自動道路與休息站搜尋。停車費、行車方向與補給資訊出發前待核實。照片來源：太宰府天滿宮、九州國立博物館官方網站。</div><div id="k12-overlay" class="overlay" hidden></div>
+<script>
+(()=>{const root=document.getElementById('kyushu12'),main=root.querySelector('main'),overlay=root.querySelector('.overlay');let saved=null;try{saved=JSON.parse(localStorage.getItem('kyushu-v12-photo'))}catch{}let day=saved?.privateContent?.day||2,page=saved?.privateContent?.page||'行程',mode=saved?.privateContent?.mode||'test',next=0,expenses=saved?.privateContent?.expenses||[{name:'午餐（範例）',amount:3200}],timer;
+const names=['抵達福岡','太宰府・柳川','柳川 → 武雄 → 嬉野','嬉野 → 有田 → 豪斯登堡','豪斯登堡','豪斯登堡 → 小倉','門司港 → 福岡','福岡自由行','返程'];
+const stop=(name,type,period,park,fee,shops)=>({name,type,period,park,fee,shops});
+const routes={1:[stop('CI116 桃園起飛','航班','16:25','桃園 T2','—',''),stop('抵達福岡機場','航班','19:35','國際線航廈','—',''),stop('三井花園福岡祇園','住宿','21:00','','待核實','')],2:[stop('福岡機場取車','取車','上午','','依租車預訂',''),stop('太宰府天滿宮・表參道','景點','上午','太宰府停車中心','¥500／次','Lawson 太宰府天滿宮前店 · Leganet 太宰府'),stop('九州國立博物館','步行參觀','下午','與太宰府共用停車安排','不重複計費',''),stop('基山 PA（下行）','沿途休息站','下午','PA 停車場','待核實','餐飲與休息設施'),stop('廣川 SA（下行）','沿途休息站','下午','SA 停車場','待核實','餐飲與伴手禮'),stop('道之驛 みやま','沿途休息站','下午','道之驛停車場','待核實','當地農產品與伴手禮'),stop('柳川龜之井飯店','住宿','晚上','飯店戶外停車場','免費','FamilyMart 上宮永店 · marukyo 柳川')],3:[stop('柳川龜之井飯店','出發','上午'),stop('武雄市圖書館','景點','上午'),stop('武雄溫泉樓門','景點','下午'),stop('嬉野櫻花飯店','住宿','晚上')],4:[stop('嬉野','出發','上午'),stop('有田','景點','下午'),stop('豪斯登堡日航飯店','住宿','晚上')],5:[stop('豪斯登堡','景點','全天'),stop('豪斯登堡日航飯店','住宿','晚上')],6:[stop('豪斯登堡日航飯店','出發','上午'),stop('小倉城','景點','下午'),stop('魚町銀天街','景點','下午'),stop('皿倉山夜景','景點','晚上'),stop('小倉飯店（待選定）','住宿','晚上')],7:[stop('門司港 Retro','景點','上午'),stop('LaLaport 福岡','購物','下午'),stop('庵飯店','住宿','晚上')],8:[],9:[]};
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const money=n=>'¥'+n.toLocaleString();const target=s=>s.name==='福岡機場取車'?'福岡空港':s.type==='沿途休息站'?s.name:s.park&&!s.park.includes('共用')?s.park:s.name;
+function url(i){const list=routes[day],dest=target(list[i]);let u='https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(dest+' 日本')+'&travelmode='+ (list[i].type==='步行參觀'?'walking':'driving');if(mode==='test'&&i>0)u+='&origin='+encodeURIComponent(target(list[i-1])+' 日本');return u;}
+function save(){try{localStorage.setItem('kyushu-v12-photo',JSON.stringify({privateContent:{day,page,mode,expenses}}))}catch{}}
+function toast(msg){const el=root.querySelector('.toast');el.textContent=msg;el.hidden=false;clearTimeout(timer);timer=setTimeout(()=>el.hidden=true,3000);}
+function dates(){return '<div class="dates">'+names.map((n,i)=>`<button data-day="${i+1}" class="${day===i+1?'active':''}" aria-pressed="${day===i+1}">1/${16+i}<span>Day ${i+1}</span></button>`).join('')+'</div>';}
+
+const photoD='assets/dazaifu-tenmangu.jpg';
+const photoWalk='https://www.dazaifutenmangu.or.jp/wp/wp-content/themes/dazaifutenmangu3/img/top/img-sozoroaruki.jpg';
+const photoMuseum='assets/kyuhaku.jpg';
+function photo(s){if(s.name.includes('天滿宮'))return photoD;if(s.name.includes('博物館'))return photoMuseum;return null;}
+function guide(s){if(s.name.includes('天滿宮'))return '慢慢逛表參道、品嚐梅枝餅，再走進天滿宮參拜。停妥車後，這一區以步行遊覽。';if(s.name.includes('博物館'))return '從天滿宮經虹之隧道步行前往，參觀後返回同一個停車場。';if(s.type==='住宿')return '結束一天行程，入住休息。停車資訊和附近補給可在下方查看。';return '';}
+function mapModule(large=false){const item=routes[day][next];const q=item?target(item)+' 日本':'九州 日本';return `<section class="mapmodule ${large?'maplarge':''}"><div class="mapheading"><h3>Google Maps · ${esc(item?.name||'九州')}</h3><p>可縮放、拖曳地圖 · 選擇站點即更新</p></div><iframe title="Google Maps ${esc(q)}" src="https://maps.google.com/maps?q=${encodeURIComponent(q)}&hl=zh-TW&z=13&output=embed" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe><div class="mapcaption">目前顯示所選站點，完整多站道路路線請開啟 Google Maps。</div></section>`;}
+
+function itinerary(){const list=routes[day];return `<div class="eyebrow">DAILY ITINERARY</div><h2>每日行程</h2><p class="muted">景點攻略、住宿與分段導航</p>${dates()}<div class="dayhead ${day===2?'scenic':''}"><div><div class="eyebrow">DAY ${day} · JANUARY ${15+day}, 2027</div><h2>${names[day-1]}</h2>${day===2?'<p class="muted">停一次車逛太宰府與博物館，再沿途休息、柳川入住。</p>':''}<\/div><div class="daynumber">${String(day).padStart(2,'0')}</div></div><div class="workspace"><aside class="sidebar">${mapModule()}${list.length?`<section class="navbox"><div class="flex between"><h3>導航下一站</h3><div class="mode flex"><button data-mode="test" class="${mode==='test'?'active':''}">行前測試</button><button data-mode="live" class="${mode==='live'?'active':''}">日本目前位置</button></div></div><div class="next"><div><select aria-label="下一站" id="k12-next">${list.map((s,i)=>`<option value="${i}" ${i===next?'selected':''}>${i+1}. ${s.name}</option>`).join('')}</select><p class="muted">${mode==='live'?'起點：由 Google Maps 使用裝置目前位置':'起點：'+(next?target(list[next-1]):'目前位置（本日第一站）')} → ${esc(target(list[next]))}</p></div><a class="primary" href="${esc(url(next))}" target="_blank" rel="noopener">Google Maps 導航 ↗</a></div><div class="navfoot">導航以停車場為優先目的地<br>沿途 SA／PA 已列入停靠順序</div></section>`:''}</aside><div class="timeline">${!list.length?'<p class="muted">當日詳細景點與預訂資料待補入。</p>':list.map((s,i)=>`${i===0||s.period!==list[i-1].period?'<div class="period">'+s.period+'</div>':''}<article class="stop ${s.type==='沿途休息站'?'reststop':''}">${photo(s)?`<img class="photocard" src="${photo(s)}" alt="${esc(s.name)} · 官方照片" loading="lazy">`:""}<div class="stopbody"><div class="flex between"><div><small>${String(i+1).padStart(2,'0')} · ${s.type}${s.type==='沿途休息站'?' · 已列入導航順序':''}</small><h3>${esc(s.name)}</h3></div><button data-next="${i}">前往此站 ↗</button></div><p class="guide">${guide(s)}</p><p class="muted">停車：${esc(s.park||'待核實')} · ${esc(s.fee||'費用待核實')}</p>${s.shops?'<div class="supply">附近補給｜'+esc(s.shops)+'</div>':''}<details><summary>查看攻略與停車詳情</summary><div class="detail">${s.type==='步行參觀'?'參觀後步行返回原停車場，再開始下一段自駕導航。':s.type==='沿途休息站'?'候選高速路線的停靠點，行車方向與實際經過道路仍待核實。':s.type==='住宿'?'住宿地址、入住時間與訂房憑證待補入。':'依當天體力彈性安排停留時間。'}<p class="muted">MAPCODE：待核實</p>${s.shops?`<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.shops.split(' · ')[0]+' 日本')}" target="_blank" rel="noopener">查看附近補給 ↗</a>`:''}</div></details><button class="mapjump" data-map="${i}">在右側地圖查看此站</button></div></article>`).join('')}</div></div>`;}
+function render(){if(!routes[day][next])next=0;let html='';if(page==='行程')html=itinerary();if(page==='首頁')html=`<section class="home"><div class="homeintro"><div class="eyebrow">OUR FAMILY JOURNEY</div><h2>一起出發，去九州。</h2><p class="muted">2027 年 1 月 16 日 — 24 日 · 九天親子自駕</p></div><div class="facts"><div><small>出發</small><b>1/16</b><span>${names[0]}</span></div><div><small>天數</small><b>9 天</b><span>親子自駕</span></div><div><small>回程</small><b>1/24</b><span>${names[8]}</span></div></div><div class="cover"><img src="${photoD}" alt="太宰府天滿宮官方照片"><div class="covertext"><div class="eyebrow">KYUSHU 2027</div><h2>把時間，留給旅途。</h2><p class="routechips">${'福岡 · 太宰府 · 柳川 · 嬉野 · 豪斯登堡 · 小倉'.split(' · ').map(x=>`<span>${x}</span>`).join('')}</p></div></div><div class="continue"><div><div class="eyebrow">CONTINUE EXPLORING</div><h3>Day ${day} · ${names[day-1]}</h3><p class="muted">1/${15+day} · ${routes[day].length?routes[day].length+' 個停靠點':'當日詳細景點待補入'}</p></div><button data-page="行程" class="primary">查看每日行程 →</button></div><div class="sectionhead"><h3>九天行程一覽</h3><span class="eyebrow">9 DAYS</span></div><div class="daygrid">${names.map((n,i)=>`<button class="dayitem ${day===i+1?'current':''}" data-day="${i+1}" data-page="行程"><span class="dnum">${String(i+1).padStart(2,'0')}</span><span class="dtext"><small>1/${16+i} · Day ${i+1}</small><b>${n}</b></span><span class="darrow" aria-hidden="true">→</span></button>`).join('')}</div><div class="photocredit">影像來源：<a href="https://www.dazaifutenmangu.or.jp/" target="_blank" rel="noopener">太宰府天滿宮官方網站</a></div></section>`;if(page==='地圖')html=`<div class="eyebrow">GOOGLE MAPS</div><h2>旅程地圖</h2><p class="muted">選擇日期與停靠點，查看位置、停車場和下一段導航。</p>${dates()}<div class="maplayout">${mapModule(true)}<section><h3>Day ${day} · 停靠順序</h3><div class="maplist">${routes[day].map((s,i)=>`<a href="#" data-map-select="${i}" class="${i===next?'selected':''}"><span class="marker">${i+1}</span>${esc(s.name)}<p class="muted">${esc(s.park||s.type)}</p></a>`).join('')||'<p>當日站點待補入</p>'}</div>${routes[day].length?`<a class="primary" href="${esc(url(next))}" target="_blank" rel="noopener">Google Maps 導航此站 ↗</a>`:''}</section></div>`;if(page==='購物')html=`<div class="eyebrow">TRAVEL WALLET</div><h2>購物與記帳</h2><p class="muted">原型範例 · 金額以日圓計</p><div class="total">${money(expenses.reduce((a,e)=>a+e.amount,0))}</div><div class="muted">${expenses.length} 筆支出</div>${expenses.map((e,i)=>`<div class="ledger flex between"><div>${esc(e.name)}<p>${money(e.amount)}</p></div><div class="flex"><button data-edit="${i}">編輯</button><button data-delete="${i}">刪除</button></div></div>`).join('')}<div class="addrow"><button class="primary add" data-add="yes" aria-label="新增消費">＋</button></div>`;if(page==='預訂')html=`<div class="eyebrow">RESERVATIONS</div><h2>預訂資料</h2><p class="muted">沿用對話中的住宿安排，預訂狀態待確認。</p>${[['1/16','三井花園福岡祇園'],['1/17','柳川龜之井飯店'],['1/18','嬉野櫻花飯店'],['1/19–20','豪斯登堡日航飯店'],['1/21','小倉飯店（待選定）'],['1/22','庵飯店']].map(([d,n])=>`<div class="ledger"><div class="muted">${d}</div><h3>${n}</h3><details><summary>住宿與預訂詳情</summary><p class="muted">確認碼、地址、停車與入住規則待補入。</p></details></div>`).join('')}`;main.innerHTML=html;root.querySelector('footer').innerHTML=['首頁','行程','地圖','購物','預訂'].map((n,i)=>`<button data-page="${n}" class="${page===n?'active':''}"><i data-lucide="${['house','route','map','shopping-bag','tickets'][i]}" aria-hidden="true"></i>${n}</button>`).join('');globalThis.lucide?.createIcons({attrs:{width:18,height:18}});const ds=main.querySelector('.dates'),da=ds?.querySelector('.active');if(ds&&da&&ds.scrollWidth>ds.clientWidth)ds.scrollLeft=da.offsetLeft-ds.clientWidth/2+da.offsetWidth/2;}
+function modal(i){const e=i===null?{name:'',amount:''}:expenses[i];overlay.hidden=false;overlay.innerHTML=`<form class="modal"><div class="flex between"><h3>${i===null?'新增消費':'編輯消費'}</h3><button type="button" data-close="yes" aria-label="關閉">×</button></div><label>項目名稱<input name="name" required maxlength="60" value="${esc(e.name)}" placeholder="例如：太宰府午餐"></label><label>金額（日圓）<input name="amount" type="number" min="1" step="1" required value="${e.amount}"></label><button class="primary" type="submit">儲存消費</button></form>`;overlay.querySelector('form').onsubmit=ev=>{ev.preventDefault();const f=new FormData(ev.target),v={name:String(f.get('name')).trim(),amount:Number(f.get('amount'))};if(!v.name||!Number.isFinite(v.amount)||v.amount<1)return;if(i===null)expenses.push(v);else expenses[i]=v;overlay.hidden=true;render();save();toast('消費已儲存');};overlay.querySelector('input').focus();}
+root.addEventListener('click',e=>{const maplink=e.target.closest('[data-map-select]');if(maplink){e.preventDefault();next=+maplink.dataset.mapSelect;render();save();return;}const b=e.target.closest('button');if(!b)return;if(b.dataset.map!==undefined){next=+b.dataset.map;render();save();if(innerWidth<960)main.querySelector('.sidebar').scrollIntoView({behavior:'smooth',block:'start'});}if(b.dataset.day){day=+b.dataset.day;next=0;render();save();}if(b.dataset.page){page=b.dataset.page;render();save();scrollTo({top:0,behavior:'smooth'});}if(b.dataset.mode){mode=b.dataset.mode;render();save();}if(b.dataset.next){next=+b.dataset.next;render();save();const a=main.querySelector('.next a');a?.click();}if(b.dataset.add)modal(null);if(b.dataset.edit!==undefined)modal(+b.dataset.edit);if(b.dataset.delete!==undefined){expenses.splice(+b.dataset.delete,1);render();save();toast('消費已刪除');}if(b.dataset.close)overlay.hidden=true;});root.addEventListener('change',e=>{if(e.target.id==='k12-next'){next=+e.target.value;render();save();}});root.addEventListener('keydown',e=>{if(e.key==='Escape')overlay.hidden=true;});window.addEventListener('openai:set_globals',e=>{const s=e.detail?.globals?.widgetState?.privateContent;if(s?.design==='editorial-v2'){day=s.day||2;page=s.page||'行程';mode=s.mode||'test';expenses=s.expenses||expenses;render();}});render();})();
+</script>
+</div>
+</body></html>
