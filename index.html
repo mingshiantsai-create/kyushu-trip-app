@@ -103,14 +103,26 @@ body{margin:0;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antia
 #app .credit{position:absolute!important;top:10px;right:12px;font-size:10px;color:rgba(255,255,255,.85);background:rgba(0,0,0,.35);padding:2px 8px;border-radius:999px;max-width:70%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #app .credit a{text-decoration:underline;text-underline-offset:2px}
 /* rain */
-#app .rain{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:16px 18px;margin:0 0 22px;border-left:4px solid var(--primary-ink);scroll-margin-top:80px}
+#app .rain{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:16px 18px;margin:0 0 22px;border-left:4px solid var(--primary-ink);scroll-margin-top:130px}
 #app .rain .rainhead{display:flex;align-items:center;gap:8px;color:var(--primary-ink)}
 #app .rain .rainhead h3{color:var(--primary-ink);font-size:15.5px}
 #app .rain .rainhead svg{width:18px;height:18px}
 #app .rainlist{display:grid;gap:10px;margin-top:10px}
-#app .rainitem{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:start;padding:10px 12px;border-radius:var(--r-sm);background:var(--bg)}
-#app .rainitem b{font-size:14.5px}
-#app .rainitem p{grid-column:1/-1;font-size:12.5px;color:var(--ink-2);line-height:1.65}
+#app .rainhead{justify-content:space-between;flex-wrap:wrap}
+#app .raincards{display:grid;gap:12px;margin-top:12px}
+#app .rcard{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:grid;grid-template-columns:1fr;align-items:stretch}
+#app .rc-img{width:100%;height:150px;object-fit:cover;display:block;background:var(--surface-2)}
+#app .rc-body{padding:12px 12px 10px;min-width:0}
+#app .rc-body h3{font:700 15.5px/1.35 var(--sans);margin:0 0 4px}
+#app .rc-desc{font-size:13px;color:var(--ink-2);line-height:1.6}
+#app .rc-meta{display:flex;flex-direction:column;gap:5px;margin-top:8px}
+#app .rc-meta>span{display:flex;align-items:flex-start;gap:6px;font-size:13px;font-weight:650;color:var(--ink);line-height:1.45}
+#app .rc-meta svg{width:15px;height:15px;flex-shrink:0;margin-top:2px;color:var(--accent)}
+#app .rc-meta small{display:inline;margin-left:4px;font-weight:500;color:var(--quiet);font-size:12px}
+#app .rc-note{margin-top:6px!important;font-size:12px;color:var(--quiet);line-height:1.55}
+#app .rc-foot{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:8px}
+#app .rc-credit{font-size:11px;color:var(--quiet);margin-left:auto}
+#app .rc-credit a{text-decoration:underline;text-underline-offset:2px}
 /* itinerary layout */
 #app .workspace{display:flex;flex-direction:column;gap:22px}
 #app .sidebar{display:flex;flex-direction:column;gap:14px}
@@ -345,6 +357,7 @@ body{margin:0;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antia
 #app .plantoggle button svg{width:17px;height:17px}
 #app .plantoggle .active{background:var(--surface);color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.16)}
 #app .plantoggle .active.rainon{background:#2f6db5;color:#fff}
+#app .rainview{padding-top:4px}
 #app .rainview .rain{border-left:0;border-top:4px solid #2f6db5}
 #app .rainintro{margin-top:6px!important;font-size:13px;color:var(--ink-2)}
 #app .tlhead{margin:4px 0 12px}
@@ -443,7 +456,10 @@ body{margin:0;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antia
 /* larger screens */
 @media(min-width:720px){
   #app .plantoggle{max-width:420px;top:70px}
-  #app .rainview{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
+  #app .rainview{display:block}
+  #app .raincards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #app .rcard{grid-template-columns:140px minmax(0,1fr)}
+  #app .rc-img{width:140px;min-height:140px;max-height:240px}
   #app{--pad:36px}
   #app .wordmark{font-size:20px;letter-spacing:.14em}
   #app .version{font-size:11px;letter-spacing:.08em}
@@ -469,7 +485,7 @@ body{margin:0;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antia
   #app .areachips{margin:0 0 14px;padding:0;flex-wrap:wrap;overflow:visible}
   #app .supplygrid{grid-template-columns:repeat(2,minmax(0,1fr))}
   #app .daygrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-  #app .rainlist{grid-template-columns:repeat(2,minmax(0,1fr))}
+
   #app .modal{padding:26px}
   #app .notice{margin:0 var(--pad) 12px}
   #app footer.tabbar{bottom:16px;width:auto;max-width:none;border:1px solid var(--line);border-radius:999px;padding:6px;gap:2px;box-shadow:var(--shadow-lg)}
@@ -524,7 +540,7 @@ body{margin:0;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antia
 </style></head><body><div id="app">
 <header class="brand"><div class="brandmark"><div class="wordmark">KYUSHU 2027</div><div class="eyebrow">FAMILY ROAD TRIP</div></div><div class="brandside"><div class="version">2027.01.16 — 01.24<br>9 DAYS · FAMILY ROAD TRIP</div><button class="themebtn" type="button" aria-label="切換主題"></button></div></header>
 <main id="k-content"></main><div class="toast" role="status" aria-live="polite" hidden></div><footer class="tabbar"></footer>
-<div class="notice">V16 互動原型 · Day 2 為完整範本，其餘日期為草稿；Day 8、Day 9 依 V6 行程補入。地圖以 Google Maps 顯示整日路線，車程僅供參考。停車費、行車方向與補給資訊出發前待核實。<details><summary>圖片與資料來源</summary><ul><li>封面、Day 2、太宰府天滿宮：<a href="https://www.dazaifutenmangu.or.jp/" target="_blank" rel="noopener">太宰府天滿宮官方網站</a></li><li>九州國立博物館：<a href="https://www.kyuhaku.jp/" target="_blank" rel="noopener">九州國立博物館官方網站</a></li><li>Day 1 博多站：<a href="https://commons.wikimedia.org/wiki/File:Hakata_Station_20180306.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 3 武雄溫泉樓門：<a href="https://commons.wikimedia.org/wiki/File:Takeo_Onsen_Romon_20230510.jpg" target="_blank" rel="noopener">Viy4092</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 4 有田 陶山神社：<a href="https://commons.wikimedia.org/wiki/File:Tozan_Shrine01.jpg" target="_blank" rel="noopener">STA3816</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>（已縮圖）</li><li>Day 5 豪斯登堡：<a href="https://commons.wikimedia.org/wiki/File:200320_Huis_Ten_Bosch_Sasebo_Nagasaki_pref_Japan04s3.jpg" target="_blank" rel="noopener">663highland</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/2.5" target="_blank" rel="noopener">CC BY 2.5</a>（已縮圖）</li><li>Day 6 小倉城：<a href="https://commons.wikimedia.org/wiki/File:Kokura_Castle_2024-09-04.jpg" target="_blank" rel="noopener">Stjepko Krehula</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>（已縮圖）</li><li>Day 7 門司港站：<a href="https://commons.wikimedia.org/wiki/File:Mojiko_Station_20190831.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 8 櫛田神社：<a href="https://commons.wikimedia.org/wiki/File:Torii_and_Romon_Gate_of_Kushida_Shrine_2.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 9 福岡機場國際線航廈：<a href="https://commons.wikimedia.org/wiki/File:Fukuoka_Airport_International_Passenger_Term_Bldg_The_WSW_side_Aoki_Hakata-ku_Fukuoka_20250318_162120.jpg" target="_blank" rel="noopener">Hirho</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>（已縮圖）</li><li>飯店照片：<a href="https://www.gardenhotels.co.jp/fukuoka-gion/" target="_blank" rel="noopener">三井花園飯店福岡祇園</a>、<a href="https://kamenoi-hotels.com/yanagawa/" target="_blank" rel="noopener">龜之井飯店柳川</a>、<a href="https://www.h-sakura.com/ureshino/" target="_blank" rel="noopener">櫻花飯店嬉野</a>（含館內晚餐照片）、<a href="https://www.nikko-htb.co.jp/" target="_blank" rel="noopener">豪斯登堡日航飯店</a>、<a href="https://hotel-iori.com/" target="_blank" rel="noopener">Hotel Iori</a> 各官方網站（已縮圖）</li><li>季楽本店：<a href="https://kira.saga-ja.jp/honten/" target="_blank" rel="noopener">季楽官方網站</a>；ろくろ座：<a href="https://www.arita.jp/experience/post_12.html" target="_blank" rel="noopener">有田觀光協會官方網站</a></li><li>佐賀牛示意圖：<a href="https://commons.wikimedia.org/wiki/File:Saga_beef.jpg" target="_blank" rel="noopener">Masahiko Satoh</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>（已縮圖）</li><li>附近店家：© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors（ODbL）</li><li>圖示：<a href="https://lucide.dev/license" target="_blank" rel="noopener">Lucide</a>（ISC）</li></ul></details></div>
+<div class="notice">V17 互動原型 · Day 2 為完整範本，其餘日期為草稿；Day 8、Day 9 依 V6 行程補入。地圖以 Google Maps 顯示整日路線，車程僅供參考。停車費、行車方向與補給資訊出發前待核實。<details><summary>圖片與資料來源</summary><ul><li>封面、Day 2、太宰府天滿宮：<a href="https://www.dazaifutenmangu.or.jp/" target="_blank" rel="noopener">太宰府天滿宮官方網站</a></li><li>九州國立博物館：<a href="https://www.kyuhaku.jp/" target="_blank" rel="noopener">九州國立博物館官方網站</a></li><li>Day 1 博多站：<a href="https://commons.wikimedia.org/wiki/File:Hakata_Station_20180306.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 3 武雄溫泉樓門：<a href="https://commons.wikimedia.org/wiki/File:Takeo_Onsen_Romon_20230510.jpg" target="_blank" rel="noopener">Viy4092</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 4 有田 陶山神社：<a href="https://commons.wikimedia.org/wiki/File:Tozan_Shrine01.jpg" target="_blank" rel="noopener">STA3816</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>（已縮圖）</li><li>Day 5 豪斯登堡：<a href="https://commons.wikimedia.org/wiki/File:200320_Huis_Ten_Bosch_Sasebo_Nagasaki_pref_Japan04s3.jpg" target="_blank" rel="noopener">663highland</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/2.5" target="_blank" rel="noopener">CC BY 2.5</a>（已縮圖）</li><li>Day 6 小倉城：<a href="https://commons.wikimedia.org/wiki/File:Kokura_Castle_2024-09-04.jpg" target="_blank" rel="noopener">Stjepko Krehula</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>（已縮圖）</li><li>Day 7 門司港站：<a href="https://commons.wikimedia.org/wiki/File:Mojiko_Station_20190831.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 8 櫛田神社：<a href="https://commons.wikimedia.org/wiki/File:Torii_and_Romon_Gate_of_Kushida_Shrine_2.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 9 福岡機場國際線航廈：<a href="https://commons.wikimedia.org/wiki/File:Fukuoka_Airport_International_Passenger_Term_Bldg_The_WSW_side_Aoki_Hakata-ku_Fukuoka_20250318_162120.jpg" target="_blank" rel="noopener">Hirho</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>（已縮圖）</li><li>飯店照片：<a href="https://www.gardenhotels.co.jp/fukuoka-gion/" target="_blank" rel="noopener">三井花園飯店福岡祇園</a>、<a href="https://kamenoi-hotels.com/yanagawa/" target="_blank" rel="noopener">龜之井飯店柳川</a>、<a href="https://www.h-sakura.com/ureshino/" target="_blank" rel="noopener">櫻花飯店嬉野</a>（含館內晚餐照片）、<a href="https://www.nikko-htb.co.jp/" target="_blank" rel="noopener">豪斯登堡日航飯店</a>、<a href="https://hotel-iori.com/" target="_blank" rel="noopener">Hotel Iori</a> 各官方網站（已縮圖）</li><li>季楽本店：<a href="https://kira.saga-ja.jp/honten/" target="_blank" rel="noopener">季楽官方網站</a>；ろくろ座：<a href="https://www.arita.jp/experience/post_12.html" target="_blank" rel="noopener">有田觀光協會官方網站</a></li><li>佐賀牛示意圖：<a href="https://commons.wikimedia.org/wiki/File:Saga_beef.jpg" target="_blank" rel="noopener">Masahiko Satoh</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>（已縮圖）</li><li>附近店家：© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors（ODbL）</li><li>圖示：<a href="https://lucide.dev/license" target="_blank" rel="noopener">Lucide</a>（ISC）</li></ul></details></div>
 <div class="overlay" hidden></div></div>
 <script>
 const SUPPLY={"gion": [{"cat": "超商", "name": "セブン-イレブン", "dist": 37, "lat": 33.590141, "lon": 130.413215, "note": ""}, {"cat": "超商", "name": "セブン-イレブン", "dist": 179, "lat": 33.58875, "lon": 130.414078, "note": ""}, {"cat": "超市", "name": "マックスバリュ", "dist": 302, "lat": 33.592017, "lon": 130.411034, "note": "OSM 標示 24 小時"}, {"cat": "超市", "name": "ボンラパス タンブル", "dist": 535, "lat": 33.589036, "lon": 130.419133, "note": ""}, {"cat": "便當", "name": "ほっともっと", "dist": 217, "lat": 33.591713, "lon": 130.415184, "note": "外帶便當連鎖"}, {"cat": "餐廳", "name": "桐壺", "dist": 182, "lat": 33.589602, "lon": 130.415335, "note": "日式料理"}, {"cat": "餐廳", "name": "牧のうどん 博多バスターミナル店", "dist": null, "q": "牧のうどん 博多バスターミナル店", "note": "V6 行程建議（D1 晚餐）"}, {"cat": "餐廳", "name": "博多もつ鍋 おおやま", "dist": null, "q": "博多もつ鍋 おおやま 博多", "note": "V6 行程建議（D1 晚餐）"}], "iori": [{"cat": "超商", "name": "ファミリーマート", "dist": 191, "lat": 33.582334, "lon": 130.425445, "note": ""}, {"cat": "超商", "name": "デイリーヤマザキ", "dist": 193, "lat": 33.585615, "lon": 130.425603, "note": ""}, {"cat": "超市", "name": "マルショク", "dist": 201, "lat": 33.582306, "lon": 130.424087, "note": ""}, {"cat": "超市", "name": "サニー", "dist": 262, "lat": 33.582019, "lon": 130.426427, "note": ""}, {"cat": "便當", "name": "ほっともっと", "dist": 243, "lat": 33.583923, "lon": 130.427501, "note": "外帶便當連鎖"}, {"cat": "餐廳", "name": "葉隠うどん", "dist": 47, "lat": 33.583609, "lon": 130.424652, "note": "烏龍麵"}, {"cat": "餐廳", "name": "博多一双", "dist": 265, "lat": 33.586366, "lon": 130.42511, "note": "豚骨拉麵"}, {"cat": "餐廳", "name": "とんかつ大将", "dist": 247, "lat": 33.581828, "lon": 130.424264, "note": "炸豬排"}], "dazaifu": [{"cat": "超商", "name": "セブン-イレブン", "dist": 193, "lat": 33.522646, "lon": 130.533878, "note": ""}, {"cat": "超商", "name": "ローソン", "dist": 438, "lat": 33.51974, "lon": 130.531202, "note": ""}, {"cat": "餐廳", "name": "寺田屋", "dist": 239, "lat": 33.519632, "lon": 130.534152, "note": "表參道日式餐飲"}, {"cat": "餐廳", "name": "中村屋", "dist": 251, "lat": 33.519663, "lon": 130.533848, "note": "表參道日式餐飲"}, {"cat": "餐廳", "name": "かさの家", "dist": 295, "lat": 33.519395, "lon": 130.533485, "note": "表參道梅枝餅・餐飲"}], "yanagawa": [{"cat": "超商", "name": "ファミリーマート", "dist": 278, "lat": 33.156112, "lon": 130.403408, "note": ""}, {"cat": "超商", "name": "セブン-イレブン", "dist": 422, "lat": 33.159369, "lon": 130.403752, "note": ""}, {"cat": "超市", "name": "マルマツ", "dist": 716, "lat": 33.15123, "lon": 130.404554, "note": ""}, {"cat": "超市", "name": "マルキョウ", "dist": 909, "lat": 33.148575, "lon": 130.401449, "note": ""}, {"cat": "餐廳", "name": "うなぎ屋本店", "dist": 300, "lat": 33.158782, "lon": 130.398446, "note": "柳川鰻魚蒸籠飯"}, {"cat": "餐廳", "name": "楠川", "dist": 314, "lat": 33.15878, "lon": 130.398218, "note": "柳川鰻魚蒸籠飯"}, {"cat": "餐廳", "name": "本城ラーメン", "dist": 354, "lat": 33.159657, "lon": 130.399082, "note": "拉麵"}], "ureshino": [{"cat": "超商", "name": "ローソン", "dist": 233, "lat": 33.098127, "lon": 129.983045, "note": ""}, {"cat": "超市", "name": "マルキョウ嬉野店", "dist": 547, "lat": 33.099725, "lon": 129.990869, "note": ""}, {"cat": "餐廳", "name": "宗庵 よこ長", "dist": 197, "lat": 33.096992, "lon": 129.983588, "note": "嬉野溫泉湯豆腐（OSM：週三休）"}, {"cat": "餐廳", "name": "ジョイフル", "dist": 199, "lat": 33.098188, "lon": 129.983439, "note": "家庭餐廳"}], "htb": [{"cat": "超商", "name": "ニューヤマザキデイリーストア", "dist": 150, "lat": 33.089762, "lon": 129.790563, "note": ""}, {"cat": "超商", "name": "ファミリーマート", "dist": 392, "lat": 33.08961, "lon": 129.793156, "note": ""}, {"cat": "餐廳", "name": "リンガーハット", "dist": 349, "lat": 33.089781, "lon": 129.792699, "note": "長崎強棒麵連鎖"}, {"cat": "餐廳", "name": "ペッパーランチ", "dist": 463, "lat": 33.085695, "lon": 129.789496, "note": "鐵板牛排飯"}]};
@@ -561,17 +577,136 @@ const routes={
 const ADDED={8:'Day 8 依 V6 行程方案 A 補入（另可選門司港半日）。',9:'Day 9 依 V6 行程補入：08:00 前到機場。'};
 const DAYIMG=[null,'day-1.jpg','day-2.jpg','day-3.jpg','day-4.jpg','day-5.jpg','day-6.jpg','day-7.jpg','day-8.jpg','day-9.jpg'];
 const OFFICIAL_D2={artist:'太宰府天滿宮官方網站',page:'https://www.dazaifutenmangu.or.jp/',license:'官方照片'};
+const R=(o)=>o;
 const rain={
- 1:[{n:'JR 博多城・AMU PLAZA 博多',d:'博多站直結的大型商場，晚餐與隔日早餐採買都能在室內完成。',u:'https://www.jrhakatacity.com/'}],
- 2:[{n:'九州國立博物館',d:'原行程已列入，室內展館；週一休館，9:30–17:00。',u:'https://www.kyuhaku.jp/'},{n:'柳川 御花（立花家史料館）',d:'柳川藩主立花家的宅邸與史料館，室內參觀為主。',u:'https://ohana.co.jp/'}],
- 3:[{n:'武雄市圖書館・歷史資料館',d:'原行程已列入，室內；V6 記載 9:00–21:00、年中無休。',u:'https://takeo.city-library.jp/guide/entry-757.html'},{n:'提早入住嬉野櫻花飯店',d:'15:00 後可入住，當晚已含晚餐，可在館內休息。',u:''}],
- 4:[{n:'佐賀縣立九州陶瓷文化館',d:'有田的陶瓷博物館，室內展示有田燒歷史。',u:'https://saga-museum.jp/ceramic/'},{n:'佐賀縣立宇宙科學館',d:'武雄的室內科學館，適合孩子；週一休，1/19（二）可去。',u:'https://www.yumeginga.jp/'}],
- 5:[{n:'九十九島水族館 海きらら',d:'佐世保的室內水族館，從豪斯登堡開車可達。',u:'https://www.umikirara.jp/'}],
- 6:[{n:'北九州市立自然史・歷史博物館（いのちのたび博物館）',d:'小倉附近的大型室內博物館，有恐龍展示。',u:'https://www.kmnh.jp/'},{n:'小倉城天守閣',d:'天守內部為室內展示，可避雨參觀。',u:''}],
- 7:[{n:'九州鐵道紀念館',d:'門司港站旁，室內有歷代車輛與鐵道展示。',u:'https://www.k-rhm.jp/'},{n:'LaLaport 福岡',d:'原行程已列入，大型室內購物中心。',u:''}],
- 8:[{n:'福岡市科學館',d:'室內科學館與天象儀；週二休，1/23（六）可去。',u:'https://www.fukuokacity-kagakukan.jp/'},{n:'博多運河城',d:'室內為主的購物娛樂中心，離庵飯店不遠。',u:'https://canalcity.co.jp/'}],
- 9:[{n:'福岡機場國際線航廈',d:'提早到航廈，在室內用早餐、買伴手禮。',u:'https://www.fukuoka-airport.jp/'}]
+ 1:[
+  {n:'キャナルシティ博多（運河城）',img:'rain-canal.jpg',src:'そらみみ',srcu:'https://commons.wikimedia.org/wiki/File:Canal_City_Hakata_at_dusk_20170929.jpg',lic:'CC BY-SA 4.0',
+   desc:'博多站步行可到的大型室內購物中心，有商店、餐廳和電影院。1/16 約 21:15 才入住，商店多已打烊，可趕餐廳時段。',
+   from:'三井花園飯店福岡祇園',min:1,hours:'商店 10:00–21:00，餐廳 11:00–23:00（部分店鋪不同）',note:'年中無休。',
+   q:'キャナルシティ博多',u:'https://canalcity.co.jp/service/index'},
+  {n:'JR 博多シティ・アミュプラザ博多',img:'rain-hakatacity.jpg',src:'ぱちょぴ',srcu:'https://commons.wikimedia.org/wiki/File:JR_Hakata_City_2011_Jan.jpg',lic:'CC BY-SA 3.0',
+   desc:'博多站直結的室內商場。抵達當晚商店多半已關，站內餐廳（くうてん、DEITOS めん街道、ほろよい通り）較晚還開，也可買隔日早餐。',
+   from:'三井花園飯店福岡祇園',min:4,hours:'AMU 商店 10:00–20:00；くうてん 11:00–22:00（最晚至 24:00）；DEITOS 食堂最晚約 23:00–24:00',note:'各店時間可能不同。',
+   q:'JR博多シティ',u:'https://www.jrhakatacity.com/information/hours/'}
+ ],
+ 2:[
+  {n:'九州國立博物館',img:'kyuhaku.jpg',src:'九州國立博物館官方網站',srcu:'https://www.kyuhaku.jp/',lic:'官方照片',
+   desc:'太宰府天滿宮旁邊的室內大館，原行程已列入，下雨可多留一些時間。',
+   from:'太宰府天滿宮',min:5,hours:'9:30–17:00（入館至 16:30）',note:'週一休館。1/17（日）依現行規定開館。特別展「卑弥呼の鏡」已於 1/11 結束。',
+   q:'九州国立博物館',u:'https://www.kyuhaku.jp/visit/visit_top.html'},
+  {n:'九州歷史資料館',img:'rain-kyureki.jpg',src:'そらみみ',srcu:'https://commons.wikimedia.org/wiki/File:Kyushu_Historical_Museum_20160515.JPG',lic:'CC BY-SA 4.0',
+   desc:'小郡市的縣立歷史博物館，室內常設展介紹九州歷史，適合避雨。',
+   from:'太宰府天滿宮',min:20,hours:'9:30–16:30（入館至 16:00）',note:'週一休；年末年始 12/28–1/4 休。1/17（日）依現行規定開館。',
+   q:'九州歴史資料館 小郡市三沢5208-3',u:'https://kyureki.jp/outline/date'},
+  {n:'柳川藩主立花邸 御花',img:'rain-ohana.jpg',src:'江戸村のとくぞう',srcu:'https://commons.wikimedia.org/wiki/File:Yanagawa_Ohana_200223a.jpg',lic:'CC BY-SA 4.0',
+   desc:'柳川藩主立花家的庭園、大廣間、西洋館與史料館，室內參觀為主。',
+   from:'龜之井飯店柳川',min:3,hours:'通常 10:00–16:00（15:40 前入館）',note:'休館日按月公告。2027 年 1 月行事曆查詢時（2026/11）尚未公布，出發前請看官網「営業のお知らせ」。',
+   q:'柳川藩主立花邸 御花',u:'https://ohana.co.jp/about/visit/'},
+  {n:'北原白秋生家・記念館',img:'rain-hakushu.jpg',src:'そらみみ',srcu:'https://commons.wikimedia.org/wiki/File:Memorial_Museum_of_Kitahara_Hakushu_20141111.JPG',lic:'CC BY-SA 4.0',
+   desc:'詩人北原白秋在柳川的生家與記念館，室內展示生平與作品。',
+   from:'龜之井飯店柳川',min:3,hours:'9:00–17:00（入館至 16:30）',note:'12/29–1/3 休；1/17（日）依現行規定開館。',
+   q:'北原白秋記念館 柳川市沖端町55-1',u:'https://www.hakushu.or.jp/'}
+ ],
+ 3:[
+  {n:'武雄市圖書館',img:'rain-takeolib.jpg',src:'Asturio Cantabrio',srcu:'https://commons.wikimedia.org/wiki/File:Takeo_City_Library_exterior_ac_(1).jpg',lic:'CC BY-SA 4.0',
+   desc:'著名的室內圖書館，原行程已列入。同棟的歷史資料館週一休館，這天只逛圖書館。',
+   from:'櫻花飯店-嬉野',min:20,hours:'9:00–21:00',note:'圖書館年中無休（災害等除外）。歷史資料館週一休，1/18 不開放。',
+   q:'武雄市図書館',u:'https://takeo.city-library.jp/guide/'},
+  {n:'うれしの茶交流館 チャオシル',img:'rain-chaos.jpg',src:'うれしの茶交流館チャオシル公式サイト',srcu:'https://chaoshiru.com/',lic:'官方照片',
+   desc:'介紹嬉野茶歷史與製茶過程的室內交流館，離飯店很近。',
+   from:'櫻花飯店-嬉野',min:4,hours:'9:00–17:00（第 2、第 4 個週一開至 15:00）',note:'週二休（遇祝則翌平日休）。1/18 是 1 月第 3 個週一，依現行規定開至 17:00。',
+   q:'うれしの茶交流館チャオシル',u:'https://chaoshiru.com/learn/'},
+  {n:'志田燒之里博物館',img:'rain-shida.jpg',src:'STA3816',srcu:'https://commons.wikimedia.org/wiki/File:Shida-Yaki_Pottery_Factory_Museum_01.jpg',lic:'CC BY-SA 4.0',
+   desc:'把舊製磁工廠保存下來的室內博物館，可看志田燒與生產過程（體驗需另預約）。',
+   from:'櫻花飯店-嬉野',min:19,hours:'9:00–17:00',note:'週三與年末年始休。1/18（一）依現行規定開館。',
+   q:'志田焼の里博物館 嬉野市塩田町久間乙3073',u:'https://www.city.ureshino.lg.jp/kanko/shidayaki/shidayaki.html'}
+ ],
+ 4:[
+  {n:'佐賀縣立九州陶瓷文化館',img:'rain-ceramic.jpg',src:'Pekachu',srcu:'https://commons.wikimedia.org/wiki/File:Kyushu_Ceramic_Museum_front.JPG',lic:'CC BY-SA 4.0',
+   desc:'有田的陶瓷博物館，室內展示有田燒歷史，離有田站很近。',
+   from:'有田站',min:3,hours:'9:00–17:00（入館至 16:30）',note:'週一休（遇祝則翌平日休），12/29–1/3 休。1/19（二）依現行規定開館。',
+   q:'佐賀県立九州陶磁文化館',u:'https://saga-museum.jp/ceramic/information/'},
+  {n:'佐賀縣立宇宙科學館（ゆめぎんが）',img:'rain-yumeginga.jpg',src:'ハポニアラ',srcu:'https://commons.wikimedia.org/wiki/File:佐賀県立宇宙科学館玄関.jpg',lic:'CC BY 4.0',
+   desc:'武雄的室內科學館與天文館，適合孩子。官網行事曆寫 1/18 休館，1/19 可去。',
+   from:'櫻花飯店-嬉野',min:20,hours:'平日 9:15–17:15（入場至閉館 30 分前）',note:'週一休（遇祝則翌日）。2026 年度冬展頁列出 2027/1/1、1/12、1/18、1/25 休；1/19（二）開館。',
+   q:'佐賀県立宇宙科学館',u:'https://www.yumeginga.jp/users_guide/'},
+  {n:'志田燒之里博物館',img:'rain-shida.jpg',src:'STA3816',srcu:'https://commons.wikimedia.org/wiki/File:Shida-Yaki_Pottery_Factory_Museum_01.jpg',lic:'CC BY-SA 4.0',
+   desc:'舊製磁工廠改成的室內博物館。週三休，1/19（二）可去。',
+   from:'櫻花飯店-嬉野',min:19,hours:'9:00–17:00',note:'週三與年末年始休。',
+   q:'志田焼の里博物館 嬉野市塩田町久間乙3073',u:'https://www.city.ureshino.lg.jp/kanko/shidayaki/shidayaki.html'}
+ ],
+ 5:[
+  {n:'九十九島水族館 海きらら',img:'rain-umikirara.jpg',src:'Atsasebo',srcu:'https://commons.wikimedia.org/wiki/File:Saikai_Pearlsea_Umikirara.jpg',lic:'CC BY-SA 3.0',
+   desc:'佐世保的室內水族館，看九十九島的海棲生物。',
+   from:'豪斯登堡日航飯店',min:27,hours:'11 月至 2 月 9:00–17:00（入館至 16:30）',note:'年中無休。',
+   q:'九十九島水族館 海きらら',u:'https://www.umikirara.jp/information/information_480/'},
+  {n:'させぼ五番街',img:'rain-gobangai.jpg',src:'そらみみ',srcu:'https://commons.wikimedia.org/wiki/File:View_of_Sasebo_5th_Avenue_Shopping_Mall.jpg',lic:'CC BY-SA 4.0',
+   desc:'佐世保港旁的室內購物中心，有商店、書店和餐廳。',
+   from:'豪斯登堡日航飯店',min:19,hours:'商店・服務 10:00–20:00，餐廳 11:00–22:00，超市 9:00–22:00',note:'部分店鋪時間不同。',
+   q:'させぼ五番街',u:'https://sasebo-5bangai.com/facility/'}
+ ],
+ 6:[
+  {n:'小倉城天守閣',img:'rain-kokura.jpg',src:'Stjepko Krehula',srcu:'https://commons.wikimedia.org/wiki/File:Kokura_Castle_2024-09-04.jpg',lic:'CC BY 4.0',
+   desc:'天守內部為室內展示，可避雨參觀。原行程已列入。',
+   from:'小倉城（當日主要停靠點）',min:0,hours:'11 月至 3 月 9:00–19:00（入場至閉城 30 分前）',note:'年中無休。1/21 住宿尚未訂，車程以小倉城為起點。',
+   q:'小倉城',u:'https://kokura-castle.jp/information/'},
+  {n:'松本清張記念館',img:'rain-seicho.jpg',src:'663highland',srcu:'https://commons.wikimedia.org/wiki/File:140721_Matsumoto_Seicho_Memorial_Museum_Kitakyushu_Japan01bs3.jpg',lic:'CC BY 2.5',
+   desc:'就在小倉城旁邊，室內展示作家松本清張的生平與作品。',
+   from:'小倉城',min:1,hours:'9:30–18:00（入館至 17:30）',note:'週一休；年末年始 12/29–1/3 休。官網公告 1/14、1/28 為館內整理休，1/21（四）不在此列。',
+   q:'松本清張記念館',u:'https://www.seicho-mm.jp/guide/'},
+  {n:'北九州市漫畫博物館',img:'rain-manga.jpg',src:'Bmazerolles',srcu:'https://commons.wikimedia.org/wiki/File:Kitakyushu_Manga_Museum_entrance.jpg',lic:'CC BY 4.0',
+   desc:'小倉站附近あるある City 5–6 樓的室內漫畫博物館，有常設展和閱覽區。',
+   from:'小倉城',min:3,hours:'11:00–19:00（入館至 18:30）',note:'週二休（遇祝則翌日）、年末年始與館內整理日休。1/21（四）依現行規定開館。',
+   q:'北九州市漫画ミュージアム',u:'https://www.ktqmm.jp/about/outline'},
+  {n:'いのちのたび博物館',img:'rain-inochi.jpg',src:'ノボホショコロトソ',srcu:'https://commons.wikimedia.org/wiki/File:Kitakyushu_Museum_of_Natural_History_%26_Human_History_20240313.jpg',lic:'CC BY 4.0',
+   desc:'北九州市立自然史・歷史博物館，有大型恐龍骨架與自然、歷史常設展，適合孩子。',
+   from:'小倉城',min:9,hours:'9:00–17:00（入館至 16:30）',note:'原則每天開館；年末年始與每年 6 月下旬害蟲防治休館。1/21 不在已知休館範圍，出發前再看官網。',
+   q:'いのちのたび博物館',u:'https://www.kmnh.jp/'}
+ ],
+ 7:[
+  {n:'九州鐵道紀念館',img:'rain-rail.jpg',src:'そらみみ',srcu:'https://commons.wikimedia.org/wiki/File:Kyushu_Railway_History_Museum_20170811.jpg',lic:'CC BY-SA 4.0',
+   desc:'門司港站旁，室內有歷代車輛與鐵道展示。',
+   from:'門司港站',min:2,hours:'9:00–17:00（入館至 16:30）',note:'無固定公休日，一年約有維修休館。官網指南頁未列出 1/22 休館，出發前請再看新着情報。',
+   q:'九州鉄道記念館',u:'https://www.k-rhm.jp/guide/'},
+  {n:'關門海峽博物館',img:'rain-kanmon.jpg',src:'ゴーヤーズ',srcu:'https://commons.wikimedia.org/wiki/File:Kanmon_Strait_Museum.jpg',lic:'CC BY-SA 4.0',
+   desc:'門司港的體驗型室內博物館，介紹海峽的歷史、文化和自然；另有室內復古街。',
+   from:'門司港站',min:1,hours:'9:00–17:00（入館至 16:30）',note:'年 5 日不定休。官方已公告下次維修休館為 2027/1/12，1/22（五）不在名單內。',
+   q:'関門海峡ミュージアム',u:'https://mojiko-retoro9.jp/spot/kanmon_kaikyo_museum/'},
+  {n:'キャナルシティ博多（運河城）',img:'rain-canal.jpg',src:'そらみみ',srcu:'https://commons.wikimedia.org/wiki/File:Canal_City_Hakata_at_dusk_20170929.jpg',lic:'CC BY-SA 4.0',
+   desc:'下午回到博多後可去的室內購物中心，離庵飯店很近。',
+   from:'庵飯店',min:4,hours:'商店 10:00–21:00，餐廳 11:00–23:00',note:'年中無休。',
+   q:'キャナルシティ博多',u:'https://canalcity.co.jp/service/index'},
+  {n:'JR 博多シティ・アミュプラザ博多',img:'rain-hakatacity.jpg',src:'ぱちょぴ',srcu:'https://commons.wikimedia.org/wiki/File:JR_Hakata_City_2011_Jan.jpg',lic:'CC BY-SA 3.0',
+   desc:'博多站直結的室內商場，逛街、用餐和伴手禮都能在室內完成。',
+   from:'庵飯店',min:4,hours:'AMU 商店 10:00–20:00；餐廳樓層較晚（くうてん至 22:00，部分更晚）',note:'各店時間可能不同。',
+   q:'JR博多シティ',u:'https://www.jrhakatacity.com/information/hours/'}
+ ],
+ 8:[
+  {n:'福岡市科學館',img:'rain-science.jpg',src:'SuFlyer',srcu:'https://commons.wikimedia.org/wiki/File:Fukuoka_City_Science_Museum_Entrance.jpg',lic:'CC0',
+   desc:'六本松的室內科學館與圓頂星象廳，適合孩子。',
+   from:'庵飯店',min:7,hours:'全館 9:30–21:30，各樓層不同（常設展等請看出發前官網）',note:'週二與 12/28–1/1 休。1/23（六）依現行規定開館。',
+   q:'福岡市科学館',u:'https://www.fukuokacity-kagakukan.jp/use/'},
+  {n:'福岡亞洲美術館',img:'rain-faam.jpg',src:'そらみみ',srcu:'https://commons.wikimedia.org/wiki/File:Hakatagawa_River_and_Fukuoka_Asian_Art_Museum.JPG',lic:'CC BY-SA 4.0',
+   desc:'位於博多河畔 Riverain 7–8 樓，室內常設與策劃展介紹亞洲現代美術。',
+   from:'庵飯店',min:4,hours:'展覽 9:30–18:00（週五、週六至 20:00）；入室至閉室 30 分前',note:'週三休（遇祝則翌平日），12/26–1/1 休。1/23（六）開至 20:00。',
+   q:'福岡アジア美術館',u:'https://faam.city.fukuoka.lg.jp/guidance/guide/'},
+  {n:'キャナルシティ博多（運河城）',img:'rain-canal.jpg',src:'そらみみ',srcu:'https://commons.wikimedia.org/wiki/File:Canal_City_Hakata_at_dusk_20170929.jpg',lic:'CC BY-SA 4.0',
+   desc:'室內購物娛樂中心，離庵飯店很近。',
+   from:'庵飯店',min:4,hours:'商店 10:00–21:00，餐廳 11:00–23:00',note:'年中無休。',
+   q:'キャナルシティ博多',u:'https://canalcity.co.jp/service/index'},
+  {n:'JR 博多シティ・アミュプラザ博多',img:'rain-hakatacity.jpg',src:'ぱちょぴ',srcu:'https://commons.wikimedia.org/wiki/File:JR_Hakata_City_2011_Jan.jpg',lic:'CC BY-SA 3.0',
+   desc:'博多站直結的室內商場，晚上最後採買也可以在這裡。',
+   from:'庵飯店',min:4,hours:'AMU 商店 10:00–20:00；餐廳樓層較晚',note:'各店時間可能不同。',
+   q:'JR博多シティ',u:'https://www.jrhakatacity.com/information/hours/'}
+ ],
+ 9:[
+  {n:'福岡機場國際線航廈',img:'day-9.jpg',src:'Hirho',srcu:'https://commons.wikimedia.org/wiki/File:Fukuoka_Airport_International_Passenger_Term_Bldg_The_WSW_side_Aoki_Hakata-ku_Fukuoka_20250318_162120.jpg',lic:'CC BY 4.0',
+   desc:'約 07:00 出發、08:00 前到航廈。這天沒有再排景點；下雨就提早在航廈室內用早餐、買伴手禮。',
+   from:'庵飯店',min:7,hours:'配合航班運作；各商店、餐廳開門時間不一',note:'當天只有這一處實際用得到。商場多 10:00 才開，趕不上再繞去。',
+   q:'福岡空港 国際線旅客ターミナル',u:'https://www.fukuoka-airport.jp/'}
+ ]
 };
+
 const spots=[
  {n:'太宰府天滿宮',day:2,img:'dazaifu-tenmangu.jpg',d:'表參道、梅枝餅與天滿宮參拜。',u:'https://www.dazaifutenmangu.or.jp/'},
  {n:'九州國立博物館',day:2,img:'kyuhaku.jpg',d:'經虹之隧道步行前往；週一休館。',u:'https://www.kyuhaku.jp/'},
@@ -686,7 +821,16 @@ function mapModule(large){const list=routes[S.day],f=S.focus,item=f!=null?list[f
  return `<section class="mapmodule ${large?'maplarge':''}"><div class="mapheading"><h3>${item?'Google Maps · '+esc(item.name):`Day ${S.day} 整日路線`}</h3><p>${item?'目前顯示單一站點':r.length>1?`${r.length} 個停靠點依序連成路線（開車）`:'當日只有一個地點'}</p>${item?`<span class="focuschip">${ic('map-pin')}${esc(item.name)}<button data-focus="-1">回到整日路線</button></span>`:''}</div>
  <iframe title="Google Maps Day ${S.day}" src="${embedUrl(S.day,f)}" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
  <div class="mapfoot"><p class="muted">車程與路線由 Google 即時計算，僅供參考；航班與未定住宿不列入路線。</p><a class="primary" href="${esc(dayDirUrl(S.day))}" target="_blank" rel="noopener">${ic('route')}在 Google 地圖開啟整日路線</a></div></section>`}
-function rainCard(d){return `<section class="rain" id="rain"><div class="rainhead">${ic('umbrella')}<h3>雨天備案 · Day ${d}</h3></div><p class="rainintro">下雨時改去這些室內地點，取代當天的戶外景點；住宿和三餐不變。</p><div class="rainlist">${rain[d].map(x=>`<div class="rainitem"><b>${esc(x.n)}</b>${x.u?`<a class="linkout" href="${esc(x.u)}" target="_blank" rel="noopener">官網${ic('external-link')}</a>`:`<a class="linkout" href="${pin({q:x.n})}" target="_blank" rel="noopener">地圖${ic('external-link')}</a>`}<p>${esc(x.d)}</p></div>`).join('')}</div><p class="muted" style="margin-top:8px;font-size:11.5px">營業日與時間出發前請再到官網確認。</p></section>`}
+function rainCard(d){const list=rain[d]||[];
+ const card=x=>`<article class="rcard"><img class="rc-img" src="assets/${x.img}" alt="${esc(x.n)}" loading="lazy"><div class="rc-body"><h3>${esc(x.n)}</h3><p class="rc-desc">${esc(x.desc)}</p>
+  <div class="rc-meta"><span>${ic('car')}${x.min===0?'就在附近（步行即可）':`開車約 ${x.min} 分（估算）`}<small>從${esc(x.from)}</small></span><span>${ic('clock')}${esc(x.hours)}</span></div>
+  ${x.note?`<p class="rc-note">${esc(x.note)}</p>`:''}
+  <div class="rc-foot"><a class="mplace" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(x.q)}" target="_blank" rel="noopener">${ic('map-pin')}Google 地圖</a>${x.u?`<a class="mplace web" href="${esc(x.u)}" target="_blank" rel="noopener">官網${ic('external-link')}</a>`:''}<span class="rc-credit">照片：<a href="${esc(x.srcu)}" target="_blank" rel="noopener">${esc(x.src)}</a> · ${esc(x.lic)}</span></div>
+ </div></article>`;
+ return `<section class="rain" id="rain"><div class="rainhead">${ic('umbrella')}<h3>雨天備案 · Day ${d}</h3><span class="muted">${list.length} 處室內景點</span></div>
+ <p class="rainintro">下雨時改去這些室內地點，取代當天的戶外行程；住宿和三餐不變。只列開車約 30 分內、且該日依官方資料應開館的地方。車程是 OSRM 路徑估算，實際會受路況影響。</p>
+ <div class="raincards">${list.map(card).join('')}</div>
+ <p class="mealsfoot">營業日、時間與車程出發前請再對官網和地圖。未查到 2027 年當日行事曆的，卡片上已註明。</p></section>`}
 function mealsCard(d){const M=MEALS[d];
  const row=k=>{const m=M[k],[nm,icn]=MEALNAME[k];const sg=m.sugg?(SUPPLY[m.sugg[0]]||[]).filter(x=>m.sugg[1].includes(x.cat)).slice(0,3):[];
   return `<div class="meal ${m.st}"><div class="mealk">${ic(icn)}<span>${nm}</span></div><div class="mealb"><div class="mealt"><b>${esc(m.t)}</b><span class="mtag ${m.st}">${esc(m.l)}</span></div>${m.note?`<p>${esc(m.note)}</p>`:''}${(m.places||[]).length||sg.length?`<div class="mealplaces">${(m.places||[]).map(p=>`<a class="mplace" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.q)}" target="_blank" rel="noopener">${ic('map-pin')}${esc(p.n)}</a>${p.u?`<a class="mplace web" href="${esc(p.u)}" target="_blank" rel="noopener">官網${ic('external-link')}</a>`:''}`).join('')}${sg.map(x=>`<a class="mplace" href="${pin(x)}" target="_blank" rel="noopener">${ic('map-pin')}${esc(x.name)}${x.dist!=null?`<small>${x.dist} m</small>`:''}</a>`).join('')}</div>`:''}</div></div>`};
