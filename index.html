@@ -583,10 +583,38 @@ body{margin:0;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antia
   #app .near-block{margin-left:26px}
 }
 
+/* v21 Arita choose-one + coupon chips */
+#app .coupon-chip{display:inline-flex;align-items:center;padding:3px 9px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);background:transparent;font-size:11px;font-weight:700;letter-spacing:.06em;text-decoration:none;line-height:1.4}
+#app .coupon-chip:hover{background:var(--accent);color:#fff}
+#app .choice-block{margin:0 0 18px;padding:14px 14px 4px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface)}
+#app .choice-head h3{margin:0;font-size:18px}
+#app .choice-head p{margin:6px 0 10px}
+#app .choice-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
+#app .choice-tabs button{flex:1 1 140px;padding:10px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface-2);font-weight:700;font-size:13px}
+#app .choice-tabs button.active{border-color:var(--accent);background:var(--accent);color:#fff}
+#app .choice-grid{display:flex;flex-direction:column;gap:12px}
+#app .choice-pane{border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:var(--surface);opacity:.72}
+#app .choice-pane.is-on{opacity:1;border-color:var(--accent);box-shadow:var(--shadow)}
+#app .choice-label{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 12px 0;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--ink-2)}
+#app .choice-now{padding:2px 8px;border-radius:999px;background:var(--accent);color:#fff;font-size:10px;letter-spacing:.08em}
+#app .choice-pane .hero{margin:8px 10px 12px;box-shadow:none;border:0}
+#app .choice-pane .hero .photocard,#app .choice-pane .hero-img{border-radius:var(--r-md)}
+#app .diy-alts{padding:0 12px 14px}
+#app .diy-alts h4{margin:0 0 4px;font-size:13px}
+#app .diy-row{display:flex;flex-direction:column;gap:10px}
+#app .diy-card{display:flex;gap:10px;padding:8px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--surface-2)}
+#app .diy-card img{width:96px;height:72px;object-fit:cover;border-radius:8px;flex:none;background:var(--surface)}
+#app .diy-card b{font-size:13px;display:block;margin-bottom:2px}
+#app .diy-card p{margin:0 0 4px;font-size:12px;color:var(--ink-2);line-height:1.5}
+@media(min-width:720px){
+  #app .choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+  #app .diy-card img{width:120px;height:88px}
+}
+
 </style></head><body><div id="app">
 <header class="brand"><div class="brandmark"><div class="wordmark">KYUSHU 2027</div><div class="eyebrow">FAMILY ROAD TRIP</div></div><div class="brandside"><div class="version">2027.01.16 — 01.24<br>9 DAYS · FAMILY ROAD TRIP</div><button class="themebtn" type="button" aria-label="切換主題"></button></div></header>
 <main id="k-content"></main><div class="toast" role="status" aria-live="polite" hidden></div><footer class="tabbar"></footer>
-<div class="notice">V20 互動原型 · Day 2 為完整範本，其餘日期為草稿；Day 8、Day 9 依 V6 行程補入。地圖以 Google Maps 顯示整日路線，車程僅供參考。停車費、行車方向與補給資訊出發前待核實。<details><summary>圖片與資料來源</summary><ul><li>封面、Day 2、太宰府天滿宮：<a href="https://www.dazaifutenmangu.or.jp/" target="_blank" rel="noopener">太宰府天滿宮官方網站</a></li><li>九州國立博物館：<a href="https://www.kyuhaku.jp/" target="_blank" rel="noopener">九州國立博物館官方網站</a></li><li>Day 1 博多站：<a href="https://commons.wikimedia.org/wiki/File:Hakata_Station_20180306.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 3 武雄溫泉樓門：<a href="https://commons.wikimedia.org/wiki/File:Takeo_Onsen_Romon_20230510.jpg" target="_blank" rel="noopener">Viy4092</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 4 有田 陶山神社：<a href="https://commons.wikimedia.org/wiki/File:Tozan_Shrine01.jpg" target="_blank" rel="noopener">STA3816</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>（已縮圖）</li><li>Day 5 豪斯登堡：<a href="https://commons.wikimedia.org/wiki/File:200320_Huis_Ten_Bosch_Sasebo_Nagasaki_pref_Japan04s3.jpg" target="_blank" rel="noopener">663highland</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/2.5" target="_blank" rel="noopener">CC BY 2.5</a>（已縮圖）</li><li>Day 6 小倉城：<a href="https://commons.wikimedia.org/wiki/File:Kokura_Castle_2024-09-04.jpg" target="_blank" rel="noopener">Stjepko Krehula</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>（已縮圖）</li><li>Day 7 門司港站：<a href="https://commons.wikimedia.org/wiki/File:Mojiko_Station_20190831.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 8 櫛田神社：<a href="https://commons.wikimedia.org/wiki/File:Torii_and_Romon_Gate_of_Kushida_Shrine_2.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 9 福岡機場國際線航廈：<a href="https://commons.wikimedia.org/wiki/File:Fukuoka_Airport_International_Passenger_Term_Bldg_The_WSW_side_Aoki_Hakata-ku_Fukuoka_20250318_162120.jpg" target="_blank" rel="noopener">Hirho</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>（已縮圖）</li><li>飯店照片：<a href="https://www.gardenhotels.co.jp/fukuoka-gion/" target="_blank" rel="noopener">三井花園飯店福岡祇園</a>、<a href="https://kamenoi-hotels.com/yanagawa/" target="_blank" rel="noopener">龜之井飯店柳川</a>、<a href="https://www.h-sakura.com/ureshino/" target="_blank" rel="noopener">櫻花飯店嬉野</a>（含館內晚餐照片）、<a href="https://www.nikko-htb.co.jp/" target="_blank" rel="noopener">豪斯登堡日航飯店</a>、<a href="https://hotel-iori.com/" target="_blank" rel="noopener">Hotel Iori</a> 各官方網站（已縮圖）</li><li>季楽本店：<a href="https://kira.saga-ja.jp/honten/" target="_blank" rel="noopener">季楽官方網站</a>；ろくろ座：<a href="https://www.arita.jp/experience/post_12.html" target="_blank" rel="noopener">有田觀光協會官方網站</a>；有田銘品館：<a href="https://www.arita.jp/gourmet/post_6.html" target="_blank" rel="noopener">有田觀光協會官方網站</a>；艸窯：<a href="https://www.arita.jp/experience/post_32.html" target="_blank" rel="noopener">有田觀光協會官方網站</a>；Gallery 有田：<a href="https://gallery-arita.co.jp/charm/" target="_blank" rel="noopener">ギャラリー有田官方網站</a>；九州陶瓷文化館：<a href="https://commons.wikimedia.org/wiki/File:Kyushu_Ceramic_Museum_front.JPG" target="_blank" rel="noopener">Pekachu</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>v20 附近推薦與新主景點照片：だざいふ遊園地 Photaro、竈門神社 そらみみ、御船山楽園 STA3816、陶山神社 STA3816、有田ポーセリンパーク mahlervv、針尾送信所 Dyamasan、西海橋 そらみみ、舊門司稅關 Suicasmo、門司港ハイマート そらみみ、出光美術館（門司） Nissy-KITAQ、香椎宮 Saigen Jiro（CC0）、福岡城 Pontafon、福岡市博物館 Nkmr844、魚町銀天街 Asturio Cantabrio、皿倉山夜景 Suicasmo、柳川川下り ブルーノ・プラス、LaLaport Flower Park 入口 Junknote；以上除標示外多為 Wikimedia Commons，授權見各卡片（已縮圖）</li><li>佐賀牛示意圖：<a href="https://commons.wikimedia.org/wiki/File:Saga_beef.jpg" target="_blank" rel="noopener">Masahiko Satoh</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>（已縮圖）</li><li>附近店家：© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors（ODbL）</li><li>圖示：<a href="https://lucide.dev/license" target="_blank" rel="noopener">Lucide</a>（ISC）</li></ul></details></div>
+<div class="notice">V21 互動原型 · Day 2 為完整範本，其餘日期為草稿；Day 8、Day 9 依 V6 行程補入。地圖以 Google Maps 顯示整日路線，車程僅供參考。停車費、行車方向與補給資訊出發前待核實。<details><summary>圖片與資料來源</summary><ul><li>封面、Day 2、太宰府天滿宮：<a href="https://www.dazaifutenmangu.or.jp/" target="_blank" rel="noopener">太宰府天滿宮官方網站</a></li><li>九州國立博物館：<a href="https://www.kyuhaku.jp/" target="_blank" rel="noopener">九州國立博物館官方網站</a></li><li>Day 1 博多站：<a href="https://commons.wikimedia.org/wiki/File:Hakata_Station_20180306.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 3 武雄溫泉樓門：<a href="https://commons.wikimedia.org/wiki/File:Takeo_Onsen_Romon_20230510.jpg" target="_blank" rel="noopener">Viy4092</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 4 有田 陶山神社：<a href="https://commons.wikimedia.org/wiki/File:Tozan_Shrine01.jpg" target="_blank" rel="noopener">STA3816</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>（已縮圖）</li><li>Day 5 豪斯登堡：<a href="https://commons.wikimedia.org/wiki/File:200320_Huis_Ten_Bosch_Sasebo_Nagasaki_pref_Japan04s3.jpg" target="_blank" rel="noopener">663highland</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/2.5" target="_blank" rel="noopener">CC BY 2.5</a>（已縮圖）</li><li>Day 6 小倉城：<a href="https://commons.wikimedia.org/wiki/File:Kokura_Castle_2024-09-04.jpg" target="_blank" rel="noopener">Stjepko Krehula</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>（已縮圖）</li><li>Day 7 門司港站：<a href="https://commons.wikimedia.org/wiki/File:Mojiko_Station_20190831.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 8 櫛田神社：<a href="https://commons.wikimedia.org/wiki/File:Torii_and_Romon_Gate_of_Kushida_Shrine_2.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 9 福岡機場國際線航廈：<a href="https://commons.wikimedia.org/wiki/File:Fukuoka_Airport_International_Passenger_Term_Bldg_The_WSW_side_Aoki_Hakata-ku_Fukuoka_20250318_162120.jpg" target="_blank" rel="noopener">Hirho</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>（已縮圖）</li><li>飯店照片：<a href="https://www.gardenhotels.co.jp/fukuoka-gion/" target="_blank" rel="noopener">三井花園飯店福岡祇園</a>、<a href="https://kamenoi-hotels.com/yanagawa/" target="_blank" rel="noopener">龜之井飯店柳川</a>、<a href="https://www.h-sakura.com/ureshino/" target="_blank" rel="noopener">櫻花飯店嬉野</a>（含館內晚餐照片）、<a href="https://www.nikko-htb.co.jp/" target="_blank" rel="noopener">豪斯登堡日航飯店</a>、<a href="https://hotel-iori.com/" target="_blank" rel="noopener">Hotel Iori</a> 各官方網站（已縮圖）</li><li>季楽本店：<a href="https://kira.saga-ja.jp/honten/" target="_blank" rel="noopener">季楽官方網站</a>；Arita Será：<a href="https://www.arita.gr.jp/" target="_blank" rel="noopener">アリタセラ公式サイト</a>；丸兄商社：<a href="https://www.maru-kei.com/" target="_blank" rel="noopener">丸兄商社公式サイト</a>；幸樂窯：<a href="https://kouraku.jp.net/" target="_blank" rel="noopener">幸楽窯公式サイト</a>；有田銘品館：<a href="https://www.arita.jp/gourmet/post_6.html" target="_blank" rel="noopener">有田觀光協會官方網站</a>；艸窯：<a href="https://www.arita.jp/experience/post_32.html" target="_blank" rel="noopener">有田觀光協會官方網站</a>；Gallery 有田：<a href="https://gallery-arita.co.jp/charm/" target="_blank" rel="noopener">ギャラリー有田官方網站</a>；九州陶瓷文化館：<a href="https://commons.wikimedia.org/wiki/File:Kyushu_Ceramic_Museum_front.JPG" target="_blank" rel="noopener">Pekachu</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>v20 附近推薦與新主景點照片：だざいふ遊園地 Photaro、竈門神社 そらみみ、御船山楽園 STA3816、陶山神社 STA3816、有田ポーセリンパーク mahlervv、針尾送信所 Dyamasan、西海橋 そらみみ、舊門司稅關 Suicasmo、門司港ハイマート そらみみ、出光美術館（門司） Nissy-KITAQ、香椎宮 Saigen Jiro（CC0）、福岡城 Pontafon、福岡市博物館 Nkmr844、魚町銀天街 Asturio Cantabrio、皿倉山夜景 Suicasmo、柳川川下り ブルーノ・プラス、LaLaport Flower Park 入口 Junknote；以上除標示外多為 Wikimedia Commons，授權見各卡片（已縮圖）</li><li>v21 Arita Será 園區照：<a href="https://www.arita.gr.jp/" target="_blank" rel="noopener">アリタセラ公式サイト</a>；丸兄商社外觀：<a href="https://www.maru-kei.com/" target="_blank" rel="noopener">丸兄商社公式サイト</a>；幸樂窯工房：<a href="https://kouraku.jp.net/" target="_blank" rel="noopener">幸楽窯公式サイト</a>（已縮圖）</li><li>佐賀牛示意圖：<a href="https://commons.wikimedia.org/wiki/File:Saga_beef.jpg" target="_blank" rel="noopener">Masahiko Satoh</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>（已縮圖）</li><li>附近店家：© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors（ODbL）</li><li>圖示：<a href="https://lucide.dev/license" target="_blank" rel="noopener">Lucide</a>（ISC）</li></ul></details></div>
 <div class="overlay" hidden></div></div>
 <script>
 const SUPPLY={"gion": [{"cat": "超商", "name": "セブン-イレブン", "dist": 37, "lat": 33.590141, "lon": 130.413215, "note": ""}, {"cat": "超商", "name": "セブン-イレブン", "dist": 179, "lat": 33.58875, "lon": 130.414078, "note": ""}, {"cat": "超市", "name": "マックスバリュ", "dist": 302, "lat": 33.592017, "lon": 130.411034, "note": "OSM 標示 24 小時"}, {"cat": "超市", "name": "ボンラパス タンブル", "dist": 535, "lat": 33.589036, "lon": 130.419133, "note": ""}, {"cat": "便當", "name": "ほっともっと", "dist": 217, "lat": 33.591713, "lon": 130.415184, "note": "外帶便當連鎖"}, {"cat": "餐廳", "name": "桐壺", "dist": 182, "lat": 33.589602, "lon": 130.415335, "note": "日式料理"}, {"cat": "餐廳", "name": "牧のうどん 博多バスターミナル店", "dist": null, "q": "牧のうどん 博多バスターミナル店", "note": "V6 行程建議（D1 晚餐）"}, {"cat": "餐廳", "name": "博多もつ鍋 おおやま", "dist": null, "q": "博多もつ鍋 おおやま 博多", "note": "V6 行程建議（D1 晚餐）"}], "iori": [{"cat": "超商", "name": "ファミリーマート", "dist": 191, "lat": 33.582334, "lon": 130.425445, "note": ""}, {"cat": "超商", "name": "デイリーヤマザキ", "dist": 193, "lat": 33.585615, "lon": 130.425603, "note": ""}, {"cat": "超市", "name": "マルショク", "dist": 201, "lat": 33.582306, "lon": 130.424087, "note": ""}, {"cat": "超市", "name": "サニー", "dist": 262, "lat": 33.582019, "lon": 130.426427, "note": ""}, {"cat": "便當", "name": "ほっともっと", "dist": 243, "lat": 33.583923, "lon": 130.427501, "note": "外帶便當連鎖"}, {"cat": "餐廳", "name": "葉隠うどん", "dist": 47, "lat": 33.583609, "lon": 130.424652, "note": "烏龍麵"}, {"cat": "餐廳", "name": "博多一双", "dist": 265, "lat": 33.586366, "lon": 130.42511, "note": "豚骨拉麵"}, {"cat": "餐廳", "name": "とんかつ大将", "dist": 247, "lat": 33.581828, "lon": 130.424264, "note": "炸豬排"}], "dazaifu": [{"cat": "超商", "name": "セブン-イレブン", "dist": 193, "lat": 33.522646, "lon": 130.533878, "note": ""}, {"cat": "超商", "name": "ローソン", "dist": 438, "lat": 33.51974, "lon": 130.531202, "note": ""}, {"cat": "餐廳", "name": "寺田屋", "dist": 239, "lat": 33.519632, "lon": 130.534152, "note": "表參道日式餐飲"}, {"cat": "餐廳", "name": "中村屋", "dist": 251, "lat": 33.519663, "lon": 130.533848, "note": "表參道日式餐飲"}, {"cat": "餐廳", "name": "かさの家", "dist": 295, "lat": 33.519395, "lon": 130.533485, "note": "表參道梅枝餅・餐飲"}], "yanagawa": [{"cat": "超商", "name": "ファミリーマート", "dist": 278, "lat": 33.156112, "lon": 130.403408, "note": ""}, {"cat": "超商", "name": "セブン-イレブン", "dist": 422, "lat": 33.159369, "lon": 130.403752, "note": ""}, {"cat": "超市", "name": "マルマツ", "dist": 716, "lat": 33.15123, "lon": 130.404554, "note": ""}, {"cat": "超市", "name": "マルキョウ", "dist": 909, "lat": 33.148575, "lon": 130.401449, "note": ""}, {"cat": "餐廳", "name": "うなぎ屋本店", "dist": 300, "lat": 33.158782, "lon": 130.398446, "note": "柳川鰻魚蒸籠飯"}, {"cat": "餐廳", "name": "楠川", "dist": 314, "lat": 33.15878, "lon": 130.398218, "note": "柳川鰻魚蒸籠飯"}, {"cat": "餐廳", "name": "本城ラーメン", "dist": 354, "lat": 33.159657, "lon": 130.399082, "note": "拉麵"}], "ureshino": [{"cat": "超商", "name": "ローソン", "dist": 233, "lat": 33.098127, "lon": 129.983045, "note": ""}, {"cat": "超市", "name": "マルキョウ嬉野店", "dist": 547, "lat": 33.099725, "lon": 129.990869, "note": ""}, {"cat": "餐廳", "name": "宗庵 よこ長", "dist": 197, "lat": 33.096992, "lon": 129.983588, "note": "嬉野溫泉湯豆腐（OSM：週三休）"}, {"cat": "餐廳", "name": "ジョイフル", "dist": 199, "lat": 33.098188, "lon": 129.983439, "note": "家庭餐廳"}], "htb": [{"cat": "超商", "name": "ニューヤマザキデイリーストア", "dist": 150, "lat": 33.089762, "lon": 129.790563, "note": ""}, {"cat": "超商", "name": "ファミリーマート", "dist": 392, "lat": 33.08961, "lon": 129.793156, "note": ""}, {"cat": "餐廳", "name": "リンガーハット", "dist": 349, "lat": 33.089781, "lon": 129.792699, "note": "長崎強棒麵連鎖"}, {"cat": "餐廳", "name": "ペッパーランチ", "dist": 463, "lat": 33.085695, "lon": 129.789496, "note": "鐵板牛排飯"}]};
@@ -648,15 +676,15 @@ const NEAR={
      note:'週二休。1/18（一）依現行規定開至 17:00。體驗建議予約。',
      q:'うれしの茶交流館 チャオシル',u:'https://chaoshiru.com/experience/'})
  ],
- '體驗工房 ろくろ座':[
+ '有田下午':[
   N({n:'佐賀縣立宇宙科學館（ゆめぎんが）',img:'rain-yumeginga.jpg',src:'ハポニアラ',srcu:'https://commons.wikimedia.org/wiki/File:佐賀県立宇宙科学館玄関.jpg',lic:'CC BY 4.0',
      line:'武雄的動手科學館與天文館',min:25,from:'有田站',hours:'平日 9:15–17:15（門票售至閉館 30 分前）',
      note:'週一休。官網冬展頁列 2027/1/18 休、1/19（二）開館。',
      q:'佐賀県立宇宙科学館',u:'https://www.yumeginga.jp/users_guide/'}),
-  N({n:'有田ポーセリンパーク',img:'near-porcelain.jpg',src:'mahlervv',srcu:'https://commons.wikimedia.org/wiki/File:Zwinger_Palace_(Arita_Porcelain_Park).jpg',lic:'CC BY 3.0',
-     line:'陶磁器園區；展示館目前休館',min:7,from:'有田站',hours:'9:00–17:00',
-     note:'2026 年度休園日未列 1/19。官方寫展示館休館中、重開未定；園區與賣店仍開放。',
-     q:'有田ポーセリンパーク 有田町戸矢乙370-2',u:'https://www.arita-touki.com/'}),
+  N({n:'幸樂窯（倉庫尋寶／工場參觀）',img:'place-kouraku.jpg',src:'幸楽窯公式サイト',srcu:'https://kouraku.jp.net/',lic:'官方照片',
+     line:'倉庫尋寶可不預約；工場參觀有英語（需事先洽詢）',min:5,from:'有田站',hours:'商店 10:00–17:00；尋寶 10:00–12:00（最終 11:00）、13:00–15:30（最終 14:00）',
+     note:'官方寫尋寶年末年始休至 2027/1/5，1/18、1/19 應開。工場參觀週二至週六（日祝除外）：1/18（一）沒有、1/19（二）可預約。官網寫有田站計程車約 5 分。LetsGoJP 有介紹，價格與時間以官網為準。',
+     q:'幸楽窯 有田町丸尾丙2512',u:'https://kouraku.jp.net/'}),
   N({n:'陶山神社',img:'day-4.jpg',src:'STA3816',srcu:'https://commons.wikimedia.org/wiki/File:Tozan_Shrine01.jpg',lic:'CC BY-SA 3.0',
      line:'磁器鳥居與狛犬，有田燒戶外景',min:5,from:'有田站',hours:'參拜自由；社務所／祈禱 9:00–17:00',
      note:'境內有鐵路平交道且無遮断機，請依神社公告確認安全後再通行。',
@@ -764,14 +792,14 @@ const HEROTEXT={
  '佐賀縣立九州陶瓷文化館':{desc:'展示九州陶磁名品的縣立博物館。以參觀為主。1/19（二）開館，1/18（一）休館。',hours:'9:00–17:00（入館至 16:30）；常設展免費',u:'https://saga-museum.jp/ceramic/information/'},
  '有田銘品館':{desc:'JR 有田站構內的伴手禮店，有田燒咖哩可內用。',hours:'10:00–16:00（10:45–11:45 休息）；週三與不定休',u:'https://www.arita.jp/gourmet/post_6.html'},
  'ギャラリー有田':{desc:'兩千多客有田燒杯子可選來喝熱飲。本日午餐候選（Tabelog 3.49、子供可）。官方餐單沒有三麗鷗咖哩。',hours:'11:00–17:00（L.O. 16:30）；不定休',u:'https://gallery-arita.co.jp/'},
- '艸窯（練り上げワークショップ）':{desc:'疊色土做器的體驗工房，需預約。不定休，出發前請確認是否開窯。',hours:'10:00–17:00（官網最終受付 15:00）',u:'https://sougama.net/workshop-experience/'},
- '體驗工房 ろくろ座':{desc:'繪付或拉坯體驗，需預約。週四休；1/19 依現行規定應開。作品約 2–3 個月後寄出。',hours:'10:00–15:00（受付至 14:30）',u:'https://www.arita.jp/experience/post_12.html'},
+ '艸窯（練り上げワークショップ）':{desc:'疊色土做器的體驗工房，需預約。不定休，出發前請確認是否開窯。官方未列海外寄送。',hours:'10:00–17:00（官網最終受付 15:00）',u:'https://sougama.net/workshop-experience/'},
+ 'Arita Será（アリタセラ）':{desc:'約 22 間有田燒店鋪的購物度假村，有廊道可避雨。官方寫年中無休（部分店鋪不同），1/18、1/19 綜合體應開。有田站開車約 6 分（官網）。',hours:'10:00–17:00（部分店鋪不同）',u:'https://www.arita.gr.jp/'},
  '豪斯登堡':{desc:'住園區日航，可以整天遊園，晚上再看燈飾。',hours:'開園與燈飾時刻出發前看官方日曆',u:'https://www.huistenbosch.co.jp/'},
  '小倉城':{desc:'小倉的地標城堡，城下就是商店街。1/21 住宿尚未訂。',hours:'天守等施設時間出發前看官網',u:'https://www.kokura-castle.jp/'},
  '魚町銀天街':{desc:'小倉車站附近的拱廊商店街，適合走路逛店、找點心。',hours:'各店不同，大致白天至傍晚',u:'https://www.crossroadfukuoka.jp/spot/10751'},
  '皿倉山夜景':{desc:'先開車到纜車山麓站，再上山看北九州夜景。',hours:'纜車時刻出發前看官網',u:'https://www.sarakurayama-cablecar.co.jp/'},
  '門司港 Retro':{desc:'復古港區，車站、倉庫與海邊可以走一圈。',hours:'戶外區域白天為主；個別施設時間不同',u:'https://mojiko-retoro9.jp/'},
- 'LaLaport 福岡':{desc:'福岡東區的大型購物中心，下午購物與休息。照片為園區內 Flower Park 入口。',hours:'各店時間不同，出發前看官網',u:'https://www.mitsui-shopping-park.com/lalaport/fukuoka/'},
+ 'LaLaport 福岡':{desc:'福岡東區的大型購物中心，下午購物與休息。照片為園區內 Flower Park 入口。',hours:'各店時間不同，出發前看官網',u:'https://www.mitsui-shopping-park.com/lalaport/fukuoka/',coupon:'https://kyushu.letsgojp.com/coupon/620344/'},
  '櫛田神社・川端通':{desc:'博多總鎮守，從庵飯店步行可到，再轉往川端商店街。',hours:'境內參拜自由',u:'https://www.kushida.or.jp/'},
  '寶可夢中心福岡（博多マルイ 2F）':{desc:'角色商店，適合孩子逛。',hours:'10:00–21:00',u:'https://www.pokemon.co.jp/shop/pokecen/fukuoka/'},
  'Nintendo FUKUOKA':{desc:'任天堂直營店，在博多駅 AMU 廣場 8 樓。照片為 JR 博多シティ外觀。',hours:'10:00–20:00（配合 AMU 營業日）',u:'https://www.nintendo.com/jp/officialstore/index.html'}
@@ -796,7 +824,7 @@ const routes={
     stop('柳川龜之井飯店','住宿','晚上','飯店戶外停車場','免費','FamilyMart 上宮永店 · marukyo 柳川','亀の井ホテル 柳川')],
  3:[stop('柳川龜之井飯店','出發','上午','','','','亀の井ホテル 柳川'),stop('武雄市圖書館','景點','上午','','','','武雄市図書館'),
     stop('武雄溫泉樓門','景點','下午','','','','武雄温泉 楼門'),stop('嬉野櫻花飯店','住宿','晚上','','','','佐賀県嬉野市嬉野町大字下宿乙1021')],
- 4:[stop('嬉野','出發','上午','','','','佐賀県嬉野市嬉野町大字下宿乙1021'),stop('佐賀縣立九州陶瓷文化館','景點','上午','免費停車場（官方約 310 台）','免費','','佐賀県立九州陶磁文化館 有田町戸杓乙3100-1'),stop('有田銘品館','購物','中午','有田站周邊','待核實','','有田銘品館 JR有田駅'),stop('ギャラリー有田','餐廳','中午','待核實','待核實','','ギャラリー有田 有田町本町乙3057'),stop('艸窯（練り上げワークショップ）','體驗','下午','待核實','待核實','','艸窯 有田町中樽2-28-14'),stop('體驗工房 ろくろ座','體驗','下午','待核實','待核實','','体験工房ろくろ座 有田町泉山1-30-1'),stop('豪斯登堡日航飯店','住宿','晚上','','','','ホテル日航ハウステンボス')],
+ 4:[stop('嬉野','出發','上午','','','','佐賀県嬉野市嬉野町大字下宿乙1021'),stop('佐賀縣立九州陶瓷文化館','景點','上午','免費停車場（官方約 310 台）','免費','','佐賀県立九州陶磁文化館 有田町戸杓乙3100-1'),stop('有田銘品館','購物','中午','有田站周邊','待核實','','有田銘品館 JR有田駅'),stop('ギャラリー有田','餐廳','中午','待核實','待核實','','ギャラリー有田 有田町本町乙3057'),stop('Arita Será（アリタセラ）','購物','下午','約 800 台','陶器市資訊寫免費；平日請以現場為準','','アリタセラ 有田町赤坂丙2351番地169'),stop('艸窯（練り上げワークショップ）','體驗','下午','待核實','待核實','','艸窯 有田町中樽2-28-14'),stop('豪斯登堡日航飯店','住宿','晚上','','','','ホテル日航ハウステンボス')],
  5:[stop('豪斯登堡','景點','全天','','','','ハウステンボス'),stop('豪斯登堡日航飯店','住宿','晚上','','','','ホテル日航ハウステンボス')],
  6:[stop('豪斯登堡日航飯店','出發','上午','','','','ホテル日航ハウステンボス'),stop('小倉城','景點','下午','','','','小倉城'),
     stop('魚町銀天街','景點','下午','','','','魚町銀天街'),stop('皿倉山夜景','景點','晚上','','','','皿倉山 山上駅'),stop('小倉飯店（待選定）','住宿','晚上','','','',null)],
@@ -805,7 +833,7 @@ const routes={
     stop('Nintendo FUKUOKA','購物','下午','','','','Nintendo FUKUOKA'),stop('庵飯店','住宿','晚上','','','','ホテル庵 博多駅南2-4-13')],
  9:[stop('庵飯店出發','出發','約 07:00','','','','ホテル庵 博多駅南2-4-13'),stop('福岡機場國際線航廈','航班','08:00 前','國際線航廈','—','','福岡空港 国際線旅客ターミナル'),stop('CI111 起飛 → 12:35 抵桃園 T2','航班','11:00','','—','',null)]
 };
-const ADDED={4:'有田景點與體驗已補入（銘品館、Gallery 有田、陶瓷文化館、ろくろ座、艸窯）。日期尚未重排：目前仍在 Day 4 1/19（二）；v6 把有田排在 1/18（一）。各點已對照這兩天的開館日。資料查詢 2026-11-27 07:32–07:36 台北時間。',8:'Day 8 依 V6 行程方案 A 補入（另可選門司港半日）。',9:'Day 9 依 V6 行程補入：08:00 前到機場。'};
+const ADDED={4:'下午改為「買瓷器／DIY」二選一：Arita Será，或艸窯（主）加丸兄商社、ポーセリンパーク工房。ろくろ座已從主行程與雨案拿掉，避免和 DIY 重複。日期尚未重排：目前仍在 Day 4 1/19（二）；v6 把有田排在 1/18（一）。各點已對照 1/18、1/19 開館日。資料查詢 2026-11-27 11:52–12:00 台北時間。',8:'Day 8 依 V6 行程方案 A 補入（另可選門司港半日）。',9:'Day 9 依 V6 行程補入：08:00 前到機場。'};
 const DAYIMG=[null,'day-1.jpg','day-2.jpg','day-3.jpg','day-4.jpg','day-5.jpg','day-6.jpg','day-7.jpg','day-8.jpg','day-9.jpg'];
 const OFFICIAL_D2={artist:'太宰府天滿宮官方網站',page:'https://www.dazaifutenmangu.or.jp/',license:'官方照片'};
 const R=(o)=>o;
@@ -862,11 +890,11 @@ const rain={
    desc:'武雄的室內科學館與天文館，展示多可動手，適合孩子。官網冬季休館日列 2027/1/18（一），1/19（二）可去。',
    from:'櫻花飯店-嬉野',min:20,hours:'平日 9:15–17:15（門票售至閉館 30 分前）',note:'週一休（遇祝則翌日）。2026 年度冬展頁列出 2027/1/1、1/12、1/18、1/25 休；1/19（二）開館。',
    q:'佐賀県立宇宙科学館',u:'https://www.yumeginga.jp/users_guide/'},
-  {n:'體驗工房 ろくろ座（繪付／拉坯）',img:'exp-rokuroza.jpg',src:'有田觀光協會官方網站',srcu:'https://www.arita.jp/experience/post_12.html',lic:'官方照片',
-   tag:'手作體驗',reserve:'要予約（電話 0955-41-1302）。個人建議先預約才有位子',kid:'繪付：湯吞／飯碗 1,050 円、咖啡杯 1,570 円。拉坯 1,360 円起（含燒成 2,040 円）。官網寫有指導，兒童也可參加。燒成約 2–3 個月後寄出、運費另計；官網未寫可否寄台灣與運費',
-   desc:'有田官方體驗工房，可畫瓷器或拉坯。週四休，1/18（一）、1/19（二）依現行規定可預約。從有田站開車約 6 分。',
-   from:'有田站',min:6,hours:'10:00–15:00（受付至 14:30）',note:'週四與年末年始休。海外寄送與運費請予約時向工房確認（未代為聯絡）。',
-   q:'体験工房ろくろ座 有田町泉山1-30-1',u:'https://www.arita.jp/experience/post_12.html'},
+  {n:'Arita Será（アリタセラ）',img:'place-sera.jpg',src:'アリタセラ公式サイト',srcu:'https://www.arita.gr.jp/',lic:'官方照片',
+   tag:'購物避雨',reserve:'無需予約',kid:'全館無障礙、可借輪椅與身障廁所。有遮雨廊道與餐廳，適合慢慢逛店買瓷器，不是遊樂設施',
+   desc:'約 22 間有田燒店鋪的購物度假村，有廊道可避雨。官方寫年中無休（部分店鋪時間不同），1/18（一）、1/19（二）綜合體應開。',
+   from:'有田站',min:6,hours:'10:00–17:00（部分店鋪不同）',note:'官方停車約 800 台；陶器市資訊寫免費，平日請以現場為準。有田站開車約 6 分、陶瓷文化館約 8 分（皆官網）。',
+   q:'アリタセラ 有田町赤坂丙2351番地169',u:'https://www.arita.gr.jp/'},
   {n:'艸窯 練り上げワークショップ',img:'place-sougama.jpg',src:'有田觀光協會官方網站',srcu:'https://www.arita.jp/experience/post_32.html',lic:'官方照片',
    tag:'手作體驗',reserve:'要予約：窯直電話 0955-42-3846，或官方 LINE／じゃらん／アソビュー。未代為預約',kid:'官網未列年齡下限。協會寫作家指導約 1–2 小時；じゃらん寫小孩也能享受。10 歲／12 歲應可在指導下參加，予約時請再確認。官網價 3,800／2,800 円（含土與燒成）',
    desc:'詢問的「練り上げワークショップ」就是這家：練り上げの器 艸窯（そうがま），有田町中樽2-28-14。疊色土做器，最後由老師修整。從有田站開車約 5 分。',
@@ -959,7 +987,7 @@ const spots=[
  {n:'太宰府天滿宮',day:2,img:'dazaifu-tenmangu.jpg',d:'表參道、梅枝餅與天滿宮參拜。',u:'https://www.dazaifutenmangu.or.jp/'},
  {n:'九州國立博物館',day:2,img:'kyuhaku.jpg',d:'經虹之隧道步行前往；週一休館。',u:'https://www.kyuhaku.jp/'},
  {n:'武雄溫泉樓門',day:3,img:'day-3.jpg',d:'朱紅色樓門，武雄溫泉的地標。',u:''},
- {n:'有田 ろくろ座',day:4,img:'day-4.jpg',d:'有田燒拉坯體驗；需預約、週四休。',u:'https://www.arita.jp/experience/post_12.html'},
+ {n:'Arita Será',day:4,img:'place-sera.jpg',d:'有田燒購物度假村，約 22 間店鋪；年中無休（部分店鋪不同）。',u:'https://www.arita.gr.jp/'},
  {n:'有田銘品館',day:4,img:'place-meihin.jpg',d:'JR 有田站構內的伴手禮店，有田燒咖哩可內用。',u:'https://www.arita.jp/gourmet/post_6.html'},
  {n:'Gallery 有田',day:4,img:'place-gallery.jpg',d:'從兩千多客有田燒杯子裡選一杯喝咖啡；午餐候選。',u:'https://gallery-arita.co.jp/'},
  {n:'九州陶瓷文化館',day:4,img:'rain-ceramic.jpg',d:'九州陶磁名品館，常設展免費；週一休館。',u:'https://saga-museum.jp/ceramic/information/'},
@@ -1001,7 +1029,7 @@ const restaurants=[
  {d:'1/22（五）午餐・佐賀牛②',n:'焼肉 竜馬（佐賀市鍋島）',st:'wait',label:'尚未預訂',img:'rest-sagabeef.jpg',src:'Masahiko Satoh · CC BY 2.0（佐賀牛示意圖，非本店）',srcu:'https://commons.wikimedia.org/wiki/File:Saga_beef.jpg',intro:'佐賀市鍋島的燒肉店，有車的話可當作第二餐佐賀牛。',info:'週五有午市 11:30–13:45；官方寫不收信用卡，請帶現金。',u:''}
 ];
 const experiences=[
- {d:'1/18（一）或 1/19（二）',n:'有田 ろくろ座（拉坯／繪付）',st:'wait',label:'尚未預訂',img:'exp-rokuroza.jpg',src:'有田觀光協會官方網站',srcu:'https://www.arita.jp/experience/post_12.html',intro:'有田燒拉坯與繪付工房，工作人員指導，初學者和小孩也能做；拉坯約 1 小時內。燒成作品約 2–3 個月後寄出，官網寫運費另計；未在官網查到可否寄台灣與運費（未代為詢問）。',info:'需預約（電話 0955-41-1302）；10:00–15:00（受付至 14:30），週四與年末年始休。1/18（一）、1/19（二）依現行規定應開。',u:'https://www.arita.jp/experience/post_12.html'},
+ {d:'1/18（一）或 1/19（二）',n:'丸兄商社（敏右衛門窯）繪付／拉坯',st:'wait',label:'尚未預訂',img:'place-marukei.jpg',src:'丸兄商社公式サイト',srcu:'https://www.maru-kei.com/',intro:'有田町中樽的大型有田燒專門店，館內敏右衛門窯可做繪付或拉坯。官方寫從小孩子就能參加；繪付多可當日（官網寫予約なしでもOK），拉坯完全予約制（協會寫前一日前連絡）。燒成後寄送、運費另計；官方未列可否寄海外／台灣。未代為預約。',info:'營業 9:00–17:00；協會寫定休日僅 12/31・1/1，1/18、1/19 應開。繪付 1,650 円起、最終受付 16:00。窯官方拉坯 3,850／4,400／5,500 円（協會寫小 3,300 円，以工房為準）。売店／繪付 0955-42-3052，拉坯予約 0955-42-2731。',u:'https://www.toshiemon.com/studio/studio.html'},
  {d:'1/18（一）或 1/19（二）',n:'艸窯 練り上げワークショップ',st:'wait',label:'尚未預訂',img:'place-sougama.jpg',src:'有田觀光協會官方網站',srcu:'https://www.arita.jp/experience/post_32.html',intro:'有田町中樽的「練り上げの器 艸窯（そうがま）」是有田以練り上げ技法做磁器的窯元；在工房疊色土做器，最後由老師幫忙拉坯修整。這就是詢問的那家練り上げ體驗。',info:'官網價：原創 3,800 円、市松取皿 2,800 円（含土與燒成）。10:00–17:00，最終受付 15:00。窯直予約 0955-42-3846，或 LINE／じゃらん／アソビュー。不定休，1/18、1/19 出發前需確認是否開窯。官方未列年齡下限與海外運費。',u:'https://sougama.net/workshop-experience/'},
  {d:'1/20（三）',n:'豪斯登堡門票',st:'wait',label:'尚未預訂',img:'day-5.jpg',src:'663highland · CC BY 2.5',srcu:'https://commons.wikimedia.org/wiki/File:200320_Huis_Ten_Bosch_Sasebo_Nagasaki_pref_Japan04s3.jpg',intro:'荷蘭街景主題的大型樂園，住園區內的日航飯店，1/20 可以玩一整天。',info:'信箱中沒有找到門票確認信；開園與燈飾時刻出發前看官方日曆。',u:'https://www.huistenbosch.co.jp/'}
 ];
@@ -1046,15 +1074,23 @@ let saved={};try{saved=JSON.parse(localStorage.getItem(KEY))||JSON.parse(localSt
 let legacy=null;try{legacy=JSON.parse(localStorage.getItem('kyushu-v12-photo'))?.privateContent}catch{}
 const S={plan:saved.plan==='rain'?'rain':'normal',day:saved.day||legacy?.day||2,page:saved.page||legacy?.page||'行程',mode:saved.mode||legacy?.mode||'test',next:0,focus:null,
  resTab:saved.resTab||'機票',wday:saved.wday||2,area:saved.area||null,
- expenses:(saved.expenses||legacy?.expenses||[{name:'午餐（範例）',amount:3200}]).map(normExp)};
+ expenses:(saved.expenses||legacy?.expenses||[{name:'午餐（範例）',amount:3200}]).map(normExp),aritaPm:saved.aritaPm==='diy'?'diy':'buy'};
 let theme=localStorage.getItem('kyushu-theme')||'auto', timer;
-function save(){try{localStorage.setItem(KEY,JSON.stringify({day:S.day,page:S.page,mode:S.mode,resTab:S.resTab,plan:S.plan,wday:S.wday,area:S.area,expenses:S.expenses}))}catch{}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({day:S.day,page:S.page,mode:S.mode,resTab:S.resTab,plan:S.plan,wday:S.wday,area:S.area,expenses:S.expenses,aritaPm:S.aritaPm}))}catch{}}
 // ---------- helpers ----------
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const money=n=>'¥'+Math.round(n).toLocaleString();
 const ic=(n,c='')=>`<i data-lucide="${n}" class="${c}" aria-hidden="true"></i>`;
 const target=s=>s.q||s.name;
-const routable=d=>routes[d].filter(s=>s.q);
+const isAritaPm=s=>s.name.includes('セラ')||s.name.includes('Será')||s.name.includes('艸窯');
+const routable=d=>routes[d].filter(s=>{
+ if(!s.q)return false;
+ if(d===4&&isAritaPm(s)){
+  const diy=s.name.includes('艸窯');
+  return (S.aritaPm||'buy')==='diy'?diy:!diy;
+ }
+ return true;
+});
 function url(i){const list=routes[S.day],s=list[i];let u='https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(target(s)+' 日本')+'&travelmode='+(s.type==='步行參觀'?'walking':'driving');
  if(S.mode==='test'&&i>0){const prev=list.slice(0,i).reverse().find(x=>x.q);if(prev)u+='&origin='+encodeURIComponent(target(prev)+' 日本')}return u}
 function dayDirUrl(d){const r=routable(d);if(!r.length)return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(names[d-1]+' 九州');
@@ -1087,14 +1123,14 @@ const dayPlaces={
    desc:'展示九州陶磁名品的縣立博物館。v18 雨案曾因低互動暫時拿掉，現加回一般行程與雨天備案。從有田站開車約 2 分，從櫻花飯店約 27 分。',
    from:'有田站',min:2,hours:'9:00–17:00（入館至 16:30）',note:'週一休（遇祝則翌平日休），12/29–1/3 休。1/18（一）休館；1/19（二）依現行規定開館。停車場免費，官方約 310 台。',
    q:'佐賀県立九州陶磁文化館 有田町戸杓乙3100-1',u:'https://saga-museum.jp/ceramic/information/'},
-  {n:'體驗工房 ろくろ座（可問海外寄送）',img:'exp-rokuroza.jpg',src:'有田觀光協會官方網站',srcu:'https://www.arita.jp/experience/post_12.html',lic:'官方照片',
-   tag:'手作體驗',reserve:'要予約（電話 0955-41-1302）。團體必須預約；個人也建議先預約。未代為預約',kid:'繪付湯吞／飯碗 1,050 円、咖啡杯 1,570 円；拉坯 1,360 円、含燒成 2,040 円（燒成以 2 件為限）。官網寫有指導，兒童也可參加。拉坯約 1 小時內',
-   desc:'有田繪付與拉坯工房。官方寫燒成作品約 2–3 個月後寄出、運費另計。未在官網查到可否寄台灣與運費，予約時請向工房確認。從有田站開車約 6 分。',
-   from:'有田站',min:6,hours:'10:00–15:00（受付至 14:30）',note:'週四與年末年始休。1/18（一）、1/19（二）依現行規定應開。志田燒之里（嬉野，週三休，1/18、1/19 應開）：嬉野市官方英譯寫作品可寄到海外，運費未公布；絵付け 800 円起，建議予約。',
-   q:'体験工房ろくろ座 有田町泉山1-30-1',u:'https://www.arita.jp/experience/post_12.html'},
+  {n:'Arita Será（アリタセラ）',img:'place-sera.jpg',src:'アリタセラ公式サイト',srcu:'https://www.arita.gr.jp/',lic:'官方照片',
+   tag:'買瓷器',reserve:'無需予約',kid:'全館無障礙、可借輪椅與身障廁所。有遮雨廊道與餐廳，適合慢慢逛店，不是遊樂設施',
+   desc:'有田燒購物度假村，官方寫約 22 間店鋪，也有餐廳與飯店。下午若選「買瓷器」就來這裡。有田站開車約 6 分／2 km，陶瓷文化館約 8 分／2.6 km（官網）。OSRM 估：從陶瓷文化館約 6 分、Gallery 約 5 分。',
+   from:'有田站',min:6,hours:'10:00–17:00（部分店鋪不同）',note:'官方寫年中無休，年末年始也原則營業，店舗により異なります。1/18（一）、1/19（二）綜合體應開。停車約 800 台；陶器市資訊寫免費，平日請以現場為準。電話 0955-43-2288。一部份商店或餐廳（例如 arita huis 餐廳週二、週三休）可能不同。',
+   q:'アリタセラ 有田町赤坂丙2351番地169',u:'https://www.arita.gr.jp/'},
   {n:'艸窯 練り上げワークショップ',img:'place-sougama.jpg',src:'有田觀光協會官方網站',srcu:'https://www.arita.jp/experience/post_32.html',lic:'官方照片',
    tag:'手作體驗',reserve:'窯直予約 0955-42-3846，或官方 LINE／じゃらん／アソビュー。未代為預約或聯絡',kid:'官方未列年齡下限。協會寫作家指導約 1–2 小時；じゃらん寫小孩也能享受。10 歲／12 歲應可在指導下參加，請予約時確認',
-   desc:'詢問的「練り上げワークショップ」就是這家：練り上げの器 艸窯（そうがま），有田町中樽2-28-14，綠色外牆、在うーたん通。有田以練り上げ技法做磁器的窯元。疊色土做杯子、飯碗或盤子，最後由老師修整。從有田站開車約 5 分，從ろくろ座約 2 分，從櫻花飯店約 29 分。',
+   desc:'詢問的「練り上げワークショップ」就是這家：練り上げの器 艸窯（そうがま），有田町中樽2-28-14，綠色外牆、在うーたん通。有田以練り上げ技法做磁器的窯元。疊色土做杯子、飯碗或盤子，最後由老師修整。從有田站開車約 5 分，從櫻花飯店約 29 分。',
    from:'有田站',min:5,hours:'10:00–17:00（官網最終受付 15:00）',note:'不定休、年末年始休。1/18、1/19 非年始，但不能保證開窯。官網價原創 3,800 円、市松取皿 2,800 円（含土與燒成）；協會寫 3,960／2,850 円、約 1–2 小時，予約時以工房為準。官方寫會燒成可當日常用器，但未列海外／台灣寄送與運費。',
    q:'艸窯 有田町中樽2-28-14',u:'https://sougama.net/workshop-experience/'}
  ]
@@ -1114,7 +1150,7 @@ function placeCards(d){const list=dayPlaces[d]||[];
  <div class="raincards">${list.map(card).join('')}</div>
  <p class="mealsfoot">不定休的店（銘品館、Gallery 有田、艸窯）出發前請再對官網或來電確認。陶瓷文化館週一休館。餐廳名單尚未整批加入 app；Gallery 有田已列為本日午餐候選。</p></section>`}
 
-function photo(s){if(s.name.includes('天滿宮'))return 'assets/dazaifu-tenmangu.jpg';if(s.name.includes('九州國立'))return 'assets/kyuhaku.jpg';if((s.name.includes('博物館')||s.name.includes('博物館'))&&s.name.includes('九州國立'))return 'assets/kyuhaku.jpg';if(s.name.includes('陶瓷文化館')||s.name.includes('陶磁文化館'))return 'assets/rain-ceramic.jpg';if(s.name.includes('銘品館'))return 'assets/place-meihin.jpg';if(s.name.includes('ギャラリー有田'))return 'assets/place-gallery.jpg';if(s.name.includes('艸窯'))return 'assets/place-sougama.jpg';if(s.name.includes('ろくろ座'))return 'assets/exp-rokuroza.jpg';if(s.name.includes('圖書館')||s.name.includes('図書館'))return 'assets/rain-takeolib.jpg';if(s.name.includes('樓門')||s.name.includes('楼門'))return 'assets/day-3.jpg';if(s.name==='豪斯登堡')return 'assets/day-5.jpg';if(s.name.includes('小倉城'))return 'assets/rain-kokura.jpg';if(s.name.includes('魚町'))return 'assets/place-uomachi.jpg';if(s.name.includes('皿倉'))return 'assets/place-sarakura.jpg';if(s.name.includes('門司港'))return 'assets/day-7.jpg';if(s.name.includes('LaLaport')||s.name.includes('ららぽーと'))return 'assets/place-lalaport.jpg';if(s.name.includes('櫛田'))return 'assets/day-8.jpg';if(s.name.includes('寶可夢')||s.name.includes('ポケモン'))return 'assets/rain-pokecen.jpg';if(s.name.includes('Nintendo'))return 'assets/rain-hakatacity.jpg';return null}
+function photo(s){if(s.name.includes('天滿宮'))return 'assets/dazaifu-tenmangu.jpg';if(s.name.includes('九州國立'))return 'assets/kyuhaku.jpg';if((s.name.includes('博物館')||s.name.includes('博物館'))&&s.name.includes('九州國立'))return 'assets/kyuhaku.jpg';if(s.name.includes('陶瓷文化館')||s.name.includes('陶磁文化館'))return 'assets/rain-ceramic.jpg';if(s.name.includes('銘品館'))return 'assets/place-meihin.jpg';if(s.name.includes('ギャラリー有田'))return 'assets/place-gallery.jpg';if(s.name.includes('セラ')||s.name.includes('Será'))return 'assets/place-sera.jpg';if(s.name.includes('艸窯'))return 'assets/place-sougama.jpg';if(s.name.includes('ろくろ座'))return 'assets/exp-rokuroza.jpg';if(s.name.includes('圖書館')||s.name.includes('図書館'))return 'assets/rain-takeolib.jpg';if(s.name.includes('樓門')||s.name.includes('楼門'))return 'assets/day-3.jpg';if(s.name==='豪斯登堡')return 'assets/day-5.jpg';if(s.name.includes('小倉城'))return 'assets/rain-kokura.jpg';if(s.name.includes('魚町'))return 'assets/place-uomachi.jpg';if(s.name.includes('皿倉'))return 'assets/place-sarakura.jpg';if(s.name.includes('門司港'))return 'assets/day-7.jpg';if(s.name.includes('LaLaport')||s.name.includes('ららぽーと'))return 'assets/place-lalaport.jpg';if(s.name.includes('櫛田'))return 'assets/day-8.jpg';if(s.name.includes('寶可夢')||s.name.includes('ポケモン'))return 'assets/rain-pokecen.jpg';if(s.name.includes('Nintendo'))return 'assets/rain-hakatacity.jpg';return null}
 function photoCredit(s){const src=photo(s);if(!src)return null;const k=src.replace('assets/','');
  const map={
   'dazaifu-tenmangu.jpg':['太宰府天滿宮官方網站','https://www.dazaifutenmangu.or.jp/','官方照片'],
@@ -1122,6 +1158,7 @@ function photoCredit(s){const src=photo(s);if(!src)return null;const k=src.repla
   'rain-ceramic.jpg':['Pekachu','https://commons.wikimedia.org/wiki/File:Kyushu_Ceramic_Museum_front.JPG','CC BY-SA 4.0'],
   'place-meihin.jpg':['有田觀光協會官方網站','https://www.arita.jp/gourmet/post_6.html','官方照片'],
   'place-gallery.jpg':['ギャラリー有田官方網站','https://gallery-arita.co.jp/charm/','官方照片'],
+  'place-sera.jpg':['アリタセラ公式サイト','https://www.arita.gr.jp/','官方照片'],
   'place-sougama.jpg':['有田觀光協會官方網站','https://www.arita.jp/experience/post_32.html','官方照片'],
   'exp-rokuroza.jpg':['有田觀光協會官方網站','https://www.arita.jp/experience/post_12.html','官方照片'],
   'rain-takeolib.jpg':['Asturio Cantabrio','https://commons.wikimedia.org/wiki/File:Takeo_City_Library_exterior_ac_(1).jpg','CC BY-SA 4.0'],
@@ -1137,22 +1174,22 @@ function photoCredit(s){const src=photo(s);if(!src)return null;const k=src.repla
   'rain-hakatacity.jpg':['ぱちょぴ','https://commons.wikimedia.org/wiki/File:JR_Hakata_City_2011_Jan.jpg','CC BY-SA 3.0']
  };return map[k]||null}
 function isHeroStop(s){return ['景點','步行參觀','購物','體驗','餐廳'].includes(s.type)}
-function heroExtra(s){const list=dayPlaces[4]||[];const hit=list.find(p=>s.name.includes('銘品館')&&p.n.includes('銘品館')||s.name.includes('ギャラリー')&&p.n.includes('Gallery')||(s.name.includes('陶瓷')||s.name.includes('陶磁'))&&p.n.includes('陶瓷')||s.name.includes('ろくろ座')&&p.n.includes('ろくろ座')||s.name.includes('艸窯')&&p.n.includes('艸窯'));
+function heroExtra(s){const list=dayPlaces[4]||[];const hit=list.find(p=>s.name.includes('銘品館')&&p.n.includes('銘品館')||s.name.includes('ギャラリー')&&p.n.includes('Gallery')||(s.name.includes('陶瓷')||s.name.includes('陶磁'))&&p.n.includes('陶瓷')||(s.name.includes('セラ')||s.name.includes('Será'))&&p.n.includes('セラ')||s.name.includes('艸窯')&&p.n.includes('艸窯'));
  if(!hit)return '';
  return `<details class="hero-more"><summary>營業時間、開館日與備註</summary><p>${esc(hit.desc)}</p><p>${esc(hit.hours)}。${esc(hit.note)}</p><p>${esc(hit.reserve||'')} ${esc(hit.kid||'')}</p></details>`}
 function heroCard(s,i){const img=photo(s),cr=photoCredit(s),ht=HEROTEXT[s.name]||{},desc=ht.desc||guide(s)||'依當天體力彈性安排停留時間。',hours=ht.hours||'',ou=ht.u;
- return `<article class="stop hero"><div class="hero-visual">${img?`<img class="photocard hero-img" src="${img}" alt="${esc(s.name)}" loading="lazy">`:''}${cr?`<p class="hero-photocredit">照片：<a href="${esc(cr[1])}" target="_blank" rel="noopener">${esc(cr[0])}</a> · ${esc(cr[2])}</p>`:''}</div>
+ return `<article class="stop hero"><div class="hero-visual">${img?`<img class="photocard hero-img" src="${img}" alt="${esc(s.name)}">`:''}${cr?`<p class="hero-photocredit">照片：<a href="${esc(cr[1])}" target="_blank" rel="noopener">${esc(cr[0])}</a> · ${esc(cr[2])}</p>`:''}</div>
   <div class="stopbody hero-body"><div class="flex between"><div><small>${String(i+1).padStart(2,'0')} · ${esc(s.type)} · ${esc(s.period)}</small><h3>${esc(s.name)}</h3></div>${s.q?`<button data-next="${i}">前往此站 ↗</button>`:''}</div>
   <p class="hero-desc">${esc(desc)}</p>
   ${hours?`<p class="hero-hours">${ic('clock')}${esc(hours)}</p>`:''}
   <p class="muted">停車：${esc(s.park||'待核實')} · ${esc(s.fee||'費用待核實')}</p>
   ${s.shops?'<div class="supply">附近補給｜'+esc(s.shops)+'</div>':''}
   ${heroExtra(s)}
-  <div class="flex">${s.q?`<button class="mapjump" data-map="${i}">在地圖查看此站</button>`:''}${ou?`<a class="mplace web" href="${esc(ou)}" target="_blank" rel="noopener">官網${ic('external-link')}</a>`:''}</div>
+  <div class="flex">${s.q?`<button class="mapjump" data-map="${i}">在地圖查看此站</button>`:''}${ou?`<a class="mplace web" href="${esc(ou)}" target="_blank" rel="noopener">官網${ic('external-link')}</a>`:''}${ht.coupon?`<a class="coupon-chip" href="${esc(ht.coupon)}" target="_blank" rel="noopener">優惠券</a>`:''}</div>
  </div></article>`}
 function nearRow(name){const list=NEAR[name];if(!list||!list.length)return '';
  return `<section class="near-block" data-near="${esc(name)}"><div class="near-head"><h4>附近推薦 · 車程約 30 分內</h4><span class="muted">${list.length} 處 · 估算</span></div>
-  <div class="near-row">${list.map(x=>`<article class="near-card"><img src="assets/${x.img}" alt="${esc(x.n)}"><div class="near-body"><b>${esc(x.n)}</b><p>${esc(x.line)}</p>${x.note?`<p>${esc(x.note)}</p>`:''}<div class="near-min">車程約 ${x.min} 分（估） · 從${esc(x.from)}</div><div class="near-foot"><a class="mplace" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(x.q)}" target="_blank" rel="noopener">${ic('map-pin')}地圖</a>${x.u?`<a class="mplace web" href="${esc(x.u)}" target="_blank" rel="noopener">官網${ic('external-link')}</a>`:''}<span class="near-credit">照片：<a href="${esc(x.srcu)}" target="_blank" rel="noopener">${esc(x.src)}</a> · ${esc(x.lic)}</span></div></div></article>`).join('')}</div>
+  <div class="near-row">${list.map(x=>`<article class="near-card"><img src="assets/${x.img}" alt="${esc(x.n)}"><div class="near-body"><b>${esc(x.n)}</b><p>${esc(x.line)}</p>${x.note?`<p>${esc(x.note)}</p>`:''}<div class="near-min">車程約 ${x.min} 分（估） · 從${esc(x.from)}</div><div class="near-foot"><a class="mplace" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(x.q)}" target="_blank" rel="noopener">${ic('map-pin')}地圖</a>${x.u?`<a class="mplace web" href="${esc(x.u)}" target="_blank" rel="noopener">官網${ic('external-link')}</a>`:''}${x.coupon?`<a class="coupon-chip" href="${esc(x.coupon)}" target="_blank" rel="noopener">優惠券</a>`:''}<span class="near-credit">照片：<a href="${esc(x.srcu)}" target="_blank" rel="noopener">${esc(x.src)}</a> · ${esc(x.lic)}</span></div></div></article>`).join('')}</div>
   <p class="muted" style="font-size:11px">${NEAR_Q} 不重複本日已列的主行程。</p></section>`}
 function compactStop(s,i){return `<article class="stop ${s.type==='沿途休息站'?'reststop':''}">${photo(s)?`<img class="photocard" src="${photo(s)}" alt="${esc(s.name)}" loading="lazy">`:''}<div class="stopbody"><div class="flex between"><div><small>${String(i+1).padStart(2,'0')} · ${esc(s.type)}${s.type==='沿途休息站'?' · 已列入導航順序':''}</small><h3>${esc(s.name)}</h3></div>${s.q?`<button data-next="${i}">前往此站 ↗</button>`:''}</div><p class="guide">${guide(s)}</p><p class="muted">停車：${esc(s.park||'待核實')} · ${esc(s.fee||'費用待核實')}</p>${s.shops?'<div class="supply">附近補給｜'+esc(s.shops)+'</div>':''}<details><summary>查看攻略與停車詳情</summary><div class="detail">${s.type==='步行參觀'?'參觀後步行返回原停車場，再開始下一段自駕導航。':s.type==='沿途休息站'?'候選高速路線的停靠點，行車方向與實際經過道路仍待核實。':s.type==='住宿'?'入住、退房與取消期限請看「預訂 → 飯店」。':s.type==='航班'?'航班時刻以機票為準。':'依當天體力彈性安排停留時間。'}<p class="muted">MAPCODE：待核實</p>${s.shops?`<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.shops.split(' · ')[0]+' 日本')}" target="_blank" rel="noopener">查看附近補給 ↗</a>`:''}</div></details>${s.q?`<button class="mapjump" data-map="${i}">在地圖查看此站</button>`:''}</div></article>`}
 function mapModule(large){const list=routes[S.day],f=S.focus,item=f!=null?list[f]:null,r=routable(S.day);
@@ -1177,14 +1214,50 @@ function mealsCard(d){const M=MEALS[d];
   return `<div class="meal ${m.st}"><div class="mealk">${ic(icn)}<span>${nm}</span></div><div class="mealb"><div class="mealt"><b>${esc(m.t)}</b><span class="mtag ${m.st}">${esc(m.l)}</span></div>${m.note?`<p>${esc(m.note)}</p>`:''}${(m.places||[]).length||sg.length?`<div class="mealplaces">${(m.places||[]).map(p=>`<a class="mplace" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.q)}" target="_blank" rel="noopener">${ic('map-pin')}${esc(p.n)}</a>${p.u?`<a class="mplace web" href="${esc(p.u)}" target="_blank" rel="noopener">官網${ic('external-link')}</a>`:''}`).join('')}${sg.map(x=>`<a class="mplace" href="${pin(x)}" target="_blank" rel="noopener">${ic('map-pin')}${esc(x.name)}${x.dist!=null?`<small>${x.dist} m</small>`:''}</a>`).join('')}</div>`:''}</div></div>`};
  return `<section class="meals" id="meals"><div class="mealshead"><h3>${ic('soup')}今日三餐 · Day ${d}</h3><span class="muted">1/${15+d}</span></div>${row('b')}${row('l')}${row('d')}<p class="mealsfoot">飯店餐食依訂房資料；餐廳都還沒訂位，營業時間出發前再看官網。「附近」店家來自 OpenStreetMap。</p></section>`}
 function planToggle(){return `<div class="plantoggle" role="tablist" aria-label="行程方案"><button role="tab" data-plan="normal" aria-selected="${S.plan!=='rain'}" class="${S.plan!=='rain'?'active':''}">${ic('sun')}一般行程</button><button role="tab" data-plan="rain" aria-selected="${S.plan==='rain'}" class="${S.plan==='rain'?'active rainon':''}">${ic('umbrella')}雨天備案</button></div>`}
+
+function diyAlts(){
+ const alts=[
+  {n:'丸兄商社（敏右衛門窯）',img:'place-marukei.jpg',src:'丸兄商社公式サイト',srcu:'https://www.maru-kei.com/',lic:'官方照片',
+   line:'繪付可當日；拉坯要前一日予約。從小孩子就能參加。',
+   hours:'9:00–17:00（繪付最終受付 16:00）',
+   note:'協會寫定休日僅 12/31・1/1，1/18、1/19 應開。繪付 1,650 円起；窯官方拉坯 3,850／4,400／5,500 円（協會寫小 3,300 円，以工房為準）。燒成後寄送、運費另計；官方未列可否寄海外／台灣，也未寫英語對應。電話 0955-42-3052（賣店／繪付）、0955-42-2731（拉坯予約）。未代為預約。從有田站約 7 分（官網；估約 5 分），從艸窯約 1 分（估）。',
+   q:'丸兄商社 有田町中樽1-4-28',u:'https://www.toshiemon.com/studio/studio.html'},
+  {n:'有田ポーセリンパーク工房',img:'near-porcelain.jpg',src:'mahlervv',srcu:'https://commons.wikimedia.org/wiki/File:Zwinger_Palace_(Arita_Porcelain_Park).jpg',lic:'CC BY 3.0',
+   line:'下絵付け，3 歲起，約 30–60 分；較容易上手。',
+   hours:'9:00–17:00',
+   note:'官方寫絵付け 1,200 円起，作品約 60 日後寄出。官方英文寫「mail is only for Japan, not for oversees」，海外不可寄送。展示館目前休館中；2026 年度休園日未列 1/18、1/19。從有田站開車約 7 分（估）。',
+   q:'有田ポーセリンパーク 有田町戸矢乙370-2',u:'https://www.arita-touki.com/experience'}
+ ];
+ return `<div class="diy-alts"><h4>其他適合親子／外國旅客的 DIY</h4>
+  <p class="muted">這兩處都在有田，可當艸窯的備案（不定休時尤其有用）。未代為預約或聯絡。</p>
+  <div class="diy-row">${alts.map(x=>`<article class="diy-card"><img src="assets/${x.img}" alt="${esc(x.n)}"><div><b>${esc(x.n)}</b><p>${esc(x.line)}</p><p>${esc(x.hours)}</p><p>${esc(x.note)}</p><div class="near-foot"><a class="mplace" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(x.q)}" target="_blank" rel="noopener">${ic('map-pin')}地圖</a>${x.u?`<a class="mplace web" href="${esc(x.u)}" target="_blank" rel="noopener">官網${ic('external-link')}</a>`:''}<span class="near-credit">照片：<a href="${esc(x.srcu)}" target="_blank" rel="noopener">${esc(x.src)}</a> · ${esc(x.lic)}</span></div></div></article>`).join('')}</div></div>`;
+}
+function aritaChoice(list){
+ const buy=list.findIndex(s=>s.name.includes('セラ')||s.name.includes('Será'));
+ const diy=list.findIndex(s=>s.name.includes('艸窯'));
+ const sel=S.aritaPm==='diy'?'diy':'buy';
+ const pane=(key,idx,extra)=>`<div class="choice-pane ${sel===key?'is-on':''}" data-choice="${key}">
+   <div class="choice-label">${key==='buy'?'A 買瓷器':'B DIY 陶藝'}${sel===key?'<span class="choice-now">目前選擇</span>':''}</div>
+   ${idx>=0?heroCard(list[idx],idx):''}${extra||''}
+  </div>`;
+ return `<section class="choice-block" id="arita-choice">
+  <div class="choice-head"><h3>下午二選一</h3><p class="muted">買瓷器或 DIY 選一場即可，不必兩場都跑。點選後，本日地圖會改走你選的那一站。</p></div>
+  <div class="choice-tabs" role="tablist">
+   <button type="button" data-arita="buy" class="${sel==='buy'?'active':''}" role="tab" aria-selected="${sel==='buy'}">A 買瓷器 · Arita Será</button>
+   <button type="button" data-arita="diy" class="${sel==='diy'?'active':''}" role="tab" aria-selected="${sel==='diy'}">B DIY · 艸窯與其他工房</button>
+  </div>
+  <div class="choice-grid">${pane('buy',buy,'')}${pane('diy',diy,diyAlts())}</div>
+ </section>`+nearRow('有田下午');
+}
+
 function itinerary(){const list=routes[S.day];
  return `<div class="eyebrow">DAILY ITINERARY</div><h2>每日行程</h2><p class="muted">景點攻略、住宿、雨天備案與整日路線</p>${dates('day',S.day)}
- <div class="dayhead" style="background-image:url('assets/${DAYIMG[S.day]}')">${credit(S.day)}<div><div class="eyebrow">DAY ${S.day} · JANUARY ${15+S.day}, 2027</div><h2>${names[S.day-1]}</h2>${S.day===2?'<p class="muted">停一次車逛太宰府與博物館，再沿途休息、柳川入住。</p>':S.day===4?'<p class="muted">有田景點與體驗已補入；日期尚未重排（目前在 1/19 週二，v6 排在 1/18 週一）。不必全走，依體力與予約彈性選點。</p>':''}</div><div class="daynumber">${String(S.day).padStart(2,'0')}</div></div>
+ <div class="dayhead" style="background-image:url('assets/${DAYIMG[S.day]}')">${credit(S.day)}<div><div class="eyebrow">DAY ${S.day} · JANUARY ${15+S.day}, 2027</div><h2>${names[S.day-1]}</h2>${S.day===2?'<p class="muted">停一次車逛太宰府與博物館，再沿途休息、柳川入住。</p>':S.day===4?'<p class="muted">下午買瓷器或 DIY 二選一即可。日期尚未重排（目前在 1/19 週二，v6 排在 1/18 週一）。不必全走，依體力與予約彈性選點。</p>':''}</div><div class="daynumber">${String(S.day).padStart(2,'0')}</div></div>
  ${ADDED[S.day]?`<p class="addednote">${ADDED[S.day]}</p>`:''}
  ${planToggle()}${S.plan==='rain'?`<div class="rainview">${rainCard(S.day)}${mealsCard(S.day)}</div>`:`<div class="workspace"><aside class="sidebar">${mapModule()}${list.length?`<section class="navbox"><div class="flex between"><h3>導航下一站</h3><div class="mode"><button data-mode="test" class="${S.mode==='test'?'active':''}">行前測試</button><button data-mode="live" class="${S.mode==='live'?'active':''}">日本目前位置</button></div></div><div class="next"><div><select aria-label="下一站" id="k-next">${list.map((s,i)=>`<option value="${i}" ${i===S.next?'selected':''}>${i+1}. ${esc(s.name)}</option>`).join('')}</select><p class="muted">${S.mode==='live'?'起點：由 Google Maps 使用裝置目前位置':'起點：'+(S.next?esc(target(list[S.next-1])):'目前位置（本日第一站）')} → ${esc(target(list[S.next]))}</p></div><a class="primary" href="${esc(url(S.next))}" target="_blank" rel="noopener">Google Maps 導航 ↗</a></div><div class="navfoot">導航以停車場為優先目的地<br>沿途 SA／PA 已列入停靠順序</div></section>`:''}</aside>
  <div class="timeline">${mealsCard(S.day)}<div class="sectionhead tlhead"><h3>${ic('image')}主要景點與停靠順序</h3><span class="muted">${list.length} 站</span></div>
  <p class="muted" style="margin:0 0 12px">主景點用大圖呈現；若該站附近有已核實的其他點，會在下方用一列小卡推薦（開車約 30 分內、當天應開、不重複本日行程）。車程為估算。</p>
- ${list.map((s,i)=>`${i===0||s.period!==list[i-1].period?'<div class="period">'+esc(s.period)+'</div>':''}${hotelFor(s)?`<article class="stop lodging">${hotelCard(hotelFor(s),S.day,'instop')}<div class="lodgefoot"><p class="muted">停車：${esc(s.park||'待核實')} · ${esc(s.fee||'費用待核實')}</p>${s.shops?'<div class="supply">附近補給｜'+esc(s.shops)+'</div>':''}<div class="flex">${s.q?`<button data-next="${i}">前往此站 ↗</button><button class="mapjump" data-map="${i}">在地圖查看此站</button>`:''}</div></div></article>${nearRow(s.name)}`:isHeroStop(s)?heroCard(s,i)+nearRow(s.name):compactStop(s,i)}`).join('')}</div></div>`}`}
+ ${list.map((s,i)=>{const period=i===0||s.period!==list[i-1].period?'<div class="period">'+esc(s.period)+'</div>':'';if(S.day===4&&isAritaPm(s)){const first=list.findIndex(isAritaPm);if(i!==first)return '';return period+aritaChoice(list)}return `${period}${hotelFor(s)?`<article class="stop lodging">${hotelCard(hotelFor(s),S.day,'instop')}<div class="lodgefoot"><p class="muted">停車：${esc(s.park||'待核實')} · ${esc(s.fee||'費用待核實')}</p>${s.shops?'<div class="supply">附近補給｜'+esc(s.shops)+'</div>':''}<div class="flex">${s.q?`<button data-next="${i}">前往此站 ↗</button><button class="mapjump" data-map="${i}">在地圖查看此站</button>`:''}</div></div></article>${nearRow(s.name)}`:isHeroStop(s)?heroCard(s,i)+nearRow(s.name):compactStop(s,i)}`}).join('')}</div></div>`}`}
 function hotelFor(s){return s.type==='住宿'?hotels.find(h=>h.stops.includes(s.name)):null}
 function dlabel(h,day){if(day)return `D${day} | 1/${15+day}（${WD[day]}）住宿${h.dn.length>1?' · 第 '+(h.dn.indexOf(day)+1)+' 晚':''}`;
  const a=h.dn[0],b=h.dn[h.dn.length-1];return h.dn.length>1?`D${a}–D${b} | 1/${15+a}（${WD[a]}）起住宿 ${h.dn.length} 晚`:`D${a} | 1/${15+a}（${WD[a]}）住宿`}
@@ -1292,6 +1365,7 @@ root.addEventListener('click',e=>{
  if(ds.res){S.resTab=ds.res;render();save()}
  if(ds.page){S.page=ds.page;render();save();scrollTo({top:0,behavior:'smooth'})}
  if(ds.quick==='rain'){S.page='行程';S.plan='rain';render();save();scrollTo({top:0})}
+ if(ds.arita){S.aritaPm=ds.arita==='diy'?'diy':'buy';render();save();main.querySelector('#arita-choice')?.scrollIntoView({behavior:'smooth',block:'nearest'});return}
  if(ds.plan){S.plan=ds.plan;render();save();main.querySelector('.plantoggle')?.scrollIntoView({behavior:'smooth',block:'nearest'})}
  if(ds.quick==='supply'){main.querySelector('#supply')?.scrollIntoView({behavior:'smooth',block:'start'})}
  if(ds.mode){S.mode=ds.mode;render();save()}
