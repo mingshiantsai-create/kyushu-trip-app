@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f6f3ec"><meta name="robots" content="noindex"><title>KYUSHU 2027 · 九州親子自駕</title>
+<!doctype html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f6f3ec"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="assets/pwa-192.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="九州 2027"><meta name="robots" content="noindex"><title>KYUSHU 2027 · 九州親子自駕</title>
 <script>try{var t=localStorage.getItem('kyushu-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script src="assets/lucide.min.js"></script><style>
 :root{
@@ -634,12 +634,275 @@ body{margin:0;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antia
   #app .mentry{grid-template-columns:88px minmax(0,1fr)}
 }
 
+/* ---- v23 bigger text ---- */
+#app h3{font-size:18px}
+#app .muted{font-size:15px}
+#app .eyebrow{font-size:13px}
+#app button{font-size:15px}
+#app a.primary{font-size:16px}
+#app a.ghost{font-size:15px}
+#app .linkout{font-size:14px}
+#app .brand .eyebrow{font-size:12px}
+#app .version{font-size:12px}
+#app .sectionhead .muted{font-size:14px}
+#app .dates button{font-size:17px}
+#app .dates span{font-size:12px}
+#app .dayhead .eyebrow{font-size:13px}
+#app .credit{font-size:12px}
+#app .rain .rainhead h3{font-size:17px}
+#app .rc-desc{font-size:15px}
+#app .rc-meta>span{font-size:15px}
+#app .rc-meta small{font-size:14px}
+#app .rc-note{font-size:14px}
+#app .rc-credit{font-size:13px}
+#app .rc-tag{font-size:13px}
+#app .mapheading h3{font-size:17px}
+#app .mapheading p{font-size:13px}
+#app .mapfoot .muted{font-size:13px}
+#app .mapfoot a.primary{font-size:15px}
+#app .focuschip{font-size:14px}
+#app .focuschip button{font-size:13px}
+#app .navbox h3{font-size:17px}
+#app .mode button{font-size:14px}
+#app select,#app input[type=text],#app input[type=number]{font-size:17px}
+#app select{font-size:16px}
+#app .next .muted{font-size:14px}
+#app .navfoot{font-size:13px}
+#app .period{font-size:14px}
+#app .stop small{font-size:13px}
+#app .stop h3{font-size:19px}
+#app .stopbody>.flex>button{font-size:14px}
+#app .guide{font-size:15px}
+#app .stopbody>.muted{font-size:14px}
+#app .supply{font-size:14px}
+#app details{font-size:15px}
+#app .detail .muted{font-size:14px}
+#app .mapjump{font-size:14px}
+#app .reststop h3{font-size:17px}
+#app .addednote{font-size:14px}
+#app .routechips span{font-size:14px}
+#app .facts small{font-size:13px}
+#app .facts span{font-size:14px}
+#app .continue h3{font-size:20px}
+#app .continue button.primary{font-size:16px}
+#app .quick>*{font-size:15px}
+#app .quick small{font-size:13px}
+#app .spotbody small{font-size:13px}
+#app .spotbody b{font-size:17px}
+#app .spotbody p{font-size:14px}
+#app .spotbody button{font-size:14px}
+#app .areachips button{font-size:14px}
+#app .supplycol h4{font-size:16px}
+#app .shop b{font-size:16px}
+#app .shop span{font-size:13px}
+#app .supplyempty{font-size:14px}
+#app .dtext small{font-size:13px}
+#app .dtext b{font-size:17px}
+#app .darrow{font-size:17px}
+#app .photocredit{font-size:13px}
+#app .maplist a{font-size:16px}
+#app .maplist a .muted{font-size:14px}
+#app .marker{font-size:14px}
+#app .walletcard small{font-size:15px}
+#app .walletnote{font-size:13px}
+#app .exp b{font-size:17px}
+#app .exp span{font-size:15px}
+#app .empty{font-size:15px}
+#app .reftable{font-size:16px}
+#app .reftable th{font-size:14px}
+#app .reftable td span{font-size:13px}
+#app .geobtn{font-size:14px}
+#app .qml{font-size:14px}
+#app .hc-head small{font-size:14px}
+#app .hc-head .ja{font-size:13px}
+#app .hc-cell small{font-size:14px}
+#app .hc-cell b{font-size:17px}
+#app .hc-cell span{font-size:13px}
+#app .hc-row{font-size:15px}
+#app .hc-tip{font-size:15px}
+#app .hcard .resnote{font-size:14px}
+#app .hc-foot{font-size:13px}
+#app .hc-foot .linkout{font-size:14px}
+#app .lodgefoot .flex button{font-size:15px}
+#app .mc-intro{font-size:15px}
+#app .plantoggle button{font-size:16px}
+#app .rainintro{font-size:15px}
+#app .tlhead h3,#app .mealshead h3{font-size:17px}
+#app .mealk{font-size:14px}
+#app .mealt b{font-size:17px}
+#app .mtag{font-size:13px}
+#app .mealb>p{font-size:14px}
+#app .mplace{font-size:14px}
+#app .mplace small{font-size:13px}
+#app .mealsfoot{font-size:13px}
+#app .restabs button{font-size:15px}
+#app .rescard .date{font-size:14px}
+#app .rescard .ja{font-size:14px}
+#app .badge{font-size:13px}
+#app .kv{font-size:15px}
+#app .resnote{font-size:14px}
+#app .flight .ap span{font-size:14px}
+#app .flight .line{font-size:13px}
+#app footer.tabbar button{font-size:13px}
+#app .notice{font-size:13px}
+#app .notice details{font-size:13px}
+#app .notice summary{font-size:13px}
+#app .toast{font-size:15px}
+#app label{font-size:15px}
+#app .switchrow span{font-size:15px}
+#app .switchrow small{font-size:13px}
+#app .modalactions .primary{font-size:17px}
+#app .modalactions .danger{font-size:16px}
+#app .hero-photocredit{font-size:12px}
+#app .hero-body h3{font-size:21px}
+#app .hero-desc{font-size:16px}
+#app .hero-hours{font-size:14px}
+#app .hero-more summary{font-size:15px}
+#app .hero-more p{font-size:15px}
+#app .near-head h4{font-size:15px}
+#app .near-head .muted{font-size:13px}
+#app .near-body b{font-size:16px}
+#app .near-body p{font-size:14px}
+#app .near-min{font-size:13px}
+#app .near-foot a{font-size:14px}
+#app .near-credit{font-size:12px}
+#app .coupon-chip{font-size:13px}
+#app .choice-head h3{font-size:19px}
+#app .choice-tabs button{font-size:15px}
+#app .choice-label{font-size:14px}
+#app .choice-now{font-size:12px}
+#app .diy-alts h4{font-size:15px}
+#app .diy-card b{font-size:15px}
+#app .diy-card p{font-size:14px}
+#app .millus{font-size:12px}
+#app .mname{font-size:16px}
+#app .mja{font-size:14px}
+#app .mchip{font-size:13px}
+#app .mdish{font-size:14px}
+#app .mcredit{font-size:12px}
+@media(min-width:720px){#app .wordmark{font-size:21px}
+#app .version{font-size:13px}
+#app footer.tabbar button{font-size:15px}}
+@media(min-width:960px){#app .stop h3{font-size:21px}}
+@media(max-width:380px){#app .qml{font-size:14px}
+#app .quick>*{font-size:14px}}/* ---- v23: contrast, touch targets, new components ---- */
+:root{--quiet:#4f586b;--line-2:#bdb4a1;--accent:#a63a24;--moss:#3f5a39;--amber:#7d5409}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--quiet:#b4b4bb;--line-2:#56565a;--accent:#ffb09c;--moss:#9fe0ad;--amber:#f5cf84}}
+:root[data-theme=dark]{--quiet:#b4b4bb;--line-2:#56565a;--accent:#ffb09c;--moss:#9fe0ad;--amber:#f5cf84}
+#app{font-size:17px;line-height:1.6}
+#app p,#app li,#app dd,#app dt{font-size:max(15px,1em)}
+#app .stop small,#app .eyebrow{color:var(--accent)}
+#app button,#app a.primary,#app a.ghost,#app .mplace,#app .linkout,#app .coupon-chip,#app .act,#app select{min-height:44px}
+#app button,#app .act,#app .mplace,#app .linkout,#app .coupon-chip{min-width:44px}
+#app button{padding:10px 18px;border-width:1.5px}
+#app .mplace,#app .linkout,#app .coupon-chip{display:inline-flex;align-items:center;gap:6px;padding:10px 14px}
+#app .dates button{min-height:56px;min-width:68px}
+#app footer.tabbar button{min-height:54px;font-size:12px;position:relative;padding:6px 2px}
+#app footer.tabbar{gap:2px;padding-left:6px;padding-right:6px}
+#app footer.tabbar button svg{width:23px;height:23px}
+#app footer.tabbar .badge{position:absolute;top:2px;left:calc(50% + 6px);min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--accent);color:#fff;font-style:normal;font-size:12px;font-weight:700;line-height:20px;text-align:center}
+:root[data-theme=dark] #app footer.tabbar .badge{color:#000}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) #app footer.tabbar .badge{color:#000}}
+#app .themebtn{width:44px;height:44px;padding:0;display:inline-flex;align-items:center;justify-content:center}
+#app :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+#app .mode button{padding:8px 14px;min-height:44px}
+#app details>summary{min-height:44px;display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:600}
+#app .offbar{position:sticky;top:0;z-index:50;padding:10px 16px;background:#7d5409;color:#fff;font-size:15px;font-weight:600;text-align:center}
+#app .offbar[hidden]{display:none}
+/* today card */
+#app .todaycard{margin:14px 0 18px;padding:18px;border-radius:var(--r-lg,22px);background:var(--deep);color:var(--deep-ink);box-shadow:var(--shadow-lg);border:1.5px solid var(--line-2)}
+#app .todaycard .tc-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+#app .tc-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:999px;background:var(--deep-accent);color:#24365c;font-weight:700;font-size:15px}
+#app .tc-badge svg{width:18px;height:18px}
+#app .tc-clock{font-size:15px;font-weight:600;color:var(--deep-sub);font-variant-numeric:tabular-nums}
+#app .tc-preview{font-size:13px;padding:3px 10px;border-radius:999px;border:1px dashed var(--deep-sub);color:var(--deep-sub)}
+#app .tc-label{margin-top:14px;font-size:15px;font-weight:600;color:var(--deep-sub)}
+#app .tc-label span{font-weight:500}
+#app h3.tc-name{margin:4px 0 8px;font-size:26px;line-height:1.3;color:var(--deep-ink)}
+#app .tc-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-bottom:14px;font-size:16px;font-weight:600;color:var(--deep-ink)}
+#app .tc-meta span{display:inline-flex;align-items:center;gap:6px}
+#app .tc-meta svg{width:19px;height:19px;flex:none}
+#app .tc-meta small{display:block;margin-left:6px;font-size:13px;font-weight:500;color:var(--deep-sub)}
+#app .tc-actions{display:flex;flex-wrap:wrap;gap:10px}
+#app .todaycard a.primary.tc-nav{background:#fff;color:#24365c;border-color:#fff;min-height:52px;font-size:18px;padding:12px 24px;flex:1 1 200px}
+#app .todaycard .act,#app .todaycard .tc-step button,#app .todaycard .tc-actions button{background:rgba(255,255,255,.14);color:var(--deep-ink);border-color:rgba(255,255,255,.45)}
+#app .tc-step{display:flex;gap:10px;margin-top:12px}
+#app .tc-step button{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:48px;font-size:16px}
+#app .todaycard .tc-step button.done{flex:2;background:#d7f5de;color:#14301a;border-color:#d7f5de;font-weight:700}
+#app .tc-step button:disabled{opacity:.45;cursor:not-allowed}
+#app .tc-after{margin:12px 0 0;font-size:15px;color:var(--deep-sub)}
+#app .tc-after b{color:var(--deep-ink)}
+#app .tc-back{margin-top:10px;background:transparent;color:var(--deep-ink);border-color:rgba(255,255,255,.5)}
+#app .todaycard.idle .tc-count{display:flex;align-items:baseline;gap:10px;margin:12px 0 4px}
+#app .tc-count b{font-size:56px;line-height:1;font-variant-numeric:tabular-nums}
+#app .tc-count span{font-size:20px;font-weight:600}
+#app .tc-line{margin:6px 0 14px;font-size:16px;color:var(--deep-sub)}
+/* stop actions */
+#app .actions{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+#app .act{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:10px 16px;border-radius:999px;border:1.5px solid var(--line-2);background:var(--surface);color:var(--ink);font-size:16px;font-weight:650;text-decoration:none;font-variant-numeric:tabular-nums}
+#app .act svg{width:19px;height:19px;flex:none}
+#app .act.nav{background:var(--primary);color:var(--on-primary);border-color:var(--primary)}
+#app .act.tel{background:var(--moss-soft);color:var(--moss);border-color:var(--moss)}
+#app .act.mc{background:var(--amber-soft);color:var(--amber);border-color:var(--amber);text-align:left}
+#app .actsrc{margin:2px 0 8px;font-size:13px;color:var(--quiet);line-height:1.5}
+#app .mealacts{margin-top:8px}
+/* day tabs */
+#app .dtabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:6px;margin:0 0 18px;border-radius:18px;background:var(--surface-2);position:sticky;top:64px;z-index:20;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+#app .dtabs button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:62px;border:0;border-radius:13px;background:transparent;color:var(--ink-2);padding:6px 4px}
+#app .dtabs button svg{width:21px;height:21px}
+#app .dtabs button b{font-size:17px}
+#app .dtabs button small{font-size:13px;color:var(--quiet);font-weight:500}
+#app .dtabs .active{background:var(--surface);color:var(--ink);box-shadow:0 1px 5px rgba(0,0,0,.2)}
+#app .dtabs .active.rainon{background:#2f6db5;color:#fff}
+#app .dtabs .active.rainon small{color:#e6f0ff}
+#app details.addednote{margin:-6px 0 14px;font-size:15px}
+#app details.addednote p{margin:6px 0 0;color:var(--ink-2);line-height:1.7}
+#app details.fold>summary{padding:10px 14px;border:1.5px solid var(--line-2);border-radius:16px;background:var(--surface)}
+#app details.fold>summary b{font-size:17px}
+#app details.fold>summary .muted{margin-left:auto}
+#app details.fold[open]>summary{margin-bottom:12px}
+/* todo */
+#app .todolink{display:flex;align-items:center;gap:14px;width:100%;text-align:left;border-radius:20px;padding:14px 18px;margin:0 0 18px;background:var(--amber-soft);border:1.5px solid var(--amber);color:var(--ink)}
+#app .todolink>span:nth-child(2){flex:1}
+#app .todolink b{display:block;font-size:18px}
+#app .todolink small{display:block;font-size:14px;font-weight:500;color:var(--ink-2)}
+#app .todolink svg{width:26px;height:26px;color:var(--amber);flex:none}
+#app .todosec{margin:22px 0}
+#app .todoitem{display:flex;gap:14px;align-items:flex-start;padding:14px;margin:10px 0;border-radius:18px;background:var(--surface);border:1.5px solid var(--line-2);box-shadow:var(--shadow)}
+#app .todoitem.done{opacity:.6}
+#app .todoitem.done b{text-decoration:line-through}
+#app .tcheck{flex:none;width:44px;height:44px;padding:0;border-radius:50%;border:2.5px solid var(--primary);background:var(--surface);display:inline-flex;align-items:center;justify-content:center}
+#app .todoitem.done .tcheck{background:var(--moss);border-color:var(--moss);color:#fff}
+#app .tbody{flex:1;min-width:0}
+#app .tbody b{font-size:18px;line-height:1.4}
+#app .tbody p{margin:4px 0 10px}
+#app .trow{display:flex;flex-wrap:wrap;gap:8px}
+#app .trow button,#app .trow .act{font-size:15px;padding:8px 14px}
+/* misc */
+#app .mealview{padding-top:2px}
+#app .mapfold .mapmodule iframe{min-height:320px}
+@media (min-width:960px){#app .dtabs{max-width:520px;top:70px}#app .todaycard{max-width:760px}}
+@media (prefers-reduced-motion:reduce){#app *{transition:none!important;scroll-behavior:auto!important}}
+
+:root{--on-accent:#fff;--rc-blue:#1f5496}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--on-accent:#2a0d05;--rc-blue:#9cc2f5}}
+:root[data-theme=dark]{--on-accent:#2a0d05;--rc-blue:#9cc2f5}
+#app .choice-tabs button.active,#app .choice-now{color:var(--on-accent)}
+#app .rc-tag{color:var(--rc-blue);font-size:13px;padding:3px 10px}
+#app .hc-name,#app .detail a,#app .hc-cell a,#app .hcard a:not(.act),#app .supply a,#app .spot a.linkout{display:inline-flex;align-items:center;min-height:44px}
+#app .mapjump{min-height:44px;display:inline-flex;align-items:center}
+#app .eyebrow{font-size:max(12px,var(--x,12px))}
+#app .muted,#app p.muted,#app .stop .muted{font-size:14px!important}
+
 </style></head><body><div id="app">
 <header class="brand"><div class="brandmark"><div class="wordmark">KYUSHU 2027</div><div class="eyebrow">FAMILY ROAD TRIP</div></div><div class="brandside"><div class="version">2027.01.16 — 01.24<br>9 DAYS · FAMILY ROAD TRIP</div><button class="themebtn" type="button" aria-label="切換主題"></button></div></header>
-<main id="k-content"></main><div class="toast" role="status" aria-live="polite" hidden></div><footer class="tabbar"></footer>
-<div class="notice">V22 互動原型 · Day 2 為完整範本，其餘日期為草稿；Day 8、Day 9 依 V6 行程補入。地圖以 Google Maps 顯示整日路線，車程僅供參考。停車費、行車方向與補給資訊出發前待核實。<details><summary>圖片與資料來源</summary><ul><li>封面、Day 2、太宰府天滿宮：<a href="https://www.dazaifutenmangu.or.jp/" target="_blank" rel="noopener">太宰府天滿宮官方網站</a></li><li>九州國立博物館：<a href="https://www.kyuhaku.jp/" target="_blank" rel="noopener">九州國立博物館官方網站</a></li><li>Day 1 博多站：<a href="https://commons.wikimedia.org/wiki/File:Hakata_Station_20180306.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 3 武雄溫泉樓門：<a href="https://commons.wikimedia.org/wiki/File:Takeo_Onsen_Romon_20230510.jpg" target="_blank" rel="noopener">Viy4092</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 4 有田 陶山神社：<a href="https://commons.wikimedia.org/wiki/File:Tozan_Shrine01.jpg" target="_blank" rel="noopener">STA3816</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>（已縮圖）</li><li>Day 5 豪斯登堡：<a href="https://commons.wikimedia.org/wiki/File:200320_Huis_Ten_Bosch_Sasebo_Nagasaki_pref_Japan04s3.jpg" target="_blank" rel="noopener">663highland</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/2.5" target="_blank" rel="noopener">CC BY 2.5</a>（已縮圖）</li><li>Day 6 小倉城：<a href="https://commons.wikimedia.org/wiki/File:Kokura_Castle_2024-09-04.jpg" target="_blank" rel="noopener">Stjepko Krehula</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>（已縮圖）</li><li>Day 7 門司港站：<a href="https://commons.wikimedia.org/wiki/File:Mojiko_Station_20190831.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 8 櫛田神社：<a href="https://commons.wikimedia.org/wiki/File:Torii_and_Romon_Gate_of_Kushida_Shrine_2.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 9 福岡機場國際線航廈：<a href="https://commons.wikimedia.org/wiki/File:Fukuoka_Airport_International_Passenger_Term_Bldg_The_WSW_side_Aoki_Hakata-ku_Fukuoka_20250318_162120.jpg" target="_blank" rel="noopener">Hirho</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>（已縮圖）</li><li>飯店照片：<a href="https://www.gardenhotels.co.jp/fukuoka-gion/" target="_blank" rel="noopener">三井花園飯店福岡祇園</a>、<a href="https://kamenoi-hotels.com/yanagawa/" target="_blank" rel="noopener">龜之井飯店柳川</a>、<a href="https://www.h-sakura.com/ureshino/" target="_blank" rel="noopener">櫻花飯店嬉野</a>（含館內晚餐照片）、<a href="https://www.nikko-htb.co.jp/" target="_blank" rel="noopener">豪斯登堡日航飯店</a>、<a href="https://hotel-iori.com/" target="_blank" rel="noopener">Hotel Iori</a> 各官方網站（已縮圖）</li><li>季楽本店：<a href="https://kira.saga-ja.jp/honten/" target="_blank" rel="noopener">季楽官方網站</a>；Arita Será：<a href="https://www.arita.gr.jp/" target="_blank" rel="noopener">アリタセラ公式サイト</a>；丸兄商社：<a href="https://www.maru-kei.com/" target="_blank" rel="noopener">丸兄商社公式サイト</a>；幸樂窯：<a href="https://kouraku.jp.net/" target="_blank" rel="noopener">幸楽窯公式サイト</a>；有田銘品館：<a href="https://www.arita.jp/gourmet/post_6.html" target="_blank" rel="noopener">有田觀光協會官方網站</a>；艸窯：<a href="https://www.arita.jp/experience/post_32.html" target="_blank" rel="noopener">有田觀光協會官方網站</a>；Gallery 有田：<a href="https://gallery-arita.co.jp/charm/" target="_blank" rel="noopener">ギャラリー有田官方網站</a>；九州陶瓷文化館：<a href="https://commons.wikimedia.org/wiki/File:Kyushu_Ceramic_Museum_front.JPG" target="_blank" rel="noopener">Pekachu</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>v20 附近推薦與新主景點照片：だざいふ遊園地 Photaro、竈門神社 そらみみ、御船山楽園 STA3816、陶山神社 STA3816、有田ポーセリンパーク mahlervv、針尾送信所 Dyamasan、西海橋 そらみみ、舊門司稅關 Suicasmo、門司港ハイマート そらみみ、出光美術館（門司） Nissy-KITAQ、香椎宮 Saigen Jiro（CC0）、福岡城 Pontafon、福岡市博物館 Nkmr844、魚町銀天街 Asturio Cantabrio、皿倉山夜景 Suicasmo、柳川川下り ブルーノ・プラス、LaLaport Flower Park 入口 Junknote；以上除標示外多為 Wikimedia Commons，授權見各卡片（已縮圖）</li><li>v21 Arita Será 園區照：<a href="https://www.arita.gr.jp/" target="_blank" rel="noopener">アリタセラ公式サイト</a>；丸兄商社外觀：<a href="https://www.maru-kei.com/" target="_blank" rel="noopener">丸兄商社公式サイト</a>；幸樂窯工房：<a href="https://kouraku.jp.net/" target="_blank" rel="noopener">幸楽窯公式サイト</a>（已縮圖）</li><li>v22 三餐照片：牧のうどんごぼう天うどん <a href="https://www.makinoudon.jp/" target="_blank" rel="noopener">釜揚げ牧のうどん公式サイト</a>；博多もつ鍋 <a href="https://www.motu-ooyama.com/" target="_blank" rel="noopener">おおやま公式サイト</a>；梅枝餅與抹茶 <a href="https://commons.wikimedia.org/wiki/File:梅ヶ枝餅と抹茶.JPG" target="_blank" rel="noopener">KCyamazaki</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）。無實拍時使用分類示意圖示。</li><li>佐賀牛示意圖：<a href="https://commons.wikimedia.org/wiki/File:Saga_beef.jpg" target="_blank" rel="noopener">Masahiko Satoh</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>（已縮圖）</li><li>附近店家：© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors（ODbL）</li><li>圖示：<a href="https://lucide.dev/license" target="_blank" rel="noopener">Lucide</a>（ISC）</li></ul></details></div>
+<div class="offbar" role="status" hidden>目前沒有網路：行程、電話、Mapcode 仍可看；Google 地圖與導航需要網路。</div><main id="k-content"></main><div class="toast" role="status" aria-live="polite" hidden></div><footer class="tabbar"></footer>
+<div class="notice">V23 互動原型 · Day 2 為完整範本，其餘日期為草稿；Day 8、Day 9 依 V6 行程補入。地圖以 Google Maps 顯示整日路線，車程僅供參考。停車費、行車方向與補給資訊出發前待核實。電話與 Mapcode 只收錄查證過的，沒顯示代表尚未查證。<details><summary>圖片與資料來源</summary><ul><li>封面、Day 2、太宰府天滿宮：<a href="https://www.dazaifutenmangu.or.jp/" target="_blank" rel="noopener">太宰府天滿宮官方網站</a></li><li>九州國立博物館：<a href="https://www.kyuhaku.jp/" target="_blank" rel="noopener">九州國立博物館官方網站</a></li><li>Day 1 博多站：<a href="https://commons.wikimedia.org/wiki/File:Hakata_Station_20180306.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 3 武雄溫泉樓門：<a href="https://commons.wikimedia.org/wiki/File:Takeo_Onsen_Romon_20230510.jpg" target="_blank" rel="noopener">Viy4092</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 4 有田 陶山神社：<a href="https://commons.wikimedia.org/wiki/File:Tozan_Shrine01.jpg" target="_blank" rel="noopener">STA3816</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>（已縮圖）</li><li>Day 5 豪斯登堡：<a href="https://commons.wikimedia.org/wiki/File:200320_Huis_Ten_Bosch_Sasebo_Nagasaki_pref_Japan04s3.jpg" target="_blank" rel="noopener">663highland</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/2.5" target="_blank" rel="noopener">CC BY 2.5</a>（已縮圖）</li><li>Day 6 小倉城：<a href="https://commons.wikimedia.org/wiki/File:Kokura_Castle_2024-09-04.jpg" target="_blank" rel="noopener">Stjepko Krehula</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>（已縮圖）</li><li>Day 7 門司港站：<a href="https://commons.wikimedia.org/wiki/File:Mojiko_Station_20190831.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 8 櫛田神社：<a href="https://commons.wikimedia.org/wiki/File:Torii_and_Romon_Gate_of_Kushida_Shrine_2.jpg" target="_blank" rel="noopener">そらみみ</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>Day 9 福岡機場國際線航廈：<a href="https://commons.wikimedia.org/wiki/File:Fukuoka_Airport_International_Passenger_Term_Bldg_The_WSW_side_Aoki_Hakata-ku_Fukuoka_20250318_162120.jpg" target="_blank" rel="noopener">Hirho</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>（已縮圖）</li><li>飯店照片：<a href="https://www.gardenhotels.co.jp/fukuoka-gion/" target="_blank" rel="noopener">三井花園飯店福岡祇園</a>、<a href="https://kamenoi-hotels.com/yanagawa/" target="_blank" rel="noopener">龜之井飯店柳川</a>、<a href="https://www.h-sakura.com/ureshino/" target="_blank" rel="noopener">櫻花飯店嬉野</a>（含館內晚餐照片）、<a href="https://www.nikko-htb.co.jp/" target="_blank" rel="noopener">豪斯登堡日航飯店</a>、<a href="https://hotel-iori.com/" target="_blank" rel="noopener">Hotel Iori</a> 各官方網站（已縮圖）</li><li>季楽本店：<a href="https://kira.saga-ja.jp/honten/" target="_blank" rel="noopener">季楽官方網站</a>；Arita Será：<a href="https://www.arita.gr.jp/" target="_blank" rel="noopener">アリタセラ公式サイト</a>；丸兄商社：<a href="https://www.maru-kei.com/" target="_blank" rel="noopener">丸兄商社公式サイト</a>；幸樂窯：<a href="https://kouraku.jp.net/" target="_blank" rel="noopener">幸楽窯公式サイト</a>；有田銘品館：<a href="https://www.arita.jp/gourmet/post_6.html" target="_blank" rel="noopener">有田觀光協會官方網站</a>；艸窯：<a href="https://www.arita.jp/experience/post_32.html" target="_blank" rel="noopener">有田觀光協會官方網站</a>；Gallery 有田：<a href="https://gallery-arita.co.jp/charm/" target="_blank" rel="noopener">ギャラリー有田官方網站</a>；九州陶瓷文化館：<a href="https://commons.wikimedia.org/wiki/File:Kyushu_Ceramic_Museum_front.JPG" target="_blank" rel="noopener">Pekachu</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）</li><li>v20 附近推薦與新主景點照片：だざいふ遊園地 Photaro、竈門神社 そらみみ、御船山楽園 STA3816、陶山神社 STA3816、有田ポーセリンパーク mahlervv、針尾送信所 Dyamasan、西海橋 そらみみ、舊門司稅關 Suicasmo、門司港ハイマート そらみみ、出光美術館（門司） Nissy-KITAQ、香椎宮 Saigen Jiro（CC0）、福岡城 Pontafon、福岡市博物館 Nkmr844、魚町銀天街 Asturio Cantabrio、皿倉山夜景 Suicasmo、柳川川下り ブルーノ・プラス、LaLaport Flower Park 入口 Junknote；以上除標示外多為 Wikimedia Commons，授權見各卡片（已縮圖）</li><li>v21 Arita Será 園區照：<a href="https://www.arita.gr.jp/" target="_blank" rel="noopener">アリタセラ公式サイト</a>；丸兄商社外觀：<a href="https://www.maru-kei.com/" target="_blank" rel="noopener">丸兄商社公式サイト</a>；幸樂窯工房：<a href="https://kouraku.jp.net/" target="_blank" rel="noopener">幸楽窯公式サイト</a>（已縮圖）</li><li>v22 三餐照片：牧のうどんごぼう天うどん <a href="https://www.makinoudon.jp/" target="_blank" rel="noopener">釜揚げ牧のうどん公式サイト</a>；博多もつ鍋 <a href="https://www.motu-ooyama.com/" target="_blank" rel="noopener">おおやま公式サイト</a>；梅枝餅與抹茶 <a href="https://commons.wikimedia.org/wiki/File:梅ヶ枝餅と抹茶.JPG" target="_blank" rel="noopener">KCyamazaki</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>（已縮圖）。無實拍時使用分類示意圖示。</li><li>佐賀牛示意圖：<a href="https://commons.wikimedia.org/wiki/File:Saga_beef.jpg" target="_blank" rel="noopener">Masahiko Satoh</a>，Wikimedia Commons，<a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>（已縮圖）</li><li>附近店家：© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors（ODbL）</li><li>圖示：<a href="https://lucide.dev/license" target="_blank" rel="noopener">Lucide</a>（ISC）</li></ul></details></div>
 <div class="overlay" hidden></div></div>
 <script>
+const STOPINFO={"三井花園福岡祇園": {"tel": "092-414-3131", "src": "飯店官網"}, "太宰府天滿宮・表參道": {"tel": "092-922-8225", "src": "天滿宮／市府觀光頁", "mc": "55 364 166*82"}, "九州國立博物館": {"tel": "050-5542-8600", "src": "九博官網", "mc": "55 334 716*48"}, "基山 PA（下行）": {"tel": "0942-81-0515", "src": "NEXCO 西日本 PA 頁", "mc": "55 064 573*42"}, "廣川 SA（下行）": {"tel": "0943-32-3529", "src": "NEXCO 西日本 SA 頁"}, "道之驛 みやま": {"tel": "0944-67-6477", "src": "道の駅みやま官網"}, "柳川龜之井飯店": {"tel": "0944-72-6295", "src": "飯店官網"}, "武雄市圖書館": {"tel": "0954-20-0222", "src": "市圖書館官網", "mc": "104 378 243*33"}, "武雄溫泉樓門": {"tel": "0954-23-2001", "src": "武雄市觀光協會", "mc": "104 406 178*40"}, "嬉野櫻花飯店": {"tel": "0954-42-3000", "src": "飯店官網"}, "佐賀縣立九州陶瓷文化館": {"tel": "0955-43-3681", "src": "館方官網"}, "有田銘品館": {"tel": "0955-43-3020", "src": "有田觀光協會"}, "ギャラリー有田": {"tel": "0955-42-2952", "src": "官網（餐廳）"}, "Arita Será（アリタセラ）": {"tel": "0955-43-2288", "src": "アリタセラ官網", "mc": "104 360 850*51"}, "艸窯（練り上げワークショップ）": {"tel": "0955-42-3846", "src": "艸窯官網（窯直予約）"}, "豪斯登堡日航飯店": {"tel": "0956-27-3000", "src": "飯店官網"}, "豪斯登堡": {"tel": "0570-064-110", "src": "豪斯登堡官網（總合案內）", "mc": "307 320 552*08", "mcn": "第 1 停車場"}, "小倉城": {"tel": "093-561-1210", "src": "小倉城官網（天守閣）"}, "皿倉山夜景": {"tel": "093-671-4761", "src": "皿倉山纜車官網"}, "門司港 Retro": {"tel": "093-321-4151", "src": "門司港レトロ總合案內"}, "LaLaport 福岡": {"tel": "092-707-9820", "src": "LaLaport 官網"}, "庵飯店": {"tel": "092-402-5515", "src": "樂天トラベル／じゃらん（官網未列）"}, "庵飯店出發": {"tel": "092-402-5515", "src": "樂天トラベル／じゃらん（官網未列）"}, "櫛田神社・川端通": {"tel": "092-291-2951", "src": "福岡市觀光資訊"}, "寶可夢中心福岡（博多マルイ 2F）": {"tel": "092-413-5185", "src": "寶可夢官網"}, "Nintendo FUKUOKA": {"tel": "0570-013-312", "src": "任天堂官網"}};
+const MEALINFO={"季楽": {"tel": "0952-28-4132", "src": "季楽官網", "mc": "87 321 891*32"}, "竜馬": {"tel": "0952-33-0660", "src": "竜馬官網"}};
+const LEGS={"福岡機場取車|太宰府天滿宮・表參道": 21, "太宰府天滿宮・表參道|九州國立博物館": 5, "九州國立博物館|基山 PA（下行）": 18, "基山 PA（下行）|廣川 SA（下行）": 19, "廣川 SA（下行）|道之驛 みやま": 14, "道之驛 みやま|柳川龜之井飯店": 13, "柳川龜之井飯店|武雄市圖書館": 53, "武雄市圖書館|武雄溫泉樓門": 2, "武雄溫泉樓門|嬉野櫻花飯店": 21, "嬉野|佐賀縣立九州陶瓷文化館": 27, "佐賀縣立九州陶瓷文化館|有田銘品館": 1, "有田銘品館|ギャラリー有田": 1, "ギャラリー有田|Arita Será（アリタセラ）": 5, "Arita Será（アリタセラ）|豪斯登堡日航飯店": 28, "ギャラリー有田|艸窯（練り上げワークショップ）": 5, "艸窯（練り上げワークショップ）|豪斯登堡日航飯店": 32, "豪斯登堡日航飯店|小倉城": 144, "小倉城|魚町銀天街": 2, "門司港 Retro|LaLaport 福岡": 76, "LaLaport 福岡|庵飯店": 4, "櫛田神社・川端通|寶可夢中心福岡（博多マルイ 2F）": 2, "寶可夢中心福岡（博多マルイ 2F）|Nintendo FUKUOKA": 3, "Nintendo FUKUOKA|庵飯店": 3, "庵飯店出發|福岡機場國際線航廈": 13, "三井花園福岡祇園|福岡機場取車": 14};
 const SUPPLY={"gion": [{"cat": "超商", "name": "セブン-イレブン", "dist": 37, "lat": 33.590141, "lon": 130.413215, "note": ""}, {"cat": "超商", "name": "セブン-イレブン", "dist": 179, "lat": 33.58875, "lon": 130.414078, "note": ""}, {"cat": "超市", "name": "マックスバリュ", "dist": 302, "lat": 33.592017, "lon": 130.411034, "note": "OSM 標示 24 小時"}, {"cat": "超市", "name": "ボンラパス タンブル", "dist": 535, "lat": 33.589036, "lon": 130.419133, "note": ""}, {"cat": "便當", "name": "ほっともっと", "dist": 217, "lat": 33.591713, "lon": 130.415184, "note": "外帶便當連鎖"}, {"cat": "餐廳", "name": "桐壺", "dist": 182, "lat": 33.589602, "lon": 130.415335, "note": "日式料理"}, {"cat": "餐廳", "name": "牧のうどん 博多バスターミナル店", "dist": null, "q": "牧のうどん 博多バスターミナル店", "note": "V6 行程建議（D1 晚餐）"}, {"cat": "餐廳", "name": "博多もつ鍋 おおやま", "dist": null, "q": "博多もつ鍋 おおやま 博多", "note": "V6 行程建議（D1 晚餐）"}], "iori": [{"cat": "超商", "name": "ファミリーマート", "dist": 191, "lat": 33.582334, "lon": 130.425445, "note": ""}, {"cat": "超商", "name": "デイリーヤマザキ", "dist": 193, "lat": 33.585615, "lon": 130.425603, "note": ""}, {"cat": "超市", "name": "マルショク", "dist": 201, "lat": 33.582306, "lon": 130.424087, "note": ""}, {"cat": "超市", "name": "サニー", "dist": 262, "lat": 33.582019, "lon": 130.426427, "note": ""}, {"cat": "便當", "name": "ほっともっと", "dist": 243, "lat": 33.583923, "lon": 130.427501, "note": "外帶便當連鎖"}, {"cat": "餐廳", "name": "葉隠うどん", "dist": 47, "lat": 33.583609, "lon": 130.424652, "note": "烏龍麵"}, {"cat": "餐廳", "name": "博多一双", "dist": 265, "lat": 33.586366, "lon": 130.42511, "note": "豚骨拉麵"}, {"cat": "餐廳", "name": "とんかつ大将", "dist": 247, "lat": 33.581828, "lon": 130.424264, "note": "炸豬排"}], "dazaifu": [{"cat": "超商", "name": "セブン-イレブン", "dist": 193, "lat": 33.522646, "lon": 130.533878, "note": ""}, {"cat": "超商", "name": "ローソン", "dist": 438, "lat": 33.51974, "lon": 130.531202, "note": ""}, {"cat": "餐廳", "name": "寺田屋", "dist": 239, "lat": 33.519632, "lon": 130.534152, "note": "表參道日式餐飲"}, {"cat": "餐廳", "name": "中村屋", "dist": 251, "lat": 33.519663, "lon": 130.533848, "note": "表參道日式餐飲"}, {"cat": "餐廳", "name": "かさの家", "dist": 295, "lat": 33.519395, "lon": 130.533485, "note": "表參道梅枝餅・餐飲"}], "yanagawa": [{"cat": "超商", "name": "ファミリーマート", "dist": 278, "lat": 33.156112, "lon": 130.403408, "note": ""}, {"cat": "超商", "name": "セブン-イレブン", "dist": 422, "lat": 33.159369, "lon": 130.403752, "note": ""}, {"cat": "超市", "name": "マルマツ", "dist": 716, "lat": 33.15123, "lon": 130.404554, "note": ""}, {"cat": "超市", "name": "マルキョウ", "dist": 909, "lat": 33.148575, "lon": 130.401449, "note": ""}, {"cat": "餐廳", "name": "うなぎ屋本店", "dist": 300, "lat": 33.158782, "lon": 130.398446, "note": "柳川鰻魚蒸籠飯"}, {"cat": "餐廳", "name": "楠川", "dist": 314, "lat": 33.15878, "lon": 130.398218, "note": "柳川鰻魚蒸籠飯"}, {"cat": "餐廳", "name": "本城ラーメン", "dist": 354, "lat": 33.159657, "lon": 130.399082, "note": "拉麵"}], "ureshino": [{"cat": "超商", "name": "ローソン", "dist": 233, "lat": 33.098127, "lon": 129.983045, "note": ""}, {"cat": "超市", "name": "マルキョウ嬉野店", "dist": 547, "lat": 33.099725, "lon": 129.990869, "note": ""}, {"cat": "餐廳", "name": "宗庵 よこ長", "dist": 197, "lat": 33.096992, "lon": 129.983588, "note": "嬉野溫泉湯豆腐（OSM：週三休）"}, {"cat": "餐廳", "name": "ジョイフル", "dist": 199, "lat": 33.098188, "lon": 129.983439, "note": "家庭餐廳"}], "htb": [{"cat": "超商", "name": "ニューヤマザキデイリーストア", "dist": 150, "lat": 33.089762, "lon": 129.790563, "note": ""}, {"cat": "超商", "name": "ファミリーマート", "dist": 392, "lat": 33.08961, "lon": 129.793156, "note": ""}, {"cat": "餐廳", "name": "リンガーハット", "dist": 349, "lat": 33.089781, "lon": 129.792699, "note": "長崎強棒麵連鎖"}, {"cat": "餐廳", "name": "ペッパーランチ", "dist": 463, "lat": 33.085695, "lon": 129.789496, "note": "鐵板牛排飯"}]};
 const IMGMETA={"d1": {"title": "Hakata Station 20180306.jpg", "page": "https://commons.wikimedia.org/wiki/File:Hakata_Station_20180306.jpg", "artist": "そらみみ", "license": "CC BY-SA 4.0", "licurl": "https://creativecommons.org/licenses/by-sa/4.0"}, "d3": {"title": "Takeo Onsen Romon 20230510.jpg", "page": "https://commons.wikimedia.org/wiki/File:Takeo_Onsen_Romon_20230510.jpg", "artist": "Viy4092", "license": "CC BY-SA 4.0", "licurl": "https://creativecommons.org/licenses/by-sa/4.0"}, "d4": {"title": "Tozan Shrine01.jpg", "page": "https://commons.wikimedia.org/wiki/File:Tozan_Shrine01.jpg", "artist": "STA3816", "license": "CC BY-SA 3.0", "licurl": "https://creativecommons.org/licenses/by-sa/3.0"}, "d5": {"title": "200320 Huis Ten Bosch Sasebo Nagasaki pref Japan04s3.jpg", "page": "https://commons.wikimedia.org/wiki/File:200320_Huis_Ten_Bosch_Sasebo_Nagasaki_pref_Japan04s3.jpg", "artist": "663highland", "license": "CC BY 2.5", "licurl": "https://creativecommons.org/licenses/by/2.5"}, "d6": {"title": "Kokura Castle 2024-09-04.jpg", "page": "https://commons.wikimedia.org/wiki/File:Kokura_Castle_2024-09-04.jpg", "artist": "Stjepko Krehula", "license": "CC BY 4.0", "licurl": "https://creativecommons.org/licenses/by/4.0"}, "d7": {"title": "Mojiko Station 20190831.jpg", "page": "https://commons.wikimedia.org/wiki/File:Mojiko_Station_20190831.jpg", "artist": "そらみみ", "license": "CC BY-SA 4.0", "licurl": "https://creativecommons.org/licenses/by-sa/4.0"}, "d8": {"title": "Torii and Romon Gate of Kushida Shrine 2.jpg", "page": "https://commons.wikimedia.org/wiki/File:Torii_and_Romon_Gate_of_Kushida_Shrine_2.jpg", "artist": "そらみみ", "license": "CC BY-SA 4.0", "licurl": "https://creativecommons.org/licenses/by-sa/4.0"}, "d9": {"title": "Fukuoka Airport International Passenger Term Bldg The WSW side Aoki Hakata-ku Fukuoka 20250318 162120.jpg", "page": "https://commons.wikimedia.org/wiki/File:Fukuoka_Airport_International_Passenger_Term_Bldg_The_WSW_side_Aoki_Hakata-ku_Fukuoka_20250318_162120.jpg", "artist": "Hirho", "license": "CC BY 4.0", "licurl": "https://creativecommons.org/licenses/by/4.0"}};
 /* nearby recs: 30 min OSRM, official hours checked 2026-11-27 09:32–10:00 Asia/Taipei */
@@ -1142,11 +1405,11 @@ function normExp(e){let r=e.refund||'',note=e.refundNote||'';if(!REFUNDERS.inclu
  return {day:e.day||2,name:e.name,amount:Math.round(Number(e.amount)||0),refund:r,refundNote:r==='其他'?note:'',taxfree:r!=='不退稅'}}
 let saved={};try{saved=JSON.parse(localStorage.getItem(KEY))||JSON.parse(localStorage.getItem('kyushu-trip-v14'))||{}}catch{}
 let legacy=null;try{legacy=JSON.parse(localStorage.getItem('kyushu-v12-photo'))?.privateContent}catch{}
-const S={plan:saved.plan==='rain'?'rain':'normal',day:saved.day||legacy?.day||2,page:saved.page||legacy?.page||'行程',mode:saved.mode||legacy?.mode||'test',next:0,focus:null,
+const S={dtab:'trip',tnext:0,mapOpen:null,todo:saved.todo||{},day:saved.day||legacy?.day||1,page:saved.page||legacy?.page||'行程',mode:saved.mode||legacy?.mode||'test',next:0,focus:null,
  resTab:saved.resTab||'機票',wday:saved.wday||2,area:saved.area||null,
  expenses:(saved.expenses||legacy?.expenses||[{name:'午餐（範例）',amount:3200}]).map(normExp),aritaPm:saved.aritaPm==='diy'?'diy':'buy'};
 let theme=localStorage.getItem('kyushu-theme')||'auto', timer;
-function save(){try{localStorage.setItem(KEY,JSON.stringify({day:S.day,page:S.page,mode:S.mode,resTab:S.resTab,plan:S.plan,wday:S.wday,area:S.area,expenses:S.expenses,aritaPm:S.aritaPm}))}catch{}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({day:S.day,page:S.page,mode:S.mode,resTab:S.resTab,wday:S.wday,area:S.area,expenses:S.expenses,aritaPm:S.aritaPm,todo:S.todo}))}catch{}}
 // ---------- helpers ----------
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const money=n=>'¥'+Math.round(n).toLocaleString();
@@ -1249,19 +1512,20 @@ function heroExtra(s){const list=dayPlaces[4]||[];const hit=list.find(p=>s.name.
  return `<details class="hero-more"><summary>營業時間、開館日與備註</summary><p>${esc(hit.desc)}</p><p>${esc(hit.hours)}。${esc(hit.note)}</p><p>${esc(hit.reserve||'')} ${esc(hit.kid||'')}</p></details>`}
 function heroCard(s,i){const img=photo(s),cr=photoCredit(s),ht=HEROTEXT[s.name]||{},desc=ht.desc||guide(s)||'依當天體力彈性安排停留時間。',hours=ht.hours||'',ou=ht.u;
  return `<article class="stop hero"><div class="hero-visual">${img?`<img class="photocard hero-img" src="${img}" alt="${esc(s.name)}">`:''}${cr?`<p class="hero-photocredit">照片：<a href="${esc(cr[1])}" target="_blank" rel="noopener">${esc(cr[0])}</a> · ${esc(cr[2])}</p>`:''}</div>
-  <div class="stopbody hero-body"><div class="flex between"><div><small>${String(i+1).padStart(2,'0')} · ${esc(s.type)} · ${esc(s.period)}</small><h3>${esc(s.name)}</h3></div>${s.q?`<button data-next="${i}">前往此站 ↗</button>`:''}</div>
+  <div class="stopbody hero-body"><div class="flex between"><div><small>${String(i+1).padStart(2,'0')} · ${esc(s.type)} · ${esc(s.period)}</small><h3>${esc(s.name)}</h3></div></div>
   <p class="hero-desc">${esc(desc)}</p>
   ${hours?`<p class="hero-hours">${ic('clock')}${esc(hours)}</p>`:''}
+  ${stopActions(s)}
   <p class="muted">停車：${esc(s.park||'待核實')} · ${esc(s.fee||'費用待核實')}</p>
   ${s.shops?'<div class="supply">附近補給｜'+esc(s.shops)+'</div>':''}
   ${heroExtra(s)}
   <div class="flex">${s.q?`<button class="mapjump" data-map="${i}">在地圖查看此站</button>`:''}${ou?`<a class="mplace web" href="${esc(ou)}" target="_blank" rel="noopener">官網${ic('external-link')}</a>`:''}${ht.coupon?`<a class="coupon-chip" href="${esc(ht.coupon)}" target="_blank" rel="noopener">優惠券</a>`:''}</div>
  </div></article>`}
 function nearRow(name){const list=NEAR[name];if(!list||!list.length)return '';
- return `<section class="near-block" data-near="${esc(name)}"><div class="near-head"><h4>附近推薦 · 車程約 30 分內</h4><span class="muted">${list.length} 處 · 估算</span></div>
+ return `<section class="near-block" data-near="${esc(name)}"><details class="fold near-fold"><summary><b>附近推薦 · 車程約 30 分內</b><span class="muted">${list.length} 處 · 估算</span></summary>
   <div class="near-row">${list.map(x=>`<article class="near-card"><img src="assets/${x.img}" alt="${esc(x.n)}"><div class="near-body"><b>${esc(x.n)}</b><p>${esc(x.line)}</p>${x.note?`<p>${esc(x.note)}</p>`:''}<div class="near-min">車程約 ${x.min} 分（估） · 從${esc(x.from)}</div><div class="near-foot"><a class="mplace" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(x.q)}" target="_blank" rel="noopener">${ic('map-pin')}地圖</a>${x.u?`<a class="mplace web" href="${esc(x.u)}" target="_blank" rel="noopener">官網${ic('external-link')}</a>`:''}${x.coupon?`<a class="coupon-chip" href="${esc(x.coupon)}" target="_blank" rel="noopener">優惠券</a>`:''}<span class="near-credit">照片：<a href="${esc(x.srcu)}" target="_blank" rel="noopener">${esc(x.src)}</a> · ${esc(x.lic)}</span></div></div></article>`).join('')}</div>
-  <p class="muted" style="font-size:11px">${NEAR_Q} 不重複本日已列的主行程。</p></section>`}
-function compactStop(s,i){return `<article class="stop ${s.type==='沿途休息站'?'reststop':''}">${photo(s)?`<img class="photocard" src="${photo(s)}" alt="${esc(s.name)}" loading="lazy">`:''}<div class="stopbody"><div class="flex between"><div><small>${String(i+1).padStart(2,'0')} · ${esc(s.type)}${s.type==='沿途休息站'?' · 已列入導航順序':''}</small><h3>${esc(s.name)}</h3></div>${s.q?`<button data-next="${i}">前往此站 ↗</button>`:''}</div><p class="guide">${guide(s)}</p><p class="muted">停車：${esc(s.park||'待核實')} · ${esc(s.fee||'費用待核實')}</p>${s.shops?'<div class="supply">附近補給｜'+esc(s.shops)+'</div>':''}<details><summary>查看攻略與停車詳情</summary><div class="detail">${s.type==='步行參觀'?'參觀後步行返回原停車場，再開始下一段自駕導航。':s.type==='沿途休息站'?'候選高速路線的停靠點，行車方向與實際經過道路仍待核實。':s.type==='住宿'?'入住、退房與取消期限請看「預訂 → 飯店」。':s.type==='航班'?'航班時刻以機票為準。':'依當天體力彈性安排停留時間。'}<p class="muted">MAPCODE：待核實</p>${s.shops?`<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.shops.split(' · ')[0]+' 日本')}" target="_blank" rel="noopener">查看附近補給 ↗</a>`:''}</div></details>${s.q?`<button class="mapjump" data-map="${i}">在地圖查看此站</button>`:''}</div></article>`}
+  <p class="muted" style="font-size:11px">${NEAR_Q} 不重複本日已列的主行程。</p></details></section>`}
+function compactStop(s,i){return `<article class="stop ${s.type==='沿途休息站'?'reststop':''}">${photo(s)?`<img class="photocard" src="${photo(s)}" alt="${esc(s.name)}" loading="lazy">`:''}<div class="stopbody"><div class="flex between"><div><small>${String(i+1).padStart(2,'0')} · ${esc(s.type)}${s.type==='沿途休息站'?' · 已列入導航順序':''}</small><h3>${esc(s.name)}</h3></div></div><p class="guide">${guide(s)}</p>${stopActions(s)}<p class="muted">停車：${esc(s.park||'待核實')} · ${esc(s.fee||'費用待核實')}</p>${s.shops?'<div class="supply">附近補給｜'+esc(s.shops)+'</div>':''}<details><summary>查看攻略與停車詳情</summary><div class="detail">${s.type==='步行參觀'?'參觀後步行返回原停車場，再開始下一段自駕導航。':s.type==='沿途休息站'?'候選高速路線的停靠點，行車方向與實際經過道路仍待核實。':s.type==='住宿'?'入住、退房與取消期限請看「預訂 → 飯店」。':s.type==='航班'?'航班時刻以機票為準。':'依當天體力彈性安排停留時間。'}${s.shops?`<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.shops.split(' · ')[0]+' 日本')}" target="_blank" rel="noopener">查看附近補給 ↗</a>`:''}</div></details>${s.q?`<button class="mapjump" data-map="${i}">在地圖查看此站</button>`:''}</div></article>`}
 function mapModule(large){const list=routes[S.day],f=S.focus,item=f!=null?list[f]:null,r=routable(S.day);
  return `<section class="mapmodule ${large?'maplarge':''}"><div class="mapheading"><h3>${item?'Google Maps · '+esc(item.name):`Day ${S.day} 整日路線`}</h3><p>${item?'目前顯示單一站點':r.length>1?`${r.length} 個停靠點依序連成路線（開車）`:'當日只有一個地點'}</p>${item?`<span class="focuschip">${ic('map-pin')}${esc(item.name)}<button data-focus="-1">回到整日路線</button></span>`:''}</div>
  <iframe title="Google Maps Day ${S.day}" src="${embedUrl(S.day,f)}" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -1285,11 +1549,10 @@ function mealsCard(d){const M=MEALS[d];
   const nm=p.ja&&p.ja!==p.n?`<b class="mname">${esc(p.n)}</b> <span class="mja" lang="ja">${esc(p.ja)}</span>`:`<b class="mname">${esc(p.n)}</b>`;
   const tag=p.illus?`<span class="millus">${p.lic&&p.lic.includes('示意圖')?'示意圖':'分類示意'}</span>`:'';
   const cred=p.src?`<span class="mcredit">照片：${p.srcu?`<a href="${esc(p.srcu)}" target="_blank" rel="noopener">${esc(p.src)}</a>`:esc(p.src)}${p.lic?' · '+esc(p.lic):''}</span>`:'';
-  return `<article class="mentry${p.illus?' is-illus':''}"><div class="mthumb"><img src="assets/${esc(p.img)}" alt="${esc(p.n)}" width="72" height="72">${tag}</div><div class="mbody"><div class="mnames">${nm}</div><div class="mchips">${chips(p)}</div>${p.dish?`<p class="mdish">${esc(p.dish)}</p>`:''}<div class="mealplaces">${p.q?`<a class="mplace" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.q)}" target="_blank" rel="noopener">${ic('map-pin')}地圖</a>`:''}${p.u?`<a class="mplace web" href="${esc(p.u)}" target="_blank" rel="noopener">官網${ic('external-link')}</a>`:''}</div>${cred}</div></article>`};
+  return `<article class="mentry${p.illus?' is-illus':''}"><div class="mthumb"><img src="assets/${esc(p.img)}" alt="${esc(p.n)}" width="72" height="72">${tag}</div><div class="mbody"><div class="mnames">${nm}</div><div class="mchips">${chips(p)}</div>${p.dish?`<p class="mdish">${esc(p.dish)}</p>`:''}${mealActs(p)}<div class="mealplaces">${p.q?`<a class="mplace" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.q)}" target="_blank" rel="noopener">${ic('map-pin')}地圖</a>`:''}${p.u?`<a class="mplace web" href="${esc(p.u)}" target="_blank" rel="noopener">官網${ic('external-link')}</a>`:''}</div>${cred}</div></article>`};
  const row=k=>{const m=M[k],[nm,icn]=MEALNAME[k];const sg=m.sugg?(SUPPLY[m.sugg[0]]||[]).filter(x=>m.sugg[1].includes(x.cat)).slice(0,3):[];const list=m.items&&m.items.length?m.items:(m.places||[]).map(p=>({n:p.n,q:p.q,u:p.u}));
   return `<div class="meal ${m.st}"><div class="mealk">${ic(icn)}<span>${nm}</span></div><div class="mealb"><div class="mealt"><b>${esc(m.t)}</b><span class="mtag ${m.st}">${esc(m.l)}</span></div>${m.note?`<p>${esc(m.note)}</p>`:''}${list.length?`<div class="mentries">${list.map(entry).join('')}</div>`:''}${sg.length?`<div class="mealplaces nearby">${sg.map(x=>`<a class="mplace" href="${pin(x)}" target="_blank" rel="noopener">${ic('map-pin')}${esc(x.name)}${x.dist!=null?`<small>${x.dist} m</small>`:''}</a>`).join('')}</div>`:''}</div></div>`};
  return `<section class="meals" id="meals"><div class="mealshead"><h3>${ic('soup')}今日三餐 · Day ${d}</h3><span class="muted">1/${15+d}</span></div>${row('b')}${row('l')}${row('d')}<p class="mealsfoot">飯店餐食依訂房資料；餐廳都還沒訂位，營業時間出發前再看官網。「附近」店家來自 OpenStreetMap。小圖標「分類示意」是類型圖示，不是該店實拍；標「示意圖」則是同類型食物照片、非該店。</p></section>`}
-function planToggle(){return `<div class="plantoggle" role="tablist" aria-label="行程方案"><button role="tab" data-plan="normal" aria-selected="${S.plan!=='rain'}" class="${S.plan!=='rain'?'active':''}">${ic('sun')}一般行程</button><button role="tab" data-plan="rain" aria-selected="${S.plan==='rain'}" class="${S.plan==='rain'?'active rainon':''}">${ic('umbrella')}雨天備案</button></div>`}
 
 function diyAlts(){
  const alts=[
@@ -1326,14 +1589,78 @@ function aritaChoice(list){
  </section>`+nearRow('有田下午');
 }
 
+// ---------- v23: today mode / actions / todo ----------
+const TRIP0=Date.UTC(2027,0,16);
+function tokyoNow(){const q=new URLSearchParams(location.search).get('now');let y,m,d,h,mi;
+ if(q&&/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(q)){[y,m,d,h,mi]=q.split(/[-T:]/).map(Number)}
+ else{const p=Object.fromEntries(new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).map(x=>[x.type,x.value]));y=+p.year;m=+p.month;d=+p.day;h=+p.hour;mi=+p.minute}
+ const days=Math.round((Date.UTC(y,m-1,d)-TRIP0)/864e5);return{y,m,d,h,mi,days,day:days>=0&&days<DAY_N?days+1:0,preview:!!q}}
+const todayDay=()=>tokyoNow().day;
+const pad2=n=>String(n).padStart(2,'0');
+const activeList=d=>routes[d]?routes[d].filter(x=>d!==4||!isAritaPm(x)||x.name.includes('艸窯')===(S.aritaPm==='diy')):[];
+function pHour(p){const m=String(p).match(/(\d{1,2}):(\d{2})/);if(m)return +m[1]+ +m[2]/60;return {'上午':9,'中午':12,'下午':14,'晚上':18,'全天':9}[p]??9}
+function startIdx(d,h,mi){const L=activeList(d),t=h+mi/60;let i=0;L.forEach((x,k)=>{if(pHour(x.period)<=t)i=k});const hh=pHour(L[i].period);while(i>0&&pHour(L[i-1].period)===hh)i--;if(L[i].type==='出發'&&i<L.length-1)i++;return i}
+const navUrl=s=>'https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(target(s)+' 日本')+'&travelmode='+(s.type==='步行參觀'?'walking':'driving');
+function legMin(L,i){if(i<1)return null;return LEGS[L[i-1].name+'|'+L[i].name]??null}
+const telHref=t=>'tel:'+t.replace(/\D/g,'');
+function stopActions(s){const f=STOPINFO[s.name]||{};const b=[];
+ if(s.q)b.push(`<a class="act nav" href="${esc(navUrl(s))}" target="_blank" rel="noopener">${ic('navigation')}導航</a>`);
+ if(f.tel)b.push(`<a class="act tel" href="${telHref(f.tel)}" aria-label="撥打電話 ${esc(f.tel)}">${ic('phone')}${esc(f.tel)}</a>`);
+ if(f.mc)b.push(`<button type="button" class="act mc" data-copy="${esc(f.mc)}" aria-label="複製 Mapcode ${esc(f.mc)}">${ic('hash')}<span>Mapcode ${esc(f.mc)}${f.mcn?'（'+esc(f.mcn)+'）':''}</span>${ic('copy')}</button>`);
+ if(!b.length)return '';
+ const src=[f.tel?'電話來源：'+f.src:'',f.mc?'Mapcode 為 Denso マップコード，由座標算出，到站前請以導航確認':''].filter(Boolean).join('；');
+ return `<div class="actions">${b.join('')}</div>${src?`<p class="actsrc">${esc(src)}</p>`:''}`}
+function mealActs(p){const k=Object.keys(MEALINFO).find(k=>(p.ja||'').includes(k)||(p.n||'').includes(k));if(!k)return '';const f=MEALINFO[k];
+ return `<div class="actions mealacts">${f.tel?`<a class="act tel" href="${telHref(f.tel)}" aria-label="撥打電話 ${esc(f.tel)}">${ic('phone')}${esc(f.tel)}</a>`:''}${f.mc?`<button type="button" class="act mc" data-copy="${esc(f.mc)}" aria-label="複製 Mapcode ${esc(f.mc)}">${ic('hash')}<span>Mapcode ${esc(f.mc)}</span>${ic('copy')}</button>`:''}</div><p class="actsrc">電話來源：${esc(f.src)}${f.mc?'；Mapcode 由座標算出，到店前以導航確認':'；Mapcode 座標待核對，暫不提供'}</p>`}
+function copyText(t){const done=()=>toast('已複製 Mapcode '+t+'（車用導航可略去空格）');
+ if(navigator.clipboard?.writeText){navigator.clipboard.writeText(t).then(done).catch(()=>fallback())}else fallback();
+ function fallback(){const ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch{}ta.remove();done()}}
+const WKD=['日','一','二','三','四','五','六'];
+function todayCard(){const T=tokyoNow();const clock=pad2(T.h)+':'+pad2(T.mi);
+ const prev=T.preview?`<span class="tc-preview">預覽 ${T.m}/${T.d} ${clock}</span>`:'';
+ if(!T.day){
+  if(T.days<0){const n=-T.days;return `<section class="todaycard idle" aria-label="出發倒數"><div class="tc-top"><span class="tc-badge">${ic('plane-takeoff')}出發倒數</span>${prev}</div><div class="tc-count"><b>${n}</b><span>天後出發</span></div><p class="tc-line">1/16（六）CI116 16:25 桃園起飛 → 19:35 抵達福岡。</p><div class="tc-actions"><button class="primary" data-day="1" data-page="行程">${ic('route')}看 Day 1</button><button data-page="待辦">${ic('list-checks')}出發前待辦${todoOpen()?'（'+todoOpen()+'）':''}</button></div></section>`}
+  return `<section class="todaycard idle"><div class="tc-top"><span class="tc-badge">${ic('house')}旅程結束</span>${prev}</div><p class="tc-line">九天旅程已結束，平安回家。</p></section>`}
+ const d=T.day,L=activeList(d);let i=Math.min(Math.max(S.tnext,0),L.length-1);const s=L[i],f=STOPINFO[s.name]||{},p=i>0?L[i-1]:null;
+ const lm=legMin(L,i),walk=s.type==='步行參觀';
+ const drive=!p?'':walk?`${ic('footprints')}步行（同一停車場）`:lm!=null?`${ic('car')}開車約 ${lm} 分<small>估，不含休息與塞車</small>`:'';
+ const after=L[i+1];const lm2=after?legMin(L,i+1):null;
+ return `<section class="todaycard" aria-label="今天的下一站"><div class="tc-top"><span class="tc-badge">${ic('sun')}今天 · Day ${d} · 1/${T.d}（${WKD[new Date(Date.UTC(T.y,T.m-1,T.d)).getUTCDay()]}）</span><span class="tc-clock">日本 ${clock}</span>${prev}</div>
+  <div class="tc-label">${i===0?'今天第一站':'下一站'} · 第 ${i+1}／${L.length} 站${p?`<span>｜剛離開：${esc(p.name)}</span>`:''}</div>
+  <h3 class="tc-name">${esc(s.name)}</h3>
+  <div class="tc-meta"><span>${ic('clock')}${esc(s.period)}</span>${drive?`<span>${drive}</span>`:''}${s.park?`<span>${ic('square-parking')}${esc(s.park)}</span>`:''}</div>
+  <div class="tc-actions">${s.q?`<a class="primary tc-nav" href="${esc(navUrl(s))}" target="_blank" rel="noopener">${ic('navigation')}導航到這裡</a>`:''}${f.tel?`<a class="act tel" href="${telHref(f.tel)}" aria-label="撥打電話 ${esc(f.tel)}">${ic('phone')}${esc(f.tel)}</a>`:''}${f.mc?`<button type="button" class="act mc" data-copy="${esc(f.mc)}">${ic('hash')}<span>Mapcode ${esc(f.mc)}</span>${ic('copy')}</button>`:''}</div>
+  <div class="tc-step"><button data-tnext="-1" ${i===0?'disabled':''}>${ic('chevron-left')}上一站</button><button class="done" data-tnext="1" ${i>=L.length-1?'disabled':''}>${ic('check')}到了，看下一站</button></div>
+  ${after?`<p class="tc-after">再下一站：<b>${esc(after.name)}</b>（${esc(after.period)}${lm2!=null?'，約 '+lm2+' 分車程':''}）</p>`:'<p class="tc-after">這是今天最後一站。</p>'}
+  ${S.day!==d&&S.page==='行程'?`<button class="tc-back" data-day="${d}" data-page="行程">回到今天 Day ${d}</button>`:''}</section>`}
+const DAYOF_EXP={'丸兄':4,'艸窯':4,'豪斯登堡':5};
+function todoData(){const A=[],B=[],C=[];
+ hotels.filter(h=>h.empty).forEach(h=>A.push({id:'h-'+h.dn[0],t:'1/21 住宿尚未預訂',s:h.note,day:h.dn[0],res:'飯店'}));
+ restaurants.filter(r=>r.st==='wait').forEach(r=>{const k=Object.keys(MEALINFO).find(k=>r.n.includes(k));const dd=+(r.d.match(/1\/(\d+)/)||[])[1]-15;A.push({id:'r-'+r.n,t:r.n+' 尚未訂位',s:r.d,day:dd,res:'餐廳',tel:k?MEALINFO[k].tel:null,gotab:'meal'})});
+ experiences.filter(e=>e.st==='wait').forEach(e=>{const k=Object.keys(DAYOF_EXP).find(k=>e.n.includes(k));A.push({id:'e-'+e.n,t:e.n+' 尚未預訂',s:e.d+(e.n.includes('豪斯登堡')?'':'・DIY 二選一，選這項才需要預約'),day:k?DAYOF_EXP[k]:3,res:'體驗'})});
+ A.push({id:'car',t:'租車尚未預訂（比價中）',s:'1/17 09:00 取車 – 1/22 19:30 還車；4 人、3 個 28 吋行李箱',day:2,res:'租車'});
+ hotels.filter(h=>!h.empty&&/確認/.test(h.note||'')).forEach(h=>B.push({id:'hc-'+h.n,t:h.n+'：出發前向飯店確認',s:h.note,day:h.dn[0],res:'飯店',tel:(STOPINFO[h.stops[0]]||{}).tel}));
+ for(let d=1;d<=DAY_N;d++){const M=MEALS[d];if(!M)continue;const miss=['b','l','d'].filter(k=>{const m=M[k];return m&&(m.st==='tbd'||(m.st==='wait'&&!/佐賀牛/.test(m.l)))}).map(k=>MEALNAME[k][0]);if(miss.length)C.push({id:'m-'+d,t:`Day ${d}（1/${15+d}）${miss.join('、')}還沒決定`,s:names[d-1],day:d,gotab:'meal'})}
+ return{A,B,C}}
+function todoOpen(){try{const t=todoData();return[...t.A,...t.B,...t.C].filter(x=>!S.todo[x.id]).length}catch{return 0}}
+function todoPage(){const T=todoData();
+ const item=x=>{const done=!!S.todo[x.id];return `<article class="todoitem ${done?'done':''}"><button class="tcheck" data-tdone="${esc(x.id)}" role="checkbox" aria-checked="${done}" aria-label="${done?'標為未完成':'標為已處理'}：${esc(x.t)}">${done?ic('check'):''}</button><div class="tbody"><b>${esc(x.t)}</b><p class="muted">${esc(x.s||'')}</p><div class="trow"><button data-day="${x.day}" data-page="行程"${x.gotab?` data-gotab="${x.gotab}"`:''}>${ic('calendar-days')}看 Day ${x.day}（1/${15+x.day}）</button>${x.res?`<button data-res="${x.res}" data-page="預訂">${ic('tickets')}預訂頁・${x.res}</button>`:''}${x.tel?`<a class="act tel" href="${telHref(x.tel)}" aria-label="撥打電話 ${esc(x.tel)}">${ic('phone')}${esc(x.tel)}</a>`:''}</div></div></article>`};
+ const sec=(h,sub,l)=>l.length?`<section class="todosec"><div class="sectionhead"><h3>${h}</h3><span class="muted">${l.filter(x=>!S.todo[x.id]).length}／${l.length} 項待處理</span></div><p class="muted">${sub}</p>${l.map(item).join('')}</section>`:'';
+ return `<div class="eyebrow">TO-DO</div><h2>出發前待辦</h2><p class="muted">把還沒訂、還沒決定的事集中在這裡。點圓圈標記「已處理」，只存在這支手機。</p>${sec('尚未預訂','訂好之後請到「預訂」頁補上資料（訂單號與付款資料不放在網站）。',T.A)}${sec('向飯店確認','訂單與官網寫法不同或人數限制，出發前確認。',T.B)}${sec('餐點還沒決定','點進去看當天「餐」分頁；都不是已訂位。',T.C)}`}
+function dayTabs(){const rn=(rain[S.day]||[]).length;
+ const t=[['trip','route','行程',routes[S.day].length+' 站'],['meal','soup','餐','3 餐'],['rain','umbrella','備案',rn?rn+' 處':'無']];
+ return `<div class="dtabs" role="tablist" aria-label="當天內容">${t.map(([k,i,n,c])=>`<button role="tab" data-dtab="${k}" aria-selected="${S.dtab===k}" class="${S.dtab===k?'active':''}${k==='rain'&&S.dtab==='rain'?' rainon':''}">${ic(i)}<b>${n}</b><small>${c}</small></button>`).join('')}</div>`}
+function navbox(list){return list.length?`<section class="navbox"><div class="flex between"><h3>導航下一站</h3><div class="mode"><button data-mode="test" class="${S.mode==='test'?'active':''}">行前測試</button><button data-mode="live" class="${S.mode==='live'?'active':''}">日本目前位置</button></div></div><div class="next"><div><select aria-label="下一站" id="k-next">${list.map((s,i)=>`<option value="${i}" ${i===S.next?'selected':''}>${i+1}. ${esc(s.name)}</option>`).join('')}</select><p class="muted">${S.mode==='live'?'起點：由 Google Maps 使用裝置目前位置':'起點：'+(S.next?esc(target(list[S.next-1])):'目前位置（本日第一站）')} → ${esc(target(list[S.next]))}</p></div><a class="primary" href="${esc(url(S.next))}" target="_blank" rel="noopener">Google Maps 導航 ↗</a></div><div class="navfoot">導航以停車場為優先目的地<br>沿途 SA／PA 已列入停靠順序</div></section>`:''}
 function itinerary(){const list=routes[S.day];
- return `<div class="eyebrow">DAILY ITINERARY</div><h2>每日行程</h2><p class="muted">景點攻略、住宿、雨天備案與整日路線</p>${dates('day',S.day)}
- <div class="dayhead" style="background-image:url('assets/${DAYIMG[S.day]}')">${credit(S.day)}<div><div class="eyebrow">DAY ${S.day} · JANUARY ${15+S.day}, 2027</div><h2>${names[S.day-1]}</h2>${S.day===2?'<p class="muted">停一次車逛太宰府與博物館，再沿途休息、柳川入住。</p>':S.day===4?'<p class="muted">下午買瓷器或 DIY 二選一即可。日期尚未重排（目前在 1/19 週二，v6 排在 1/18 週一）。不必全走，依體力與予約彈性選點。</p>':''}</div><div class="daynumber">${String(S.day).padStart(2,'0')}</div></div>
- ${ADDED[S.day]?`<p class="addednote">${ADDED[S.day]}</p>`:''}
- ${planToggle()}${S.plan==='rain'?`<div class="rainview">${rainCard(S.day)}${mealsCard(S.day)}</div>`:`<div class="workspace"><aside class="sidebar">${mapModule()}${list.length?`<section class="navbox"><div class="flex between"><h3>導航下一站</h3><div class="mode"><button data-mode="test" class="${S.mode==='test'?'active':''}">行前測試</button><button data-mode="live" class="${S.mode==='live'?'active':''}">日本目前位置</button></div></div><div class="next"><div><select aria-label="下一站" id="k-next">${list.map((s,i)=>`<option value="${i}" ${i===S.next?'selected':''}>${i+1}. ${esc(s.name)}</option>`).join('')}</select><p class="muted">${S.mode==='live'?'起點：由 Google Maps 使用裝置目前位置':'起點：'+(S.next?esc(target(list[S.next-1])):'目前位置（本日第一站）')} → ${esc(target(list[S.next]))}</p></div><a class="primary" href="${esc(url(S.next))}" target="_blank" rel="noopener">Google Maps 導航 ↗</a></div><div class="navfoot">導航以停車場為優先目的地<br>沿途 SA／PA 已列入停靠順序</div></section>`:''}</aside>
- <div class="timeline">${mealsCard(S.day)}<div class="sectionhead tlhead"><h3>${ic('image')}主要景點與停靠順序</h3><span class="muted">${list.length} 站</span></div>
- <p class="muted" style="margin:0 0 12px">主景點用大圖呈現；若該站附近有已核實的其他點，會在下方用一列小卡推薦（開車約 30 分內、當天應開、不重複本日行程）。車程為估算。</p>
- ${list.map((s,i)=>{const period=i===0||s.period!==list[i-1].period?'<div class="period">'+esc(s.period)+'</div>':'';if(S.day===4&&isAritaPm(s)){const first=list.findIndex(isAritaPm);if(i!==first)return '';return period+aritaChoice(list)}return `${period}${hotelFor(s)?`<article class="stop lodging">${hotelCard(hotelFor(s),S.day,'instop')}<div class="lodgefoot"><p class="muted">停車：${esc(s.park||'待核實')} · ${esc(s.fee||'費用待核實')}</p>${s.shops?'<div class="supply">附近補給｜'+esc(s.shops)+'</div>':''}<div class="flex">${s.q?`<button data-next="${i}">前往此站 ↗</button><button class="mapjump" data-map="${i}">在地圖查看此站</button>`:''}</div></div></article>${nearRow(s.name)}`:isHeroStop(s)?heroCard(s,i)+nearRow(s.name):compactStop(s,i)}`}).join('')}</div></div>`}`}
+ const open=S.mapOpen==null?innerWidth>=960:S.mapOpen;
+ const stops=list.map((s,i)=>{const period=i===0||s.period!==list[i-1].period?'<div class="period">'+esc(s.period)+'</div>':'';if(S.day===4&&isAritaPm(s)){const first=list.findIndex(isAritaPm);if(i!==first)return '';return period+aritaChoice(list)}return `${period}${hotelFor(s)?`<article class="stop lodging">${hotelCard(hotelFor(s),S.day,'instop')}<div class="lodgefoot"><p class="muted">停車：${esc(s.park||'待核實')} · ${esc(s.fee||'費用待核實')}</p>${s.shops?'<div class="supply">附近補給｜'+esc(s.shops)+'</div>':''}${stopActions(s)}<div class="flex">${s.q?`<button class="mapjump" data-map="${i}">在地圖查看此站</button>`:''}</div></div></article>${nearRow(s.name)}`:isHeroStop(s)?heroCard(s,i)+nearRow(s.name):compactStop(s,i)}`}).join('');
+ const trip=`<div class="workspace"><aside class="sidebar"><details class="fold mapfold" data-fold="map" ${open?'open':''}><summary>${ic('map')}<b>地圖與導航</b><span class="muted">${S.focus!=null?'已選單一站':'整日路線'}</span></summary>${open?mapModule():''}${navbox(list)}</details></aside>
+ <div class="timeline"><div class="sectionhead tlhead"><h3>${ic('image')}主要景點與停靠順序</h3><span class="muted">${list.length} 站</span></div>${stops}</div></div>`;
+ const body=S.dtab==='meal'?`<div class="mealview">${mealsCard(S.day)}</div>`:S.dtab==='rain'?`<div class="rainview">${rainCard(S.day)}</div>`:trip;
+ return `<div class="eyebrow">DAILY ITINERARY</div><h2>每日行程</h2>${dates('day',S.day)}${todayCard()}
+ <div class="dayhead" style="background-image:url('assets/${DAYIMG[S.day]}')">${credit(S.day)}<div><div class="eyebrow">DAY ${S.day} · JANUARY ${15+S.day}, 2027</div><h2>${names[S.day-1]}</h2>${S.day===2?'<p class="muted">停一次車逛太宰府與博物館，再沿途休息、柳川入住。</p>':S.day===4?'<p class="muted">下午買瓷器或 DIY 二選一即可。日期尚未重排（目前在 1/19 週二，v6 排在 1/18 週一）。</p>':''}</div><div class="daynumber">${String(S.day).padStart(2,'0')}</div></div>
+ ${ADDED[S.day]?`<details class="addednote"><summary>這天的資料說明</summary><p>${ADDED[S.day]}</p></details>`:''}
+ ${dayTabs()}${body}`}
 function hotelFor(s){return s.type==='住宿'?hotels.find(h=>h.stops.includes(s.name)):null}
 function dlabel(h,day){if(day)return `D${day} | 1/${15+day}（${WD[day]}）住宿${h.dn.length>1?' · 第 '+(h.dn.indexOf(day)+1)+' 晚':''}`;
  const a=h.dn[0],b=h.dn[h.dn.length-1];return h.dn.length>1?`D${a}–D${b} | 1/${15+a}（${WD[a]}）起住宿 ${h.dn.length} 晚`:`D${a} | 1/${15+a}（${WD[a]}）住宿`}
@@ -1354,11 +1681,12 @@ function supplyBlock(){const a=S.area||DAY_AREA[S.day];const items=SUPPLY[a]||[]
  <div class="supplygrid">${col('超商','store','附近沒有找到資料')}${col('超市','shopping-basket','附近沒有找到超市資料，可改去超商')}${col('便當','soup','附近沒有便當專門店資料，可在超商或超市熟食區買便當')}${col('餐廳','utensils','附近沒有找到餐廳資料')}</div>
  <p class="muted" style="margin-top:10px;font-size:11.5px">店家與位置來自 OpenStreetMap（2026/11/25 查詢），距離為直線距離；營業時間請以現場或 Google 地圖為準。</p></section>`}
 function home(){const r=routes[S.day];
- return `<section class="home"><div class="homeintro"><div class="eyebrow">OUR FAMILY JOURNEY</div><h2>一起出發，去九州。</h2><p class="muted">2027 年 1 月 16 日 — 24 日 · 九天親子自駕</p></div>
+ return `<section class="home"><div class="homeintro"><div class="eyebrow">OUR FAMILY JOURNEY</div><h2>一起出發，去九州。</h2><p class="muted">2027 年 1 月 16 日 — 24 日 · 九天親子自駕</p></div>${todayCard()}
  <div class="facts"><div><small>出發</small><b>1/16</b><span>${names[0]}</span></div><div><small>天數</small><b>9 天</b><span>親子自駕</span></div><div><small>回程</small><b>1/24</b><span>${names[8]}</span></div></div>
  <div class="cover"><img src="assets/dazaifu-tenmangu.jpg" alt="太宰府天滿宮官方照片"><div class="covertext"><div class="eyebrow">KYUSHU 2027</div><h2>把時間，留給旅途。</h2><p class="routechips">${'福岡 · 太宰府 · 柳川 · 嬉野 · 豪斯登堡 · 小倉'.split(' · ').map(x=>`<span>${x}</span>`).join('')}</p></div></div>
  <div class="continue"><div><div class="eyebrow">CONTINUE EXPLORING</div><h3>Day ${S.day} · ${names[S.day-1]}</h3><p class="muted">1/${15+S.day} · ${r.length?r.length+' 個停靠點':'當日詳細景點待補入'}</p></div><button data-page="行程" class="primary">查看每日行程 →</button></div>
  ${quickMap()}
+ <button class="todolink" data-page="待辦">${ic('list-checks')}<span><b>出發前待辦</b><small>${todoOpen()?todoOpen()+' 項還沒處理：未訂住宿、餐廳、飯店確認':'目前都處理完了'}</small></span><span aria-hidden="true">→</span></button>
  <section class="block"><div class="sectionhead"><h3>快捷</h3><span class="muted">Day ${S.day}</span></div><div class="quick">
   <button data-page="行程"><span class="qi">${ic('calendar-days')}</span>今日行程<small>Day ${S.day}</small></button>
   <a href="${esc(dayDirUrl(S.day))}" target="_blank" rel="noopener"><span class="qi">${ic('route')}</span>整日路線<small>Google 地圖</small></a>
@@ -1398,8 +1726,8 @@ function reservations(){const t=S.resTab;let body='';
  if(t==='租車')body=`<div class="full">`+resCard({d:'1/17（日）09:00 取車 – 1/22（五）19:30 還車',n:'福岡租車（博多站周邊）',st:'cmp'},`<dl class="kv"><dt>狀態</dt><dd>比價中，尚未預訂</dd><dt>條件</dt><dd>4 人、3 個 28 吋行李箱</dd><dt>車型</dt><dd>建議中型廂型車（Noah／Serena／StepWGN 同級）</dd><dt>比價通路</dt><dd>Trip.com、樂天、Tabirai、ToCoo</dd></dl><p class="resnote">原本的租車訂單已於 2026/11/22 取消。決定後再更新這裡。</p>`)+`</div>`;
  return `<div class="eyebrow">RESERVATIONS</div><h2>預訂資料</h2><p class="muted">只列一般資訊；訂單號、確認碼與付款資料請看原始確認信。</p><div class="restabs" role="tablist">${RES_TABS.map(([n,i])=>`<button data-res="${n}" role="tab" aria-selected="${t===n}" class="${t===n?'active':''}">${ic(i)}${n}</button>`).join('')}</div><div class="respanel ${t==='飯店'?'hotels':''}">${body}</div>`}
 function render(){if(!routes[S.day][S.next])S.next=0;if(S.focus!=null&&!routes[S.day][S.focus])S.focus=null;
- main.innerHTML=({'首頁':home,'行程':itinerary,'地圖':mapPage,'購物':wallet,'預訂':reservations}[S.page]||itinerary)();
- root.querySelector('footer').innerHTML=[['首頁','house'],['行程','route'],['地圖','map'],['購物','shopping-bag'],['預訂','tickets']].map(([n,i])=>`<button data-page="${n}" class="${S.page===n?'active':''}" aria-current="${S.page===n?'page':'false'}">${ic(i)}${n}</button>`).join('');
+ main.innerHTML=({'首頁':home,'行程':itinerary,'地圖':mapPage,'待辦':todoPage,'購物':wallet,'預訂':reservations}[S.page]||itinerary)();
+ root.querySelector('footer').innerHTML=[['首頁','house'],['行程','route'],['地圖','map'],['待辦','list-checks'],['購物','shopping-bag'],['預訂','tickets']].map(([n,i])=>`<button data-page="${n}" class="${S.page===n?'active':''}" aria-current="${S.page===n?'page':'false'}">${ic(i)}${n}${n==='待辦'&&todoOpen()?`<em class="badge" aria-label="${todoOpen()} 項未完成">${todoOpen()}</em>`:''}</button>`).join('');
  themeBtn();globalThis.lucide?.createIcons({attrs:{width:18,height:18}});
  main.querySelectorAll('.dates').forEach(ds=>{const a=ds.querySelector('.active');if(a&&ds.scrollWidth>ds.clientWidth)ds.scrollLeft=a.offsetLeft-ds.clientWidth/2+a.offsetWidth/2})}
 // ---------- theme ----------
@@ -1434,18 +1762,22 @@ root.addEventListener('click',e=>{
  const b=e.target.closest('button');if(!b)return;const ds=b.dataset;
  if(b.classList.contains('themebtn')){theme={auto:'light',light:'dark',dark:'auto'}[theme];localStorage.setItem('kyushu-theme',theme);applyTheme();themeBtn();globalThis.lucide?.createIcons({attrs:{width:18,height:18}});toast('主題：'+{auto:'跟隨系統',light:'亮色',dark:'深色'}[theme]);return}
  if(ds.focus!==undefined){S.focus=null;render();return}
- if(ds.map!==undefined){S.focus=S.next=+ds.map;render();save();if(innerWidth<960)main.querySelector('.mapmodule')?.scrollIntoView({behavior:'smooth',block:'start'})}
- if(ds.day){S.day=+ds.day;S.next=0;S.focus=null;if(!ds.page){render();save()}}
+ if(ds.map!==undefined){S.focus=S.next=+ds.map;S.mapOpen=true;render();save();if(innerWidth<960)main.querySelector('.mapmodule')?.scrollIntoView({behavior:'smooth',block:'start'})}
+ if(ds.day){S.day=+ds.day;S.next=0;S.focus=null;S.dtab='trip';if(!ds.page&&!ds.gotab){render();save()}}
  if(ds.wday){S.wday=+ds.wday;render();save()}
  if(ds.area){S.area=ds.area;render();save();main.querySelector('#supply')?.scrollIntoView({block:'nearest'})}
  if(ds.res){S.resTab=ds.res;render();save()}
  if(ds.page){S.page=ds.page;render();save();scrollTo({top:0,behavior:'smooth'})}
- if(ds.quick==='rain'){S.page='行程';S.plan='rain';render();save();scrollTo({top:0})}
+ if(ds.quick==='rain'){S.page='行程';S.dtab='rain';render();save();scrollTo({top:0})}
  if(ds.arita){S.aritaPm=ds.arita==='diy'?'diy':'buy';render();save();main.querySelector('#arita-choice')?.scrollIntoView({behavior:'smooth',block:'nearest'});return}
- if(ds.plan){S.plan=ds.plan;render();save();main.querySelector('.plantoggle')?.scrollIntoView({behavior:'smooth',block:'nearest'})}
+ if(ds.dtab){S.dtab=ds.dtab;render();main.querySelector('.dtabs')?.scrollIntoView({behavior:'smooth',block:'nearest'})}
+ if(ds.gotab){S.dtab=ds.gotab;render()}
+ if(ds.tnext){const a=activeList(todayDay());S.tnext=Math.max(0,Math.min(a.length-1,S.tnext+(+ds.tnext)));render()}
+ if(ds.tdone){S.todo[ds.tdone]=!S.todo[ds.tdone];render();save()}
+ if(ds.copy){copyText(ds.copy)}
  if(ds.quick==='supply'){main.querySelector('#supply')?.scrollIntoView({behavior:'smooth',block:'start'})}
  if(ds.mode){S.mode=ds.mode;render();save()}
- if(ds.next){S.next=+ds.next;render();save();window.open(url(S.next),'_blank','noopener')}
+ if(ds.next!==undefined&&ds.next!==''&&!ds.tnext){S.next=+ds.next;render();save();window.open(url(S.next),'_blank','noopener')}
  if(ds.add)modal(null);
  if(ds.refunds)refundModal();
  if(ds.geo)askGeo(true);
@@ -1454,7 +1786,13 @@ root.addEventListener('click',e=>{
  if(ds.close)overlay.hidden=true});
 root.addEventListener('change',e=>{if(e.target.id==='k-next'){S.next=+e.target.value;render();save()}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')overlay.hidden=true});
+(function(){const T=tokyoNow();if(T.day){S.day=T.day;if(!['預訂','購物','待辦'].includes(S.page))S.page='行程';S.mode='live';S.dtab='trip';S.tnext=startIdx(T.day,T.h,T.mi);S.next=S.tnext}})();
 applyTheme();render();
+root.addEventListener('toggle',e=>{const t=e.target;if(t.dataset?.fold==='map'){const want=t.open;const cur=S.mapOpen==null?innerWidth>=960:S.mapOpen;if(want!==cur){S.mapOpen=want;render()}}},true);
+function setOnline(){const o=root.querySelector('.offbar');if(o)o.hidden=navigator.onLine}
+addEventListener('online',setOnline);addEventListener('offline',setOnline);setOnline();
+if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol)){addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&overlay.hidden&&['首頁','行程'].includes(S.page))render()});
 })();
 
 </script></body></html>
